@@ -337,7 +337,7 @@ const FmcLawLandingPage = () => {
         <section id="about" className="bg-white py-16 md:py-20">
           <div className="text-center mb-12">
             {/* mb-12 is 48px */}
-            <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
+            <h2 className="text-3xl lg:text-4xl font-bold font-sans text-gray-900 mb-3">
               About FMC Law
             </h2>
             <div className="mx-auto w-[56px] h-[3px] bg-[#D4AF37]"></div>
@@ -352,7 +352,7 @@ const FmcLawLandingPage = () => {
                 />
               </div>
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-8">
+                <h3 className="text-2xl lg:text-3xl font-bold font-sans text-gray-900 mb-8">
                   Our Mission
                 </h3>
                 <p className="text-lg text-gray-700 font-sans leading-relaxed">
@@ -385,15 +385,14 @@ const FmcLawLandingPage = () => {
                   alt="FMC Law Conference Table"
                 />
               </div>
-              <div className="order-2 md:order-1">
-                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-6">
+              <div className="order-2 md:order-1 font-sans">
+                <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                   Our Values
                 </h3>
                 <div className="flex items-start space-x-3 text-black mb-4">
                   <img src="assets/scales-outline.png" alt="" />
                   <div>
-                    <p className="font-bold">Integrity</p>
-                    <br />
+                    <p className="font-bold mb-4">Integrity</p>
                     <p className="text-sm text-[#374151]">
                       We adhere to the highest ethical standards in all our
                       dealings, ensuring transparency and honesty in our client
@@ -404,8 +403,7 @@ const FmcLawLandingPage = () => {
                 <div className="flex items-start space-x-3 text-black mb-4">
                   <img src="assets/scales-outline.png" alt="" />
                   <div>
-                    <p className="font-bold">Excellence</p>
-                    <br />
+                    <p className="font-bold mb-4">Excellence</p>
                     <p className="text-sm text-[#374151]">
                       We strive for excellence in everything we do, from legal
                       analysis and strategy to client communication and case
@@ -416,8 +414,7 @@ const FmcLawLandingPage = () => {
                 <div className="flex items-start space-x-3 text-black mb-4">
                   <img src="assets/scales-outline.png" alt="" />
                   <div>
-                    <p className="font-bold">Collaboration</p>
-                    <br />
+                    <p className="font-bold mb-4">Collaboration</p>
                     <p className="text-sm text-[#374151]">
                       We work closely with our clients, building partnerships
                       based on mutual respect and shared goals.
@@ -427,8 +424,7 @@ const FmcLawLandingPage = () => {
                 <div className="flex items-start space-x-3 text-black mb-4">
                   <img src="assets/scales-outline.png" alt="" />
                   <div>
-                    <p className="font-bold">Innovation</p>
-                    <br />
+                    <p className="font-bold mb-4">Innovation</p>
                     <p className="text-sm text-[#374151]">
                       We embrace creative thinking and new technologies to
                       deliver efficient, effective legal solutions.
@@ -445,10 +441,10 @@ const FmcLawLandingPage = () => {
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               {/* mb-12 is 48px */}
-              <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
+              <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
                 Our Partners
               </h2>
-              <p className="text-base text-[#5A5A5A] font-sans mb-6 max-w-2xl mx-auto">
+              <p className="text-base text-[#5A5A5A] mb-6 max-w-2xl mx-auto">
                 Meet the distinguished legal minds at FMC Law, dedicated to
                 achieving exceptional results for our clients.
               </p>
@@ -456,31 +452,27 @@ const FmcLawLandingPage = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {" "}
-              {/* 32px gap */}
               {partnersData.map((partner) => (
                 <div
                   key={partner.id}
                   className="bg-white border border-[#E5E7EB] rounded-[6px] shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-lg"
                 >
                   <div
-                    className="relative w-full aspect-square bg-no-repeat bg-amber-50"
+                    className="relative w-full aspect-square bg-no-repeat bg-amber-50 overflow-hidden bg-cover bg-center flex items-end"
                     style={{ backgroundImage: `url('${partner.imageUrl}')` }}
                   >
-                    <h4 className="text-xl font-semibold font-sans text-gray-900 mb-1">
-                      {partner.name}
-                    </h4>
-                    <p className="text-sm font-medium text-[#D4AF37] font-sans mb-4">
-                      {partner.role}
-                    </p>
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
+                    <div className="m-4 absolute z-10 ">
+                      <h4 className="text-xl font-bold font-sans text-white mb-1">
+                        {partner.name}
+                      </h4>
+                      <p className="text-md font-semibold text-[#DAA520] font-sans mb-4">
+                        {partner.role}
+                      </p>
+                    </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
-                    {/* 24px padding */}
-
-                    {/* mb-4 is 16px */}
                     <div className="space-y-3 flex-grow">
-                      {" "}
-                      {/* 12px vertical gap */}
                       {partner.details.map((detailBlock) => (
                         <div key={detailBlock.label}>
                           <p className="text-sm font-semibold font-sans text-gray-800 mb-0.5">
@@ -504,7 +496,7 @@ const FmcLawLandingPage = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               {/* mb-12 is 48px */}
-              <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
+              <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
                 Contact Us
               </h2>
               <p className="text-base text-[#5A5A5A] font-sans mb-6 max-w-2xl mx-auto">
