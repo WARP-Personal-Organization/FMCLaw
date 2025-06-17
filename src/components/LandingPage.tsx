@@ -1,6 +1,7 @@
 // components/FmcLawLandingPage.jsx
 import React from "react";
 import Footer from "./Footer";
+import Header from "./Header";
 // For a real Next.js project, you'd import Link and Image:
 // import Link from 'next/link';
 // import Image from 'next/image';
@@ -169,62 +170,7 @@ const FmcLawLandingPage = () => {
 
   return (
     <>
-      {/* 0. Sticky Top Nav (UNCHANGED) */}
-      <nav className="sticky top-0 z-50 bg-black text-white shadow-md">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 text-[#D4AF37]">
-                <PlaceholderIcon className="h-8 w-8" />
-              </div>
-              <a
-                href="/"
-                className="ml-3 text-xl font-bold font-serif text-white"
-              >
-                FMC Law
-              </a>
-            </div>
-            <div className="hidden md:flex items-center space-x-6">
-              <a
-                href="#home"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
-              >
-                About Us
-              </a>
-              <a
-                href="#partners"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
-              >
-                Our Partners
-              </a>
-              <a
-                href="#contact"
-                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
-              >
-                Contact
-              </a>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="#book-consultation"
-                className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
-              >
-                Book Consultation
-              </a>
-              <div className="md:hidden ml-4">
-                {/* Optional Mobile Menu Button */}
-              </div>
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Header/>
       <main>
         {/* 1. Hero Section (UNCHANGED) */}
         <section
@@ -236,11 +182,11 @@ const FmcLawLandingPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#CE9930]/90 via-black to-black"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-22">
             <div className="grid md:grid-cols-10 gap-8 items-center">
-              <div className="md:col-span-4 text-center md:text-left">
-                <h1 className="text-[3.5rem] leading-tight font-bold font-serif mb-6">
+              <div className="md:col-span-6 text-center md:text-left">
+                <h1 className="text-[3.5rem] leading-tight font-Oswald font-bold font-sans mb-7 text-[#CE9930]">
                   Reimagining Legal Solutions for Complex Challenges
                 </h1>
                 <p className="text-lg text-gray-200 font-sans max-w-[48ch] mx-auto md:mx-0 mb-10">
@@ -263,11 +209,11 @@ const FmcLawLandingPage = () => {
                   </a>
                 </div>
               </div>
-              <div className="md:col-span-6 hidden md:flex justify-center md:justify-end items-center">
+              <div className="md:col-span-4 hidden md:flex justify-center md:justify-end items-center">
                 <img
-                  src="/images/fmc-emblem-large.svg"
+                  src="/assets/fmc-emblem-large.svg"
                   alt="FMC Law Emblem"
-                  className="w-2/3 max-w-md opacity-80"
+                  className="w-3/3 max-w-md opacity-80"
                 />
               </div>
             </div>
@@ -281,10 +227,10 @@ const FmcLawLandingPage = () => {
               <div className="md:col-span-3">
                 {" "}
                 {/* Text (60%) */}
-                <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-[inter] font-bold font-sans text-gray-900 mb-6">
                   A Different Kind of Law Firm
                 </h2>
-                <p className="text-lg text-gray-700 font-sans mb-8 leading-relaxed max-w-[50ch]">
+                <p className="text-lg text-gray-700 font-[inter] font-sans mb-8 leading-relaxed max-w-[50ch]">
                   At FMC Law, we've redefined the traditional law firm model.
                   Our modern, client-centric approach prioritizes transparent
                   communication, innovative solutions, and a deep understanding
@@ -303,8 +249,8 @@ const FmcLawLandingPage = () => {
                 {/* Image (40%) */}
                 <div className="relative">
                   <img
-                    className="rounded-lg shadow-xl w-full aspect-[4/5] object-cover"
-                    src="/images/lawyer-portrait-intro-modern.jpg" // Replace with actual portrait image
+                    className="border-4 border-black shadow-xl w-full aspect-[4/5] object-cover"
+                    src="\assets\diff-kind-of-law-firm.png" // Replace with actual portrait image
                     alt="Modern Legal Professional at FMC Law"
                   />
                   <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
@@ -318,7 +264,7 @@ const FmcLawLandingPage = () => {
         {/* 3. Practice Areas Section (UNCHANGED) */}
         <section className="bg-[#F7F8FA] py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-4xl font-bold font-serif text-center text-gray-900 mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold font-sans text-center text-gray-900 mb-16">
               Our Expertise
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -345,7 +291,7 @@ const FmcLawLandingPage = () => {
         {/* 4. Why Choose FMC Law Section (UNCHANGED) */}
         <section className="bg-black text-white py-14 md:py-[56px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold font-sans mb-16">
               Why Choose FMC Law?
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
@@ -364,11 +310,16 @@ const FmcLawLandingPage = () => {
         {/* 5. Mid-page CTA Banner (UNCHANGED) */}
         <section
           className="bg-cover bg-fixed bg-center py-24 md:py-32"
-          style={{ backgroundImage: "url('/images/dark-office-interior.jpg')" }}
+          style={{ backgroundImage: "url('/assets/dark-office-interior.png')" ,
+                   backgroundRepeat: "no-repeat",
+                   backgroundPosition: "absolute",
+                   backgroundSize: "contain",
+                   backgroundAttachment: "scroll"
+          }}
         >
-          <div className="absolute inset-0 bg-black/60"></div>
+          <div className="scroll inset-0 bg-black/60"></div>
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-serif mb-8">
+            <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-sans mb-8">
               Ready to Work with FMC Law?
             </h2>
             <a
