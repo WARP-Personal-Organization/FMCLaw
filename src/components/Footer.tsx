@@ -1,45 +1,6 @@
 import React from "react";
 
 function Footer() {
-  const practiceAreas = [
-    {
-      name: "Corporate Law",
-      description: "Expert advice on corporate governance and structuring.",
-    },
-    {
-      name: "Commercial Law",
-      description: "Navigating complex commercial transactions and agreements.",
-    },
-    {
-      name: "Litigation",
-      description: "Strategic representation in contentious legal disputes.",
-    },
-    {
-      name: "Intellectual Property",
-      description: "Protecting your innovations and creative works.",
-    },
-    {
-      name: "Labor Law",
-      description: "Guidance on employment relations and workplace compliance.",
-    },
-    {
-      name: "Criminal Law",
-      description: "Robust defense for individuals facing criminal charges.",
-    },
-    {
-      name: "Administrative Law",
-      description: "Challenging governmental decisions and regulatory actions.",
-    },
-    {
-      name: "Civil Law",
-      description: "Resolving disputes between individuals and organizations.",
-    },
-    {
-      name: "Election Law",
-      description: "Ensuring fair and lawful electoral processes.",
-    },
-  ];
-
   const PlaceholderIcon = ({ className = "w-6 h-6" }) => (
     <svg
       className={className}
@@ -55,49 +16,31 @@ function Footer() {
       {/* 9. Footer (UNCHANGED) */}
       <footer className="bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="space-y-6">
+          <div className="gap-12 mb-12 flex justify-between">
+            <div className="space-y-6 w-md">
               <a href="/" className="flex items-center space-x-2">
-                <PlaceholderIcon className="h-10 w-10 text-[#D4AF37]" />
-                <span className="text-2xl font-bold font-serif text-white">
-                  FMC Law
-                </span>
+                <img src="Logo Main.png" alt="test" className="object-cover" />
               </a>
               <p className="text-sm">
-                Dedicated to providing premier legal services with integrity and
-                expertise.
+                Combining traditional legal expertise with innovative approaches
+                for today's complex challenges.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <PlaceholderIcon className="w-6 h-6" />
+                  <img src="linkedin-solid.png" alt="" />
                 </a>
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <PlaceholderIcon className="w-6 h-6" />
+                  <img src="twitter-solid.png" alt="" />
                 </a>
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <PlaceholderIcon className="w-6 h-6" />
+                  <img src="facebook-solid.png" alt="" />
+                </a>
+                <a href="#" className="text-[#D4AF37] hover:text-white">
+                  <img src="insta-outline.png" alt="" />
                 </a>
               </div>
             </div>
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4 font-serif">
-                Practice Areas
-              </h5>
-              <ul className="space-y-2 text-sm">
-                {practiceAreas.slice(0, 5).map((area) => (
-                  <li key={area.name}>
-                    <a href="#" className="hover:text-white transition-colors">
-                      {area.name}
-                    </a>
-                  </li>
-                ))}
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    See All Areas...
-                  </a>
-                </li>
-              </ul>
-            </div>
+
             <div>
               <h5 className="text-lg font-semibold text-white mb-4 font-serif">
                 Company
@@ -108,7 +51,7 @@ function Footer() {
                     href="#about"
                     className="hover:text-white transition-colors"
                   >
-                    About Us
+                    Home
                   </a>
                 </li>
                 <li>
@@ -116,55 +59,68 @@ function Footer() {
                     href="#partners"
                     className="hover:text-white transition-colors"
                   >
-                    Our Team
+                    About Us
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Careers
+                    Practice Areas
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    FAQs
+                    Our Partners
                   </a>
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Blog
+                    Contact
                   </a>
                 </li>
               </ul>
             </div>
-            <div>
+            <div className="w-md">
               <h5 className="text-lg font-semibold text-white mb-4 font-serif">
-                Contact Us
+                Contact
               </h5>
-              <address className="not-italic space-y-2 text-sm">
-                <p>
-                  123 Legal Avenue, Suite 400
-                  <br />
-                  Justice City, JC 54321
-                </p>
-                <p>
-                  Phone:{" "}
-                  <a href="tel:+1234567890" className="hover:text-white">
-                    (123) 456-7890
-                  </a>
-                </p>
-                <p>
-                  Email:{" "}
-                  <a
-                    href="mailto:contact@fmclaw.com"
-                    className="hover:text-white"
-                  >
-                    contact@fmclaw.com
-                  </a>
-                </p>
-              </address>
+              <ul className="text-sm space-y-2 ">
+                <li>
+                  <div className="flex items-start space-x-3">
+                    <img src="pin-solid.png" alt="" />
+                    <a href="#" className="hover:text-white transition-colors">
+                      Iloilo Office: 2F, Daily Guardian Center, Guzman Jasena,
+                      Mandurriao, Iloilo City
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start space-x-3">
+                    <img src="phone-solid.png" alt="" />
+                    <a href="#" className="hover:text-white transition-colors">
+                      0917-702-1298
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start space-x-3">
+                    <img src="mail-solid.png" alt="" />
+                    <a href="#" className="hover:text-white transition-colors">
+                      admin@fmclaw.com.ph
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex items-start space-x-3">
+                    <img src="clock-solid.png" alt="" />
+                    <a href="#" className="hover:text-white transition-colors">
+                      Mon-Fri: 9:00 AM - 6:00 PM
+                    </a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
-          <div className="border-t border-gray-700 pt-8 mt-8 text-sm">
+          <div className="border-t border-[#CE9930] pt-8 mt-8 text-sm text-[#CE9930]">
             <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
               <p>© {new Date().getFullYear()} FMC Law. All rights reserved.</p>
               <div className="space-x-4 mt-4 md:mt-0">

@@ -399,16 +399,29 @@ const FmcLawLandingPage = () => {
                 />
               </div>
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-4">
+                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-8">
                   Our Mission
                 </h3>
                 <p className="text-lg text-gray-700 font-sans leading-relaxed">
-                  To provide exceptional legal services with integrity and
-                  dedication, fostering success for our clients and our
-                  community through innovative solutions and unwavering
-                  commitment to justice. We strive to be a beacon of legal
-                  excellence and a trusted partner in all your endeavors.
+                  FMC Law is driven by a mission to offer outstanding legal
+                  representation built on<b> professionalism, integrity</b>, and
+                  <b> client-focused </b>service.
+                  <br />
+                  <br />
+                  We commit to understanding individual client needs and
+                  crafting specific solutions that deliver desired outcomes.
+                  <br />
+                  <br />
+                  We believe in integrating foundational legal expertise with
+                  innovative approaches to meet the evolving demands faced by
+                  our clients.
                 </p>
+                <div className="flex items-center gap-5 mt-5">
+                  <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
+                  <p className="font-bold italic text-black justify-start">
+                    "Excellence is our standard, not our goal."
+                  </p>
+                </div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
@@ -421,27 +434,18 @@ const FmcLawLandingPage = () => {
               </div>
               <div className="order-2 md:order-1">
                 <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-6">
-                  Our Core Values
+                  Our Values
                 </h3>
-                <ul className="space-y-4 font-sans text-lg text-gray-700">
-                  {[
-                    "Integrity",
-                    "Excellence",
-                    "Collaboration",
-                    "Innovation",
-                  ].map((value) => (
-                    <li key={value} className="flex items-start">
-                      <GoldCheckIcon />
-                      <span>
-                        {value}:{" "}
-                        <span className="text-gray-600 text-base">
-                          Dedicated to upholding the highest standards in all we
-                          do.
-                        </span>
-                      </span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex items-start space-x-3 text-white">
+                  <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                  <span className="font-sans">
+                    <b>Address</b>
+                    <br />
+                    1234 Legal Avenue, Suite 500
+                    <br />
+                    Metropolis, NY 10001
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -613,13 +617,13 @@ const FmcLawLandingPage = () => {
                 </form>
               </div>
               <div className="md:w-2/5 space-y-8 mt-10 md:mt-0">
-                <div className="bg-white p-8 rounded-lg shadow-lg space-y-6">
-                  <h3 className="text-xl font-bold font-sans text-gray-900">
+                <div className=" bg-black p-8 rounded-lg shadow-lg space-y-6">
+                  <h3 className="text-xl font-bold font-sans text-white">
                     Firm Contact Details
                   </h3>
-                  <div className="flex items-start space-x-3">
+                  <div className="flex items-start space-x-3 text-white">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <span className="font-sans text-gray-700">
+                    <span className="font-sans">
                       <b>Address</b>
                       <br />
                       1234 Legal Avenue, Suite 500
@@ -629,7 +633,7 @@ const FmcLawLandingPage = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <span className="font-sans text-gray-700">
+                    <span className="font-sans ">
                       <b>Phone</b>
                       <br />
                       (212) 555-1234
@@ -637,7 +641,7 @@ const FmcLawLandingPage = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <span className="font-sans text-gray-700">
+                    <span className="font-sans ">
                       <b>Email</b>
                       <br />
                       info@fmclaw.ph
@@ -645,7 +649,7 @@ const FmcLawLandingPage = () => {
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <span className="font-sans text-gray-700">
+                    <span className="font-sans ">
                       <b>Office Hours</b>
                       <br />
                       Monday - Friday: 9:00 AM - 6:00 PM
@@ -656,7 +660,7 @@ const FmcLawLandingPage = () => {
                     </span>
                   </div>
                 </div>
-                <div className="aspect-square bg- rounded-lg shadow-lg overflow-hidden">
+                <div className="aspect-square  rounded-lg shadow-lg overflow-hidden">
                   <iframe
                     title="FMCLaw Address"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2000000000003!2d-73.98785368459365!3d40.75806097932688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6434221%3A0x60f937894d3c3d11!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1616000000000!5m2!1sen!2sus"
