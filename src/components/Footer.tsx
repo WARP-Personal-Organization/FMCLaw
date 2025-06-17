@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 function Footer() {
@@ -18,25 +20,29 @@ function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="gap-12 mb-12 flex justify-between">
             <div className="space-y-6 w-md">
-              <a href="/" className="flex items-center space-x-2">
-                <img src="Logo Main.png" alt="test" className="object-cover" />
-              </a>
+              <Link href="/" className="flex items-center space-x-2">
+                <img
+                  src="assets/Logo Main.png"
+                  alt=""
+                  className="object-cover"
+                />
+              </Link>
               <p className="text-sm">
                 Combining traditional legal expertise with innovative approaches
-                for today's complex challenges.
+                for today&apos;s complex challenges.
               </p>
               <div className="flex space-x-4">
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="linkedin-solid.png" alt="" />
+                  <img src="assets/linkedin-solid.png" alt="" />
                 </a>
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="twitter-solid.png" alt="" />
+                  <img src="assets/twitter-solid.png" alt="" />
                 </a>
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="facebook-solid.png" alt="" />
+                  <img src="assets/facebook-solid.png" alt="" />
                 </a>
                 <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="insta-outline.png" alt="" />
+                  <img src="assets/insta-outline.png" alt="" />
                 </a>
               </div>
             </div>
@@ -86,7 +92,7 @@ function Footer() {
               <ul className="text-sm space-y-2 ">
                 <li>
                   <div className="flex items-start space-x-3">
-                    <img src="pin-solid.png" alt="" />
+                    <img src="assets/pin-solid.png" alt="" />
                     <a href="#" className="hover:text-white transition-colors">
                       Iloilo Office: 2F, Daily Guardian Center, Guzman Jasena,
                       Mandurriao, Iloilo City
@@ -95,7 +101,7 @@ function Footer() {
                 </li>
                 <li>
                   <div className="flex items-start space-x-3">
-                    <img src="phone-solid.png" alt="" />
+                    <img src="assets/phone-solid.png" alt="" />
                     <a href="#" className="hover:text-white transition-colors">
                       0917-702-1298
                     </a>
@@ -103,7 +109,7 @@ function Footer() {
                 </li>
                 <li>
                   <div className="flex items-start space-x-3">
-                    <img src="mail-solid.png" alt="" />
+                    <img src="assets/mail-solid.png" alt="" />
                     <a href="#" className="hover:text-white transition-colors">
                       admin@fmclaw.com.ph
                     </a>
@@ -111,7 +117,7 @@ function Footer() {
                 </li>
                 <li>
                   <div className="flex items-start space-x-3">
-                    <img src="clock-solid.png" alt="" />
+                    <img src="assets/clock-solid.png" alt="" />
                     <a href="#" className="hover:text-white transition-colors">
                       Mon-Fri: 9:00 AM - 6:00 PM
                     </a>

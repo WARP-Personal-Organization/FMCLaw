@@ -1,6 +1,7 @@
 // components/FmcLawLandingPage.jsx
 import React from "react";
 import Footer from "./Footer";
+import Link from "next/link";
 // For a real Next.js project, you'd import Link and Image:
 // import Link from 'next/link';
 // import Image from 'next/image';
@@ -86,7 +87,7 @@ const FmcLawLandingPage = () => {
       id: 1,
       name: "Alexandra Reynolds",
       role: "Managing Partner",
-      imageUrl: "/images/partners/alexandra-reynolds.jpg",
+      imageUrl: "assets/alexandra.png",
       details: [
         {
           label: "Credentials",
@@ -113,7 +114,7 @@ const FmcLawLandingPage = () => {
       id: 2,
       name: "Jonathan Blackwell",
       role: "Senior Partner",
-      imageUrl: "/images/partners/jonathan-blackwell.jpg",
+      imageUrl: "assets/jonathan.png",
       details: [
         {
           label: "Credentials",
@@ -141,7 +142,7 @@ const FmcLawLandingPage = () => {
       id: 3,
       name: "Michelle Chen",
       role: "Partner",
-      imageUrl: "/images/partners/michelle-chen.jpg",
+      imageUrl: "assets/michelle.png",
       details: [
         {
           label: "Credentials",
@@ -177,12 +178,12 @@ const FmcLawLandingPage = () => {
               <div className="flex-shrink-0 text-[#D4AF37]">
                 <PlaceholderIcon className="h-8 w-8" />
               </div>
-              <a
+              <Link
                 href="/"
                 className="ml-3 text-xl font-bold font-serif text-white"
               >
                 FMC Law
-              </a>
+              </Link>
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a
@@ -285,11 +286,11 @@ const FmcLawLandingPage = () => {
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 font-sans mb-8 leading-relaxed max-w-[50ch]">
-                  At FMC Law, we've redefined the traditional law firm model.
-                  Our modern, client-centric approach prioritizes transparent
-                  communication, innovative solutions, and a deep understanding
-                  of your unique needs, ensuring you feel empowered and informed
-                  every step of the way.
+                  At FMC Law, we&apos;ve redefined the traditional law firm
+                  model. Our modern, client-centric approach prioritizes
+                  transparent communication, innovative solutions, and a deep
+                  understanding of your unique needs, ensuring you feel
+                  empowered and informed every step of the way.
                 </p>
                 <a
                   href="#about-us-detailed" // Point to a relevant section or page
@@ -393,9 +394,9 @@ const FmcLawLandingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div>
                 <img
-                  className="rounded-lg shadow-xl w-full aspect-video object-cover"
-                  src="/images/boardroom-meeting.jpg"
-                  alt="FMC Law Boardroom"
+                  className="rounded-lg shadow-xl object-cover"
+                  src="assets/table-people.png"
+                  alt=""
                 />
               </div>
               <div>
@@ -419,7 +420,7 @@ const FmcLawLandingPage = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    "Excellence is our standard, not our goal."
+                    &quot;Excellence is our standard, not our goal.&quot;
                   </p>
                 </div>
               </div>
@@ -427,8 +428,8 @@ const FmcLawLandingPage = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="order-1 md:order-2">
                 <img
-                  className="rounded-lg shadow-xl w-full aspect-video object-cover"
-                  src="/images/conference-table-discussion.jpg"
+                  className="rounded-lg shadow-xl"
+                  src="assets/table-empty.png"
                   alt="FMC Law Conference Table"
                 />
               </div>
@@ -436,15 +437,51 @@ const FmcLawLandingPage = () => {
                 <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-6">
                   Our Values
                 </h3>
-                <div className="flex items-start space-x-3 text-white">
-                  <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                  <span className="font-sans">
-                    <b>Address</b>
+                <div className="flex items-start space-x-3 text-black mb-4">
+                  <img src="assets/scales-outline.png" alt="" />
+                  <div>
+                    <p className="font-bold">Integrity</p>
                     <br />
-                    1234 Legal Avenue, Suite 500
+                    <p className="text-sm text-[#374151]">
+                      We adhere to the highest ethical standards in all our
+                      dealings, ensuring transparency and honesty in our client
+                      relationships.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 text-black mb-4">
+                  <img src="assets/scales-outline.png" alt="" />
+                  <div>
+                    <p className="font-bold">Excellence</p>
                     <br />
-                    Metropolis, NY 10001
-                  </span>
+                    <p className="text-sm text-[#374151]">
+                      We strive for excellence in everything we do, from legal
+                      analysis and strategy to client communication and case
+                      management.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 text-black mb-4">
+                  <img src="assets/scales-outline.png" alt="" />
+                  <div>
+                    <p className="font-bold">Collaboration</p>
+                    <br />
+                    <p className="text-sm text-[#374151]">
+                      We work closely with our clients, building partnerships
+                      based on mutual respect and shared goals.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-start space-x-3 text-black mb-4">
+                  <img src="assets/scales-outline.png" alt="" />
+                  <div>
+                    <p className="font-bold">Innovation</p>
+                    <br />
+                    <p className="text-sm text-[#374151]">
+                      We embrace creative thinking and new technologies to
+                      deliver efficient, effective legal solutions.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -474,23 +511,20 @@ const FmcLawLandingPage = () => {
                   key={partner.id}
                   className="bg-white border border-[#E5E7EB] rounded-[6px] shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-lg"
                 >
-                  <div className="relative w-full aspect-[3/2]">
-                    <img
-                      src={partner.imageUrl}
-                      alt={`Portrait of ${partner.name}`}
-                      className="absolute inset-0 w-full h-full object-cover rounded-t-[6px]"
-                      // For Next.js <Image>, you'd use layout="fill" objectFit="cover"
-                    />
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    {" "}
-                    {/* 24px padding */}
+                  <div
+                    className="relative w-full aspect-square bg-no-repeat bg-amber-50"
+                    style={{ backgroundImage: `url('${partner.imageUrl}')` }}
+                  >
                     <h4 className="text-xl font-semibold font-sans text-gray-900 mb-1">
                       {partner.name}
                     </h4>
                     <p className="text-sm font-medium text-[#D4AF37] font-sans mb-4">
                       {partner.role}
-                    </p>{" "}
+                    </p>
+                  </div>
+                  <div className="p-6 flex flex-col flex-grow">
+                    {/* 24px padding */}
+
                     {/* mb-4 is 16px */}
                     <div className="space-y-3 flex-grow">
                       {" "}
@@ -622,7 +656,7 @@ const FmcLawLandingPage = () => {
                     Firm Contact Details
                   </h3>
                   <div className="flex items-start space-x-3 text-white">
-                    <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                    <img src="assets/pin-outline.png" alt="" />
                     <span className="font-sans">
                       <b>Address</b>
                       <br />
@@ -632,7 +666,7 @@ const FmcLawLandingPage = () => {
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                    <img src="assets/phone-outline.png" alt="" />
                     <span className="font-sans ">
                       <b>Phone</b>
                       <br />
@@ -640,7 +674,7 @@ const FmcLawLandingPage = () => {
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                    <img src="assets/mail-outline.png" alt="" />
                     <span className="font-sans ">
                       <b>Email</b>
                       <br />
@@ -648,7 +682,7 @@ const FmcLawLandingPage = () => {
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                    <img src="assets/clock-outline.png" alt="" />
                     <span className="font-sans ">
                       <b>Office Hours</b>
                       <br />
