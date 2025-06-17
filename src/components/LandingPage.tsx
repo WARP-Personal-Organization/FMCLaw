@@ -1,37 +1,85 @@
 // components/FmcLawLandingPage.jsx
-import React from 'react';
+import React from "react";
+import Footer from "./Footer";
 // For a real Next.js project, you'd import Link and Image:
 // import Link from 'next/link';
 // import Image from 'next/image';
 
 // Placeholder for icons (replace with actual SVGs or an icon library)
 const PlaceholderIcon = ({ className = "w-6 h-6" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
   </svg>
 );
 
 const GoldCheckIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 flex-shrink-0">
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="#D4AF37"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="mr-2 flex-shrink-0"
+  >
     <polyline points="20 6 9 17 4 12"></polyline>
   </svg>
 );
 
-
 const FmcLawLandingPage = () => {
   const practiceAreas = [
-    { name: "Corporate Law", description: "Expert advice on corporate governance and structuring." },
-    { name: "Commercial Law", description: "Navigating complex commercial transactions and agreements." },
-    { name: "Litigation", description: "Strategic representation in contentious legal disputes." },
-    { name: "Intellectual Property", description: "Protecting your innovations and creative works." },
-    { name: "Labor Law", description: "Guidance on employment relations and workplace compliance." },
-    { name: "Criminal Law", description: "Robust defense for individuals facing criminal charges." },
-    { name: "Administrative Law", description: "Challenging governmental decisions and regulatory actions." },
-    { name: "Civil Law", description: "Resolving disputes between individuals and organizations." },
-    { name: "Election Law", description: "Ensuring fair and lawful electoral processes." },
+    {
+      name: "Corporate Law",
+      description: "Expert advice on corporate governance and structuring.",
+    },
+    {
+      name: "Commercial Law",
+      description: "Navigating complex commercial transactions and agreements.",
+    },
+    {
+      name: "Litigation",
+      description: "Strategic representation in contentious legal disputes.",
+    },
+    {
+      name: "Intellectual Property",
+      description: "Protecting your innovations and creative works.",
+    },
+    {
+      name: "Labor Law",
+      description: "Guidance on employment relations and workplace compliance.",
+    },
+    {
+      name: "Criminal Law",
+      description: "Robust defense for individuals facing criminal charges.",
+    },
+    {
+      name: "Administrative Law",
+      description: "Challenging governmental decisions and regulatory actions.",
+    },
+    {
+      name: "Civil Law",
+      description: "Resolving disputes between individuals and organizations.",
+    },
+    {
+      name: "Election Law",
+      description: "Ensuring fair and lawful electoral processes.",
+    },
   ];
 
-  const whyChooseReasons = ["Excellence", "Innovation", "Client-Focused", "Integrity", "Knowledge"];
+  const whyChooseReasons = [
+    "Excellence",
+    "Innovation",
+    "Client-Focused",
+    "Integrity",
+    "Knowledge",
+  ];
 
   const partnersData = [
     {
@@ -40,11 +88,26 @@ const FmcLawLandingPage = () => {
       role: "Managing Partner",
       imageUrl: "/images/partners/alexandra-reynolds.jpg",
       details: [
-        { label: "Credentials", value: "Board Certified in Civil Trial Law, Certified Mediator, AV Preeminent® Rated" },
-        { label: "Employment History", value: "Former Senior Partner at Wilson & Reed (2010-2018); Judicial Law Clerk, U.S. Court of Appeals (2005-2007)" },
-        { label: "Areas of Practice", value: "Corporate Litigation, M&A, International Business Law" },
-        { label: "Education", value: "J.D., Harvard Law School (magna cum laude); B.A. Economics, Yale" },
-      ]
+        {
+          label: "Credentials",
+          value:
+            "Board Certified in Civil Trial Law, Certified Mediator, AV Preeminent® Rated",
+        },
+        {
+          label: "Employment History",
+          value:
+            "Former Senior Partner at Wilson & Reed (2010-2018); Judicial Law Clerk, U.S. Court of Appeals (2005-2007)",
+        },
+        {
+          label: "Areas of Practice",
+          value: "Corporate Litigation, M&A, International Business Law",
+        },
+        {
+          label: "Education",
+          value:
+            "J.D., Harvard Law School (magna cum laude); B.A. Economics, Yale",
+        },
+      ],
     },
     {
       id: 2,
@@ -52,11 +115,27 @@ const FmcLawLandingPage = () => {
       role: "Senior Partner",
       imageUrl: "/images/partners/jonathan-blackwell.jpg",
       details: [
-        { label: "Credentials", value: "Fellow, American College of Trial Lawyers; Super Lawyers® Top 100" },
-        { label: "Employment History", value: "Founding Partner, Blackwell & Associates (2008-2020); Assistant U.S. Attorney (2002-2008)" },
-        { label: "Areas of Practice", value: "White-Collar Defense, Corporate Compliance, Complex Civil Litigation" },
-        { label: "Education", value: "J.D., Stanford Law School; B.A. Political Science, Georgetown" },
-      ]
+        {
+          label: "Credentials",
+          value:
+            "Fellow, American College of Trial Lawyers; Super Lawyers® Top 100",
+        },
+        {
+          label: "Employment History",
+          value:
+            "Founding Partner, Blackwell & Associates (2008-2020); Assistant U.S. Attorney (2002-2008)",
+        },
+        {
+          label: "Areas of Practice",
+          value:
+            "White-Collar Defense, Corporate Compliance, Complex Civil Litigation",
+        },
+        {
+          label: "Education",
+          value:
+            "J.D., Stanford Law School; B.A. Political Science, Georgetown",
+        },
+      ],
     },
     {
       id: 3,
@@ -64,14 +143,29 @@ const FmcLawLandingPage = () => {
       role: "Partner",
       imageUrl: "/images/partners/michelle-chen.jpg",
       details: [
-        { label: "Credentials", value: "Certified Intellectual Property Specialist; Rising Stars® (2018-2025)" },
-        { label: "Employment History", value: "Senior Associate, Tech Law Partners (2015-2022); In-house Counsel, InnovateTech (2012-2015)" },
-        { label: "Areas of Practice", value: "Intellectual Property, Technology Law, Data Privacy & Cyber-security" },
-        { label: "Education", value: "J.D., UC Berkeley School of Law; M.S. Computer Science, MIT; B.S. Electrical Engineering, Caltech" },
-      ]
+        {
+          label: "Credentials",
+          value:
+            "Certified Intellectual Property Specialist; Rising Stars® (2018-2025)",
+        },
+        {
+          label: "Employment History",
+          value:
+            "Senior Associate, Tech Law Partners (2015-2022); In-house Counsel, InnovateTech (2012-2015)",
+        },
+        {
+          label: "Areas of Practice",
+          value:
+            "Intellectual Property, Technology Law, Data Privacy & Cyber-security",
+        },
+        {
+          label: "Education",
+          value:
+            "J.D., UC Berkeley School of Law; M.S. Computer Science, MIT; B.S. Electrical Engineering, Caltech",
+        },
+      ],
     },
   ];
-
 
   return (
     <>
@@ -83,24 +177,49 @@ const FmcLawLandingPage = () => {
               <div className="flex-shrink-0 text-[#D4AF37]">
                 <PlaceholderIcon className="h-8 w-8" />
               </div>
-              <a href="/" className="ml-3 text-xl font-bold font-serif text-white">FMC Law</a>
+              <a
+                href="/"
+                className="ml-3 text-xl font-bold font-serif text-white"
+              >
+                FMC Law
+              </a>
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#home" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans">Home</a>
-              <a href="#about" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans">About Us</a>
-              <a href="#partners" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans">Our Partners</a>
-              <a href="#contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans">Contact</a>
+              <a
+                href="#home"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
+              >
+                About Us
+              </a>
+              <a
+                href="#partners"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
+              >
+                Our Partners
+              </a>
+              <a
+                href="#contact"
+                className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium font-sans"
+              >
+                Contact
+              </a>
             </div>
             <div className="flex items-center">
-                <a
-                    href="#book-consultation"
-                    className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
-                >
-                    Book Consultation
-                </a>
-                <div className="md:hidden ml-4">
-                    {/* Optional Mobile Menu Button */}
-                </div>
+              <a
+                href="#book-consultation"
+                className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
+              >
+                Book Consultation
+              </a>
+              <div className="md:hidden ml-4">
+                {/* Optional Mobile Menu Button */}
+              </div>
             </div>
           </div>
         </div>
@@ -109,9 +228,13 @@ const FmcLawLandingPage = () => {
       <main>
         {/* 1. Hero Section (UNCHANGED) */}
         <section
-            id="home"
-            className="relative bg-gray-700 min-h-[600px] flex items-center justify-center text-white overflow-hidden"
-            style={{ backgroundImage: "url('/images/hero-background.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+          id="home"
+          className="relative bg-gray-700 min-h-[600px] flex items-center justify-center text-white overflow-hidden"
+          style={{
+            backgroundImage: "url('/images/hero-background.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/20"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -121,7 +244,9 @@ const FmcLawLandingPage = () => {
                   Reimagining Legal Solutions for Complex Challenges
                 </h1>
                 <p className="text-lg text-gray-200 font-sans max-w-[48ch] mx-auto md:mx-0 mb-10">
-                  FMC Law delivers unparalleled legal expertise, innovative strategies, and a client-first approach to navigate your most intricate legal matters with confidence and clarity.
+                  FMC Law delivers unparalleled legal expertise, innovative
+                  strategies, and a client-first approach to navigate your most
+                  intricate legal matters with confidence and clarity.
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                   <a
@@ -139,7 +264,11 @@ const FmcLawLandingPage = () => {
                 </div>
               </div>
               <div className="md:col-span-6 hidden md:flex justify-center md:justify-end items-center">
-                <img src="/images/fmc-emblem-large.svg" alt="FMC Law Emblem" className="w-2/3 max-w-md opacity-80" />
+                <img
+                  src="/images/fmc-emblem-large.svg"
+                  alt="FMC Law Emblem"
+                  className="w-2/3 max-w-md opacity-80"
+                />
               </div>
             </div>
           </div>
@@ -149,12 +278,18 @@ const FmcLawLandingPage = () => {
         <section className="bg-white">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-[64px]">
             <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center">
-              <div className="md:col-span-3"> {/* Text (60%) */}
+              <div className="md:col-span-3">
+                {" "}
+                {/* Text (60%) */}
                 <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-6">
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 font-sans mb-8 leading-relaxed max-w-[50ch]">
-                  At FMC Law, we've redefined the traditional law firm model. Our modern, client-centric approach prioritizes transparent communication, innovative solutions, and a deep understanding of your unique needs, ensuring you feel empowered and informed every step of the way.
+                  At FMC Law, we've redefined the traditional law firm model.
+                  Our modern, client-centric approach prioritizes transparent
+                  communication, innovative solutions, and a deep understanding
+                  of your unique needs, ensuring you feel empowered and informed
+                  every step of the way.
                 </p>
                 <a
                   href="#about-us-detailed" // Point to a relevant section or page
@@ -163,14 +298,17 @@ const FmcLawLandingPage = () => {
                   Learn More
                 </a>
               </div>
-              <div className="md:col-span-2 relative mt-10 md:mt-0"> {/* Image (40%) */}
+              <div className="md:col-span-2 relative mt-10 md:mt-0">
+                {" "}
+                {/* Image (40%) */}
                 <div className="relative">
                   <img
                     className="rounded-lg shadow-xl w-full aspect-[4/5] object-cover"
                     src="/images/lawyer-portrait-intro-modern.jpg" // Replace with actual portrait image
                     alt="Modern Legal Professional at FMC Law"
                   />
-                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#D4AF37] rounded-sm z-10"></div> {/* Decorative square */}
+                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
+                  {/* Decorative square */}
                 </div>
               </div>
             </div>
@@ -185,12 +323,19 @@ const FmcLawLandingPage = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {practiceAreas.map((area) => (
-                <div key={area.name} className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
+                <div
+                  key={area.name}
+                  className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
+                >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
                     <PlaceholderIcon className="w-8 h-8" />
                   </div>
-                  <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">{area.name}</h3>
-                  <p className="text-gray-600 font-sans text-sm leading-relaxed flex-grow">{area.description}</p>
+                  <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">
+                    {area.name}
+                  </h3>
+                  <p className="text-gray-600 font-sans text-sm leading-relaxed flex-grow">
+                    {area.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -200,7 +345,9 @@ const FmcLawLandingPage = () => {
         {/* 4. Why Choose FMC Law Section (UNCHANGED) */}
         <section className="bg-black text-white py-14 md:py-[56px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-16">Why Choose FMC Law?</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold font-serif mb-16">
+              Why Choose FMC Law?
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
               {whyChooseReasons.map((reason) => (
                 <div key={reason} className="flex flex-col items-center">
@@ -245,9 +392,15 @@ const FmcLawLandingPage = () => {
                 />
               </div>
               <div>
-                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-4">Our Mission</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-4">
+                  Our Mission
+                </h3>
                 <p className="text-lg text-gray-700 font-sans leading-relaxed">
-                  To provide exceptional legal services with integrity and dedication, fostering success for our clients and our community through innovative solutions and unwavering commitment to justice. We strive to be a beacon of legal excellence and a trusted partner in all your endeavors.
+                  To provide exceptional legal services with integrity and
+                  dedication, fostering success for our clients and our
+                  community through innovative solutions and unwavering
+                  commitment to justice. We strive to be a beacon of legal
+                  excellence and a trusted partner in all your endeavors.
                 </p>
               </div>
             </div>
@@ -260,12 +413,25 @@ const FmcLawLandingPage = () => {
                 />
               </div>
               <div className="order-2 md:order-1">
-                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-6">Our Core Values</h3>
+                <h3 className="text-2xl lg:text-3xl font-bold font-serif text-gray-900 mb-6">
+                  Our Core Values
+                </h3>
                 <ul className="space-y-4 font-sans text-lg text-gray-700">
-                  {["Integrity", "Excellence", "Collaboration", "Innovation"].map(value => (
+                  {[
+                    "Integrity",
+                    "Excellence",
+                    "Collaboration",
+                    "Innovation",
+                  ].map((value) => (
                     <li key={value} className="flex items-start">
                       <GoldCheckIcon />
-                      <span>{value}: <span className="text-gray-600 text-base">Dedicated to upholding the highest standards in all we do.</span></span>
+                      <span>
+                        {value}:{" "}
+                        <span className="text-gray-600 text-base">
+                          Dedicated to upholding the highest standards in all we
+                          do.
+                        </span>
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -277,19 +443,27 @@ const FmcLawLandingPage = () => {
         {/* 7. Partner Profiles Section (REPLACED) */}
         <section id="partners" className="bg-white py-16 md:py-20">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12"> {/* mb-12 is 48px */}
+            <div className="text-center mb-12">
+              {" "}
+              {/* mb-12 is 48px */}
               <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
                 Our Partners
               </h2>
               <p className="text-base text-[#5A5A5A] font-sans mb-6 max-w-2xl mx-auto">
-                Meet the distinguished legal minds at FMC Law, dedicated to achieving exceptional results for our clients.
+                Meet the distinguished legal minds at FMC Law, dedicated to
+                achieving exceptional results for our clients.
               </p>
               <div className="mx-auto w-[56px] h-[3px] bg-[#D4AF37]"></div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* 32px gap */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {" "}
+              {/* 32px gap */}
               {partnersData.map((partner) => (
-                <div key={partner.id} className="bg-white border border-[#E5E7EB] rounded-[6px] shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-lg">
+                <div
+                  key={partner.id}
+                  className="bg-white border border-[#E5E7EB] rounded-[6px] shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-lg"
+                >
                   <div className="relative w-full aspect-[3/2]">
                     <img
                       src={partner.imageUrl}
@@ -298,15 +472,27 @@ const FmcLawLandingPage = () => {
                       // For Next.js <Image>, you'd use layout="fill" objectFit="cover"
                     />
                   </div>
-                  <div className="p-6 flex flex-col flex-grow"> {/* 24px padding */}
-                    <h4 className="text-xl font-semibold font-sans text-gray-900 mb-1">{partner.name}</h4>
-                    <p className="text-sm font-medium text-[#D4AF37] font-sans mb-4">{partner.role}</p> {/* mb-4 is 16px */}
-
-                    <div className="space-y-3 flex-grow"> {/* 12px vertical gap */}
-                      {partner.details.map(detailBlock => (
+                  <div className="p-6 flex flex-col flex-grow">
+                    {" "}
+                    {/* 24px padding */}
+                    <h4 className="text-xl font-semibold font-sans text-gray-900 mb-1">
+                      {partner.name}
+                    </h4>
+                    <p className="text-sm font-medium text-[#D4AF37] font-sans mb-4">
+                      {partner.role}
+                    </p>{" "}
+                    {/* mb-4 is 16px */}
+                    <div className="space-y-3 flex-grow">
+                      {" "}
+                      {/* 12px vertical gap */}
+                      {partner.details.map((detailBlock) => (
                         <div key={detailBlock.label}>
-                          <p className="text-sm font-semibold font-sans text-gray-800 mb-0.5">{detailBlock.label}</p>
-                          <p className="text-sm font-sans text-gray-600 leading-relaxed">{detailBlock.value}</p>
+                          <p className="text-sm font-semibold font-sans text-gray-800 mb-0.5">
+                            {detailBlock.label}
+                          </p>
+                          <p className="text-sm font-sans text-gray-600 leading-relaxed">
+                            {detailBlock.value}
+                          </p>
                         </div>
                       ))}
                     </div>
@@ -328,25 +514,79 @@ const FmcLawLandingPage = () => {
                 <form action="#" method="POST" className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
-                      <label htmlFor="first-name" className="block text-sm font-medium text-gray-700 font-sans mb-1">First Name</label>
-                      <input type="text" name="first-name" id="first-name" autoComplete="given-name" className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm" />
+                      <label
+                        htmlFor="first-name"
+                        className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                      >
+                        First Name
+                      </label>
+                      <input
+                        type="text"
+                        name="first-name"
+                        id="first-name"
+                        autoComplete="given-name"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                      />
                     </div>
                     <div>
-                      <label htmlFor="last-name" className="block text-sm font-medium text-gray-700 font-sans mb-1">Last Name</label>
-                      <input type="text" name="last-name" id="last-name" autoComplete="family-name" className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm" />
+                      <label
+                        htmlFor="last-name"
+                        className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                      >
+                        Last Name
+                      </label>
+                      <input
+                        type="text"
+                        name="last-name"
+                        id="last-name"
+                        autoComplete="family-name"
+                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                      />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 font-sans mb-1">Email</label>
-                    <input type="email" name="email" id="email" autoComplete="email" className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm" />
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      autoComplete="email"
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 font-sans mb-1">Phone</label>
-                    <input type="tel" name="phone" id="phone" autoComplete="tel" className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm" />
+                    <label
+                      htmlFor="phone"
+                      className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                    >
+                      Phone
+                    </label>
+                    <input
+                      type="tel"
+                      name="phone"
+                      id="phone"
+                      autoComplete="tel"
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                    />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 font-sans mb-1">Message</label>
-                    <textarea name="message" id="message" rows={4} className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"></textarea>
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                    >
+                      Message
+                    </label>
+                    <textarea
+                      name="message"
+                      id="message"
+                      rows={4}
+                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                    ></textarea>
                   </div>
                   <div>
                     <button
@@ -360,18 +600,34 @@ const FmcLawLandingPage = () => {
               </div>
               <div className="md:w-2/5 space-y-8 mt-10 md:mt-0">
                 <div className="bg-white p-8 rounded-lg shadow-lg space-y-6">
-                  <h3 className="text-xl font-bold font-sans text-gray-900">Contact Details</h3>
+                  <h3 className="text-xl font-bold font-sans text-gray-900">
+                    Contact Details
+                  </h3>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <span className="font-sans text-gray-700">123 Legal Avenue, Suite 400<br />Justice City, JC 54321</span>
+                    <span className="font-sans text-gray-700">
+                      123 Legal Avenue, Suite 400
+                      <br />
+                      Justice City, JC 54321
+                    </span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <a href="tel:+1234567890" className="font-sans text-gray-700 hover:text-[#D4AF37]">(123) 456-7890</a>
+                    <a
+                      href="tel:+1234567890"
+                      className="font-sans text-gray-700 hover:text-[#D4AF37]"
+                    >
+                      (123) 456-7890
+                    </a>
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <a href="mailto:contact@fmclaw.com" className="font-sans text-gray-700 hover:text-[#D4AF37]">contact@fmclaw.com</a>
+                    <a
+                      href="mailto:contact@fmclaw.com"
+                      className="font-sans text-gray-700 hover:text-[#D4AF37]"
+                    >
+                      contact@fmclaw.com
+                    </a>
                   </div>
                 </div>
                 <div className="aspect-square bg-gray-300 rounded-lg shadow-lg overflow-hidden">
@@ -390,65 +646,8 @@ const FmcLawLandingPage = () => {
             </div>
           </div>
         </section>
+        <Footer />
       </main>
-
-      {/* 9. Footer (UNCHANGED) */}
-      <footer className="bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            <div className="space-y-6">
-              <a href="/" className="flex items-center space-x-2">
-                <PlaceholderIcon className="h-10 w-10 text-[#D4AF37]" />
-                <span className="text-2xl font-bold font-serif text-white">FMC Law</span>
-              </a>
-              <p className="text-sm">
-                Dedicated to providing premier legal services with integrity and expertise.
-              </p>
-              <div className="flex space-x-4">
-                <a href="#" className="text-[#D4AF37] hover:text-white"><PlaceholderIcon className="w-6 h-6" /></a>
-                <a href="#" className="text-[#D4AF37] hover:text-white"><PlaceholderIcon className="w-6 h-6" /></a>
-                <a href="#" className="text-[#D4AF37] hover:text-white"><PlaceholderIcon className="w-6 h-6" /></a>
-              </div>
-            </div>
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4 font-serif">Practice Areas</h5>
-              <ul className="space-y-2 text-sm">
-                {practiceAreas.slice(0, 5).map(area => (
-                    <li key={area.name}><a href="#" className="hover:text-white transition-colors">{area.name}</a></li>
-                ))}
-                 <li><a href="#" className="hover:text-white transition-colors">See All Areas...</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4 font-serif">Company</h5>
-              <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#partners" className="hover:text-white transition-colors">Our Team</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">FAQs</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="text-lg font-semibold text-white mb-4 font-serif">Contact Us</h5>
-              <address className="not-italic space-y-2 text-sm">
-                <p>123 Legal Avenue, Suite 400<br />Justice City, JC 54321</p>
-                <p>Phone: <a href="tel:+1234567890" className="hover:text-white">(123) 456-7890</a></p>
-                <p>Email: <a href="mailto:contact@fmclaw.com" className="hover:text-white">contact@fmclaw.com</a></p>
-              </address>
-            </div>
-          </div>
-          <div className="border-t border-gray-700 pt-8 mt-8 text-sm">
-            <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-              <p>© {new Date().getFullYear()} FMC Law. All rights reserved.</p>
-              <div className="space-x-4 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white">Privacy Policy</a>
-                <a href="#" className="hover:text-white">Terms of Service</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
     </>
   );
 };
