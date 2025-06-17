@@ -382,6 +382,13 @@ const FmcLawLandingPage = () => {
 
         {/* 6. About FMC Law Section (UNCHANGED) */}
         <section id="about" className="bg-white py-16 md:py-20">
+          <div className="text-center mb-12">
+            {/* mb-12 is 48px */}
+            <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
+              About FMC Law
+            </h2>
+            <div className="mx-auto w-[56px] h-[3px] bg-[#D4AF37]"></div>
+          </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div>
@@ -444,7 +451,6 @@ const FmcLawLandingPage = () => {
         <section id="partners" className="bg-white py-16 md:py-20">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              {" "}
               {/* mb-12 is 48px */}
               <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
                 Our Partners
@@ -506,9 +512,17 @@ const FmcLawLandingPage = () => {
         {/* 8. Contact Section (UNCHANGED) */}
         <section id="contact" className="bg-[#FAFBFC] py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl lg:text-4xl font-bold font-serif text-center text-gray-900 mb-16">
-              Get In Touch
-            </h2>
+            <div className="text-center mb-12">
+              {/* mb-12 is 48px */}
+              <h2 className="text-3xl lg:text-4xl font-bold font-serif text-gray-900 mb-3">
+                Contact Us
+              </h2>
+              <p className="text-base text-[#5A5A5A] font-sans mb-6 max-w-2xl mx-auto">
+                Ready to discuss your legal needs? Reach out to schedule a
+                consultation with one of our experienced attorneys.
+              </p>
+              <div className="mx-auto w-[56px] h-[3px] bg-[#D4AF37]"></div>
+            </div>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-16">
               <div className="md:w-3/5 bg-white p-8 rounded-lg shadow-lg">
                 <form action="#" method="POST" className="space-y-6">
@@ -601,37 +615,50 @@ const FmcLawLandingPage = () => {
               <div className="md:w-2/5 space-y-8 mt-10 md:mt-0">
                 <div className="bg-white p-8 rounded-lg shadow-lg space-y-6">
                   <h3 className="text-xl font-bold font-sans text-gray-900">
-                    Contact Details
+                    Firm Contact Details
                   </h3>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
                     <span className="font-sans text-gray-700">
-                      123 Legal Avenue, Suite 400
+                      <b>Address</b>
                       <br />
-                      Justice City, JC 54321
+                      1234 Legal Avenue, Suite 500
+                      <br />
+                      Metropolis, NY 10001
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <a
-                      href="tel:+1234567890"
-                      className="font-sans text-gray-700 hover:text-[#D4AF37]"
-                    >
-                      (123) 456-7890
-                    </a>
+                    <span className="font-sans text-gray-700">
+                      <b>Phone</b>
+                      <br />
+                      (212) 555-1234
+                    </span>
                   </div>
                   <div className="flex items-start space-x-3">
                     <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
-                    <a
-                      href="mailto:contact@fmclaw.com"
-                      className="font-sans text-gray-700 hover:text-[#D4AF37]"
-                    >
-                      contact@fmclaw.com
-                    </a>
+                    <span className="font-sans text-gray-700">
+                      <b>Email</b>
+                      <br />
+                      info@fmclaw.ph
+                    </span>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <PlaceholderIcon className="w-6 h-6 text-[#D4AF37] mt-1 flex-shrink-0" />
+                    <span className="font-sans text-gray-700">
+                      <b>Office Hours</b>
+                      <br />
+                      Monday - Friday: 9:00 AM - 6:00 PM
+                      <br />
+                      Saturday: By appointment only
+                      <br />
+                      Sunday: Closed
+                    </span>
                   </div>
                 </div>
-                <div className="aspect-square bg-gray-300 rounded-lg shadow-lg overflow-hidden">
+                <div className="aspect-square bg- rounded-lg shadow-lg overflow-hidden">
                   <iframe
+                    title="FMCLaw Address"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2000000000003!2d-73.98785368459365!3d40.75806097932688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6434221%3A0x60f937894d3c3d11!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1616000000000!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
@@ -640,7 +667,7 @@ const FmcLawLandingPage = () => {
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     className="grayscale"
-                  ></iframe>
+                  />
                 </div>
               </div>
             </div>
