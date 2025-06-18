@@ -364,7 +364,8 @@ const FmcLawLandingPage = () => {
               Ready to Work with FMC Law?
             </h2>
             <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow mb-10 mx-40">
-              Schedule a consultation with our experienced attorneys and discover how we can help you navigate your legal challenges.
+              Schedule a consultation with our experienced attorneys and
+              discover how we can help you navigate your legal challenges.
             </p>
             <a
               href="#contact"
