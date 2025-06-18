@@ -543,7 +543,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Email Address
+                      Email
                     </label>
                     <input
                       type="email"
@@ -558,7 +558,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Phone Number
+                      Phone
                     </label>
                     <input
                       type="tel"
@@ -573,7 +573,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Your Message
+                      Message
                     </label>
                     <textarea
                       name="message"
