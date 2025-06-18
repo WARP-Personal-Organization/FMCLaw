@@ -193,10 +193,10 @@ const FmcLawLandingPage = () => {
           <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex">
             <div className="items-center justify-center flex">
               <div className=" md:text-left-300 flex-3/5">
-                <h1 className="text-[3.5rem] leading-tight font-Oswald font-bold font-sans mb-7 text-[#CE9930]">
+                <h1 className="text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
                   Reimagining Legal Solutions for Complex Challenges
                 </h1>
-                <p className="text-lg text-gray-200 font-sans mx-auto md:mx-0 mb-10">
+                <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10">
                   FMC Law delivers unparalleled legal expertise, innovative
                   strategies, and a client-first approach to navigate your most
                   intricate legal matters with confidence and clarity.
@@ -230,14 +230,14 @@ const FmcLawLandingPage = () => {
         {/* 2. Intro Section (UPDATED) */}
         <section className="bg-white">
           <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-[64px]">
-            <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center">
+            <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center font-inter">
               <div className="md:col-span-3">
                 {" "}
                 {/* Text (60%) */}
-                <h2 className="text-3xl lg:text-4xl font-[Avenir Next Family] font-bold font-sans text-gray-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-[Avenir Next Family] font-bold  text-gray-900 mb-6">
                   A Different Kind of Law Firm
                 </h2>
-                <p className="text-lg text-gray-700 font-sans mb-8 leading-relaxed max-w-[50ch]">
+                <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-[50ch]">
                   At FMC Law, we&apos;ve redefined the traditional law firm
                   model. Our modern, client-centric approach prioritizes
                   transparent communication, innovative solutions, and a deep
@@ -270,7 +270,7 @@ const FmcLawLandingPage = () => {
 
         {/* 3. Practice Areas Section (UNCHANGED) */}
         <section className="bg-[#F7F8FA] py-16 md:py-20">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-inter">
             <h2 className="text-3xl lg:text-4xl font-bold font-sans text-center text-gray-900 mb-16">
               Our Expertise
             </h2>
@@ -299,19 +299,19 @@ const FmcLawLandingPage = () => {
         {/* 4. Why Choose FMC Law Section (UNCHANGED) */}
         <section className="bg-black text-white py-14 md:py-[56px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold font-sans mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
               Why Choose FMC Law?
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 font-roboto">
               {whyChooseReasons.map((reason) => (
                 <div key={reason.name} className="flex flex-col items-center">
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37] bg-[#D4AF37]">
                     <img src={reason.image} alt={reason.name} />
                   </div>
-                  <p className="text-lg font-semibold font-sans italic mb-3">
+                  <p className="text-lg font-semibold italic mb-3">
                     {reason.name}
                   </p>
-                  <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow">
+                  <p className="text-[#D1D5DB] text-sm leading-relaxed flex-grow">
                     {reason.description}
                   </p>
                 </div>
@@ -330,17 +330,17 @@ const FmcLawLandingPage = () => {
           }}
         >
           <div className="absolute inset-0 bg-black/60"></div>
-          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-sans mb-8">
+          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center font-inter">
+            <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold mb-8">
               Ready to Work with FMC Law?
             </h2>
-            <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow mb-10 mx-40">
+            <p className="text-[#D1D5DB] text-sm leading-relaxed flex-grow mb-10 mx-40">
               Schedule a consultation with our experienced attorneys and
               discover how we can help you navigate your legal challenges.
             </p>
             <a
               href="#contact"
-              className="bg-[#D4AF37] text-black px-10 py-4 rounded-md font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
+              className="bg-[#D4AF37] text-black px-10 py-4 rounded-md font-semibold text-lg hover:bg-opacity-80 transition-colors"
             >
               Get in Touch Today
             </a>
@@ -348,7 +348,7 @@ const FmcLawLandingPage = () => {
         </section>
 
         {/* 6. About FMC Law Section (UNCHANGED) */}
-        <section id="about" className="bg-white py-16 md:py-20">
+        <section id="about" className="bg-white py-16 md:py-20 font-inter">
           <div className="text-center mb-12">
             {/* mb-12 is 48px */}
             <h2 className="text-3xl lg:text-4xl font-bold font-sans text-gray-900 mb-3">
@@ -450,7 +450,7 @@ const FmcLawLandingPage = () => {
           </div>
         </section>
 
-        <section id="partners" className="bg-white py-16 md:py-20">
+        <section id="partners" className="bg-white py-16 md:py-20 font-inter">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
@@ -472,7 +472,10 @@ const FmcLawLandingPage = () => {
         </section>
 
         {/* 8. Contact Section (UNCHANGED) */}
-        <section id="contact" className="bg-[#FAFBFC] py-16 md:py-20">
+        <section
+          id="contact"
+          className="bg-[#FAFBFC] py-16 md:py-20 font-inter"
+        >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               {/* mb-12 is 48px */}
@@ -584,9 +587,9 @@ const FmcLawLandingPage = () => {
                     <span className="font-sans">
                       <b>Address</b>
                       <br />
-                      1234 Legal Avenue, Suite 500
+                      Iloilo Office: 2F, Daily Guardian Center,
                       <br />
-                      Metropolis, NY 10001
+                      Guzman Jasena, Mandurriao, Iloilo City
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -594,7 +597,7 @@ const FmcLawLandingPage = () => {
                     <span className="font-sans ">
                       <b>Phone</b>
                       <br />
-                      (212) 555-1234
+                      0917-702-1298
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -602,7 +605,7 @@ const FmcLawLandingPage = () => {
                     <span className="font-sans ">
                       <b>Email</b>
                       <br />
-                      info@fmclaw.ph
+                      admin@fmclaw.com.ph
                     </span>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -610,26 +613,9 @@ const FmcLawLandingPage = () => {
                     <span className="font-sans ">
                       <b>Office Hours</b>
                       <br />
-                      Monday - Friday: 9:00 AM - 6:00 PM
-                      <br />
-                      Saturday: By appointment only
-                      <br />
-                      Sunday: Closed
+                      Mon-Fri: 9:00 AM - 6:00 PM
                     </span>
                   </div>
-                </div>
-                <div className="aspect-square  rounded-lg shadow-lg overflow-hidden">
-                  <iframe
-                    title="FMCLaw Address"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2000000000003!2d-73.98785368459365!3d40.75806097932688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6434221%3A0x60f937894d3c3d11!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1616000000000!5m2!1sen!2sus"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen={true}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="grayscale"
-                  />
                 </div>
               </div>
             </div>

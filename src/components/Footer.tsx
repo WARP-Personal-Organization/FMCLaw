@@ -5,8 +5,8 @@ function Footer() {
   return (
     <>
       {/* 9. Footer (UNCHANGED) */}
-      <footer className="relative bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-sans">
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#CE9930]/25 via-transparent to-black/30"></div>
+      <footer className="relative bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-roboto">
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#CE9930]/25 via-transparent to-black/30 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 ">
           <div className="gap-12 mb-12 flex justify-between">
             <div className="space-y-6 w-md">
@@ -58,11 +58,6 @@ function Footer() {
                 </li>
                 <li>
                   <a href="#" className="hover:text-white transition-colors">
-                    Practice Areas
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
                     Our Partners
                   </a>
                 </li>
@@ -83,8 +78,8 @@ function Footer() {
                       href="#"
                       className="hover:text-white transition-colors leading-none"
                     >
-                      Iloilo Office: 2F, Daily Guardian Center, Guzman Jasena,
-                      Mandurriao, Iloilo City
+                      Iloilo Office: 2F, Daily Guardian Center,
+                      <br /> Guzman Jasena, Mandurriao, Iloilo City
                     </a>
                   </div>
                 </li>
@@ -116,7 +111,7 @@ function Footer() {
             </div>
           </div>
           <div className="mt-8 text-sm text-[#CE9930]">
-            <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-8" />
+            <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-8 h-[2px]" />
             <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
               <p>© {new Date().getFullYear()} FMC Law. All rights reserved.</p>
               <div className="space-x-4 mt-4 md:mt-0">
