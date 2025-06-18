@@ -189,14 +189,14 @@ const FmcLawLandingPage = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-[#CE9930]/90 via-black to-black"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-22">
-            <div className="grid md:grid-cols-10 gap-8 items-center">
-              <div className="md:col-span-6 text-center md:text-left">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#CE9930]/90 via-black to-black" />
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex">
+            <div className="items-center justify-center flex">
+              <div className=" md:text-left-300 flex-3/5">
                 <h1 className="text-[3.5rem] leading-tight font-Oswald font-bold font-sans mb-7 text-[#CE9930]">
                   Reimagining Legal Solutions for Complex Challenges
                 </h1>
-                <p className="text-lg text-gray-200 font-sans max-w-[48ch] mx-auto md:mx-0 mb-10">
+                <p className="text-lg text-gray-200 font-sans mx-auto md:mx-0 mb-10">
                   FMC Law delivers unparalleled legal expertise, innovative
                   strategies, and a client-first approach to navigate your most
                   intricate legal matters with confidence and clarity.
@@ -216,11 +216,11 @@ const FmcLawLandingPage = () => {
                   </a>
                 </div>
               </div>
-              <div className="md:col-span-4 hidden md:flex justify-center md:justify-end items-center">
+              <div className="hidden md:flex justify-center items-center flex-2/5 overflow-hidden">
                 <img
                   src="/assets/fmc-emblem-large.svg"
                   alt="FMC Law Emblem"
-                  className="w-3/3 max-w-md opacity-80"
+                  className="aspect-square h-xl w-xl"
                 />
               </div>
             </div>
