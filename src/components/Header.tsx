@@ -24,7 +24,7 @@ export default function Header() {
                 <img
                   src="/assets/header-logo.png"
                   alt="FMC LAW"
-                  className="w-2/3 max-w-md opacity-80"
+                  className="w-3/3 max-w-md opacity-80"
                 />
               </div>
               <a

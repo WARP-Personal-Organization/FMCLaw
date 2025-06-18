@@ -28,7 +28,7 @@ function PartnersCard(partnersCardProps: Readonly<PartnersCardPropType>) {
         className="relative w-full aspect-square bg-no-repeat bg-amber-50 overflow-hidden bg-cover bg-center flex items-end"
         style={{ backgroundImage: `url('${partner.imageUrl}')` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
         <div className="m-4 absolute z-10 ">
           <h4 className="text-xl font-bold font-sans text-white mb-1">
             {partner.name}

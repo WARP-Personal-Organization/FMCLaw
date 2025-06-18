@@ -41,47 +41,76 @@ const FmcLawLandingPage = () => {
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
+      image: "assets/Our_expertise/scales-solid.png",
     },
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
+      image: "assets/Our_expertise/commercial-law-solid.png",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
+      image: "assets/Our_expertise/judge-hammer-solid.png",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
+      image: "assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
+      image: "assets/Our_expertise/labor-law-solid.png",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
+      image: "assets/Our_expertise/criminal-law-solid.png",
     },
     {
       name: "Administrative Law",
       description: "Challenging governmental decisions and regulatory actions.",
+      image: "assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Civil Law",
       description: "Resolving disputes between individuals and organizations.",
+      image: "assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Election Law",
       description: "Ensuring fair and lawful electoral processes.",
+      image: "assets/Our_expertise/TM-solid.png",
     },
   ];
 
   const whyChooseReasons = [
-    "Excellence",
-    "Innovation",
-    "Client-Focused",
-    "Integrity",
-    "Knowledge",
+    {
+      name: "Excellence",
+      image: "assets/Why_choose_FMC/award-pin-solid.png",
+      description: "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields."
+    },
+    {
+      name: "Innovation",
+      image: "assets/Why_choose_FMC/lightbulb-solid.png",
+      description: "Advanced legal solutions delivered through innovative strategies and technologies."
+    },
+    {
+      name: "Client-Focused",
+      image: "assets/Why_choose_FMC/handshake-solid.png",
+      description: "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals."
+    },
+    {
+      name: "Integrity",
+      image: "assets/Our_expertise/scales-solid.png",
+      description: "Professional conduct of the highest standard establishes relationships built on transparency and trust."
+    },
+    {
+      name: "Foresight",
+      image: "assets/Why_choose_FMC/eye-solid.png",
+      description: "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position."
+    }
   ];
 
   const partnersData = [
@@ -229,7 +258,7 @@ const FmcLawLandingPage = () => {
               <div className="md:col-span-3">
                 {" "}
                 {/* Text (60%) */}
-                <h2 className="text-3xl lg:text-4xl font-[inter] font-bold font-sans text-gray-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-[Avenir Next Family] font-bold font-sans text-gray-900 mb-6">
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 font-sans mb-8 leading-relaxed max-w-[50ch]">
@@ -276,7 +305,8 @@ const FmcLawLandingPage = () => {
                   className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
                 >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
-                    <PlaceholderIcon className="w-8 h-8" />
+                    {/* <PlaceholderIcon className="w-8 h-8" /> */}
+                    <img src={area.image} alt={area.name} className=""/>
                   </div>
                   <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">
                     {area.name}
@@ -298,11 +328,14 @@ const FmcLawLandingPage = () => {
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
               {whyChooseReasons.map((reason) => (
-                <div key={reason} className="flex flex-col items-center">
-                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37]">
-                    <PlaceholderIcon className="w-8 h-8" />
+                <div key={reason.name} className="flex flex-col items-center">
+                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37] bg-[#D4AF37]">
+                    <img src={reason.image} alt={reason.name} />
                   </div>
-                  <p className="text-lg font-semibold font-sans">{reason}</p>
+                  <p className="text-lg font-semibold font-sans italic mb-3">{reason.name}</p>
+                  <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow">
+                    {reason.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -311,16 +344,14 @@ const FmcLawLandingPage = () => {
 
         {/* 5. Mid-page CTA Banner (UNCHANGED) */}
         <section
-          className="bg-cover bg-fixed bg-center py-24 md:py-32"
+          className="relative bg-cover bg-fixed bg-center py-24 md:py-32"
           style={{
             backgroundImage: "url('/assets/dark-office-interior.png')",
             backgroundRepeat: "no-repeat",
-            backgroundPosition: "absolute",
-            backgroundSize: "contain",
             backgroundAttachment: "scroll",
           }}
         >
-          <div className="scroll inset-0 bg-black/60"></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-sans mb-8">
               Ready to Work with FMC Law?
@@ -512,7 +543,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Email Address
+                      Email
                     </label>
                     <input
                       type="email"
@@ -527,7 +558,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="phone"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Phone Number
+                      Phone
                     </label>
                     <input
                       type="tel"
@@ -542,7 +573,7 @@ const FmcLawLandingPage = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
-                      Your Message
+                      Message
                     </label>
                     <textarea
                       name="message"
