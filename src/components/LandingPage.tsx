@@ -2,39 +2,10 @@
 import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
-import Link from "next/link";
 import PartnersCard from "./PartnersCard";
 // For a real Next.js project, you'd import Link and Image:
 // import Link from 'next/link';
 // import Image from 'next/image';
-
-// Placeholder for icons (replace with actual SVGs or an icon library)
-const PlaceholderIcon = ({ className = "w-6 h-6" }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-  </svg>
-);
-
-const GoldCheckIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="#D4AF37"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="mr-2 flex-shrink-0"
-  >
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
-);
 
 const FmcLawLandingPage = () => {
   const practiceAreas = [
