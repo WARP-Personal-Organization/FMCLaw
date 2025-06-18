@@ -103,10 +103,10 @@ const AboutUsPage: React.FC = () => {
         {/* 5. Mission Banner */}
         <section className="bg-white text-white py-16 md:py-5">
           <div className="bg-black max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
-            <h3 className="text-3xl lg:text-4xl font-bold font-oswald text-center mb-10">
+            <h3 className="text-3xl lg:text-4xl font-bold font-sans text-center mb-10">
               Our Mission
             </h3>
-            <div className="max-w-3xl mx-auto space-y-6 text-center text-gray-300 font-inter leading-relaxed text-lg text-justify">
+            <div className="max-w-6xl mx-auto space-y-6 text-center text-gray-300 font-inter leading-relaxed text-lg text-justify">
               <p>
                 To deliver exceptional legal services with unwavering integrity, profound expertise, and a commitment to achieving the best possible outcomes for our clients.
               </p>
@@ -117,7 +117,7 @@ const AboutUsPage: React.FC = () => {
                 Our mission is to empower our clients by navigating complex legal landscapes with clarity, diligence, and a personalized approach that addresses their unique needs and goals.
               </p>
             </div>
-            <p className="text-[#D4AF37] italic text-2xl lg:text-3xl font-serif mt-12 text-center max-w-2xl mx-auto">
+            <p className="text-[#D4AF37] text-2xl lg:text-3xl font-inter mt-12 text-center max-w-2xl mx-auto">
               “Excellence is our standard, not our goal.”
             </p>
           </div>
