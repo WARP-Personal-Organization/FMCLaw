@@ -20,7 +20,7 @@ function Footer() {
                 Combining traditional legal expertise with innovative approaches
                 for today&apos;s complex challenges.
               </p>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 items-center">
                 <a href="#" className="text-[#D4AF37] hover:text-white">
                   <img src="assets/linkedin-solid.png" alt="" />
                 </a>
@@ -78,7 +78,10 @@ function Footer() {
                 <li>
                   <div className="flex items-start space-x-3">
                     <img src="assets/pin-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-colors leading-none"
+                    >
                       Iloilo Office: 2F, Daily Guardian Center, Guzman Jasena,
                       Mandurriao, Iloilo City
                     </a>
@@ -95,7 +98,10 @@ function Footer() {
                 <li>
                   <div className="flex items-start space-x-3">
                     <img src="assets/mail-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-colors leading-none"
+                    >
                       admin@fmclaw.com.ph
                     </a>
                   </div>
@@ -120,6 +126,9 @@ function Footer() {
                 </a>
                 <a href="#" className="hover:text-white">
                   Terms of Service
+                </a>
+                <a href="#" className="hover:text-white">
+                  Disclaimer
                 </a>
               </div>
             </div>
