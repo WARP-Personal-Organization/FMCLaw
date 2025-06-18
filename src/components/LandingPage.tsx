@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Link from "next/link";
+import PartnersCard from "./PartnersCard";
 // For a real Next.js project, you'd import Link and Image:
 // import Link from 'next/link';
 // import Image from 'next/image';
@@ -436,11 +437,9 @@ const FmcLawLandingPage = () => {
           </div>
         </section>
 
-        {/* 7. Partner Profiles Section (REPLACED) */}
         <section id="partners" className="bg-white py-16 md:py-20">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              {/* mb-12 is 48px */}
               <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
                 Our Partners
               </h2>
@@ -453,39 +452,7 @@ const FmcLawLandingPage = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partnersData.map((partner) => (
-                <div
-                  key={partner.id}
-                  className="bg-white border border-[#E5E7EB] rounded-[6px] shadow-sm overflow-hidden flex flex-col transition-shadow hover:shadow-lg"
-                >
-                  <div
-                    className="relative w-full aspect-square bg-no-repeat bg-amber-50 overflow-hidden bg-cover bg-center flex items-end"
-                    style={{ backgroundImage: `url('${partner.imageUrl}')` }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/30 pointer-events-none"></div>
-                    <div className="m-4 absolute z-10 ">
-                      <h4 className="text-xl font-bold font-sans text-white mb-1">
-                        {partner.name}
-                      </h4>
-                      <p className="text-md font-semibold text-[#DAA520] font-sans mb-4">
-                        {partner.role}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="p-6 flex flex-col flex-grow">
-                    <div className="space-y-3 flex-grow">
-                      {partner.details.map((detailBlock) => (
-                        <div key={detailBlock.label}>
-                          <p className="text-sm font-semibold font-sans text-gray-800 mb-0.5">
-                            {detailBlock.label}
-                          </p>
-                          <p className="text-sm font-sans text-gray-600 leading-relaxed">
-                            {detailBlock.value}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <PartnersCard partner={partner} key={partner.id} />
               ))}
             </div>
           </div>
