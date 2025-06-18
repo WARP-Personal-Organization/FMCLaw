@@ -35,25 +35,25 @@ export default function Header() {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#home"
+                href="/"
                 className="text-gray-300 hover:text-[#CE9930] px-3 py-2 rounded-md text-sm font-medium font-sans"
               >
                 Home
               </a>
               <a
-                href="#about"
+                href="/about"
                 className="text-gray-300 hover:text-[#CE9930] px-3 py-2 rounded-md text-sm font-medium font-sans"
               >
                 About Us
               </a>
               <a
-                href="#partners"
+                href="/partners"
                 className="text-gray-300 hover:text-[#CE9930] px-3 py-2 rounded-md text-sm font-medium font-sans"
               >
                 Our Partners
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="text-gray-300 hover:text-[#CE9930] px-3 py-2 rounded-md text-sm font-medium font-sans"
               >
                 Contact
@@ -62,7 +62,7 @@ export default function Header() {
             <div className="flex items-center">
               <a
                 href="#book-consultation"
-                className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
+                className="bg-[#D4AF37] text-black px-4 py-2 text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
               >
                 Book Consultation
               </a>

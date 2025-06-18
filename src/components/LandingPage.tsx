@@ -54,6 +54,11 @@ const FmcLawLandingPage = () => {
       description: "Ensuring fair and lawful electoral processes.",
       image: "assets/Our_expertise/TM-solid.png",
     },
+    {
+      name: "Compliance",
+      description: "Ensuring adherence to laws and regulatory standards.",
+      image: "assets/Our_expertise/TM-solid.png",
+    },
   ];
 
   const whyChooseReasons = [
@@ -182,15 +187,15 @@ const FmcLawLandingPage = () => {
         {/* 1. Hero Section (UNCHANGED) */}
         <section
           id="home"
-          className="relative bg-gray-700 min-h-[600px] flex items-center justify-center text-white overflow-hidden"
+          className="relative bg-[#CE9930] min-h-[600px] flex items-center justify-center text-white overflow-hidden"
           style={{
             backgroundImage: "url('/images/hero-background.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-[#CE9930]/90 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex ">
             <div className="items-center justify-center flex">
               <div className=" md:text-left-300 flex-3/5">
                 <h1 className="text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
@@ -204,13 +209,13 @@ const FmcLawLandingPage = () => {
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                   <a
                     href="#contact"
-                    className="bg-[#D4AF37] text-black px-8 py-3 rounded-md font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
+                    className="bg-[#D4AF37] text-black px-8 py-3 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
                   >
                     Contact Us
                   </a>
                   <a
                     href="#about"
-                    className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
+                    className="border-2 border-white text-white px-8 py-3 font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
                   >
                     Learn More
                   </a>
@@ -246,7 +251,7 @@ const FmcLawLandingPage = () => {
                 </p>
                 <a
                   href="#about-us-detailed" // Point to a relevant section or page
-                  className="inline-block border border-black text-black py-[10px] px-[32px] rounded-[6px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  className="inline-block border border-black text-black py-[10px] px-[32px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Learn More
                 </a>
@@ -256,11 +261,11 @@ const FmcLawLandingPage = () => {
                 {/* Image (40%) */}
                 <div className="relative">
                   <img
-                    className="border-4 border-black shadow-xl w-full aspect-[4/5] object-cover"
+                    className="border-4 border-black shadow-xl w-full aspect-[5/5] object-cover"
                     src="\assets\diff-kind-of-law-firm.png" // Replace with actual portrait image
                     alt="Modern Legal Professional at FMC Law"
                   />
-                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
+                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
                   {/* Decorative square */}
                 </div>
               </div>
@@ -334,13 +339,13 @@ const FmcLawLandingPage = () => {
             <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold mb-8">
               Ready to Work with FMC Law?
             </h2>
-            <p className="text-[#D1D5DB] text-sm leading-relaxed flex-grow mb-10 mx-40">
+            <p className="text-[#D1D5DB] text-lg leading-relaxed flex-grow mb-10 mx-40">
               Schedule a consultation with our experienced attorneys and
               discover how we can help you navigate your legal challenges.
             </p>
             <a
               href="#contact"
-              className="bg-[#D4AF37] text-black px-10 py-4 rounded-md font-semibold text-lg hover:bg-opacity-80 transition-colors"
+              className="bg-[#D4AF37] text-black px-10 py-4 font-semibold text-lg hover:bg-opacity-80 transition-colors"
             >
               Get in Touch Today
             </a>
