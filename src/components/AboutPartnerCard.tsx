@@ -80,9 +80,16 @@ function AboutPartnerCard(AboutPartnerCardProps: Readonly<PartnerCardProps>) {
           <div className="space-y-5">
             {infoGroups.map((group) => (
               <div key={group.heading}>
-                <h5 className="text-base font-bold font-sans text-gray-800 mb-2.5">
-                  {group.heading}
-                </h5>
+                <div className="flex items-center gap-2 align-middle">
+                  <img
+                    src={`assets/${group.heading}.png`}
+                    alt=""
+                    className="aspect-square object-contain "
+                  />
+                  <h5 className=" font-bold font-sans text-gray-800">
+                    {group.heading}
+                  </h5>
+                </div>
                 <ul className="space-y-1.5">
                   {group.items.map((item, index) => (
                     <li
