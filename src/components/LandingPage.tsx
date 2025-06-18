@@ -209,13 +209,13 @@ const FmcLawLandingPage = () => {
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                   <a
                     href="#contact"
-                    className="bg-[#D4AF37] text-black px-8 py-3 rounded-md font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
+                    className="bg-[#D4AF37] text-black px-8 py-3 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
                   >
                     Contact Us
                   </a>
                   <a
                     href="#about"
-                    className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
+                    className="border-2 border-white text-white px-8 py-3 font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
                   >
                     Learn More
                   </a>
@@ -251,7 +251,7 @@ const FmcLawLandingPage = () => {
                 </p>
                 <a
                   href="#about-us-detailed" // Point to a relevant section or page
-                  className="inline-block border border-black text-black py-[10px] px-[32px] rounded-[6px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+                  className="inline-block border border-black text-black py-[10px] px-[32px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Learn More
                 </a>
@@ -339,13 +339,13 @@ const FmcLawLandingPage = () => {
             <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-sans mb-8">
               Ready to Work with FMC Law?
             </h2>
-            <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow mb-10 mx-40">
+            <p className="text-[#D1D5DB] font-sans text-lg leading-relaxed flex-grow mb-10 mx-40">
               Schedule a consultation with our experienced attorneys and
               discover how we can help you navigate your legal challenges.
             </p>
             <a
               href="#contact"
-              className="bg-[#D4AF37] text-black px-10 py-4 rounded-md font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
+              className="bg-[#D4AF37] text-black px-10 py-4 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
             >
               Get in Touch Today
             </a>

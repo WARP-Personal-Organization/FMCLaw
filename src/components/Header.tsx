@@ -62,7 +62,7 @@ export default function Header() {
             <div className="flex items-center">
               <a
                 href="#book-consultation"
-                className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
+                className="bg-[#D4AF37] text-black px-4 py-2 text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
               >
                 Book Consultation
               </a>
