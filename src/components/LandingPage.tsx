@@ -195,16 +195,16 @@ const FmcLawLandingPage = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex ">
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex max-w-[1200px] ">
             <div className="items-center justify-center flex">
               <div className=" md:text-left-300 flex-3/5">
                 <h1 className="text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
-                  Reimagining Legal Solutions for Complex Challenges
+                  Legal Guidance That Moves You Forward
                 </h1>
                 <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10">
-                  FMC Law delivers unparalleled legal expertise, innovative
-                  strategies, and a client-first approach to navigate your most
-                  intricate legal matters with confidence and clarity.
+                  Bringing together diverse perspectives, we deliver dedicated
+                  legal representation focused on achieving the best possible
+                  outcome for you.
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                   <a
@@ -375,18 +375,11 @@ const FmcLawLandingPage = () => {
                   Our Mission
                 </h3>
                 <p className="text-lg text-gray-700 font-sans leading-relaxed">
-                  FMC Law is driven by a mission to offer outstanding legal
-                  representation built on<b> professionalism, integrity</b>, and
-                  <b> client-focused </b>service.
-                  <br />
-                  <br />
-                  We commit to understanding individual client needs and
-                  crafting specific solutions that deliver desired outcomes.
-                  <br />
-                  <br />
-                  We believe in integrating foundational legal expertise with
-                  innovative approaches to meet the evolving demands faced by
-                  our clients.
+                  FMC Law is driven by a mission to offer effective legal
+                  representation built on professionalism and genuine commitment
+                  to each client. We commit to understanding individual client
+                  needs and crafting specific solutions that deliver desired
+                  outcomes.
                 </p>
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
