@@ -78,7 +78,10 @@ function Footer() {
                 <li>
                   <div className="flex items-start space-x-3">
                     <img src="assets/pin-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-white transition-colors leading-none"
+                    >
                       Iloilo Office: 2F, Daily Guardian Center, Guzman Jasena,
                       Mandurriao, Iloilo City
                     </a>

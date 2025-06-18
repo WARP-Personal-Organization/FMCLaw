@@ -89,28 +89,33 @@ const FmcLawLandingPage = () => {
     {
       name: "Excellence",
       image: "assets/Why_choose_FMC/award-pin-solid.png",
-      description: "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields."
+      description:
+        "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields.",
     },
     {
       name: "Innovation",
       image: "assets/Why_choose_FMC/lightbulb-solid.png",
-      description: "Advanced legal solutions delivered through innovative strategies and technologies."
+      description:
+        "Advanced legal solutions delivered through innovative strategies and technologies.",
     },
     {
       name: "Client-Focused",
       image: "assets/Why_choose_FMC/handshake-solid.png",
-      description: "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals."
+      description:
+        "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
     },
     {
       name: "Integrity",
       image: "assets/Our_expertise/scales-solid.png",
-      description: "Professional conduct of the highest standard establishes relationships built on transparency and trust."
+      description:
+        "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
     },
     {
       name: "Foresight",
       image: "assets/Why_choose_FMC/eye-solid.png",
-      description: "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position."
-    }
+      description:
+        "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
+    },
   ];
 
   const partnersData = [
@@ -306,7 +311,7 @@ const FmcLawLandingPage = () => {
                 >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
                     {/* <PlaceholderIcon className="w-8 h-8" /> */}
-                    <img src={area.image} alt={area.name} className=""/>
+                    <img src={area.image} alt={area.name} className="" />
                   </div>
                   <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">
                     {area.name}
@@ -332,7 +337,9 @@ const FmcLawLandingPage = () => {
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37] bg-[#D4AF37]">
                     <img src={reason.image} alt={reason.name} />
                   </div>
-                  <p className="text-lg font-semibold font-sans italic mb-3">{reason.name}</p>
+                  <p className="text-lg font-semibold font-sans italic mb-3">
+                    {reason.name}
+                  </p>
                   <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow">
                     {reason.description}
                   </p>
