@@ -363,6 +363,9 @@ const FmcLawLandingPage = () => {
             <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold font-sans mb-8">
               Ready to Work with FMC Law?
             </h2>
+            <p className="text-[#D1D5DB] font-sans text-sm leading-relaxed flex-grow mb-10 mx-40">
+              Schedule a consultation with our experienced attorneys and discover how we can help you navigate your legal challenges.
+            </p>
             <a
               href="#contact"
               className="bg-[#D4AF37] text-black px-10 py-4 rounded-md font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
