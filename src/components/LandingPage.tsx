@@ -54,6 +54,11 @@ const FmcLawLandingPage = () => {
       description: "Ensuring fair and lawful electoral processes.",
       image: "assets/Our_expertise/TM-solid.png",
     },
+    {
+      name: "Compliance",
+      description: "Ensuring adherence to laws and regulatory standards.",
+      image: "assets/Our_expertise/TM-solid.png",
+    },
   ];
 
   const whyChooseReasons = [
@@ -182,15 +187,15 @@ const FmcLawLandingPage = () => {
         {/* 1. Hero Section (UNCHANGED) */}
         <section
           id="home"
-          className="relative bg-gray-700 min-h-[600px] flex items-center justify-center text-white overflow-hidden"
+          className="relative bg-[#CE9930] min-h-[600px] flex items-center justify-center text-white overflow-hidden"
           style={{
             backgroundImage: "url('/images/hero-background.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-t from-[#CE9930]/90 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black"/>
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex ">
             <div className="items-center justify-center flex">
               <div className=" md:text-left-300 flex-3/5">
                 <h1 className="text-[3.5rem] leading-tight font-Oswald font-bold font-sans mb-7 text-[#CE9930]">
@@ -256,11 +261,11 @@ const FmcLawLandingPage = () => {
                 {/* Image (40%) */}
                 <div className="relative">
                   <img
-                    className="border-4 border-black shadow-xl w-full aspect-[4/5] object-cover"
+                    className="border-4 border-black shadow-xl w-full aspect-[5/5] object-cover"
                     src="\assets\diff-kind-of-law-firm.png" // Replace with actual portrait image
                     alt="Modern Legal Professional at FMC Law"
                   />
-                  <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
+                  <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
                   {/* Decorative square */}
                 </div>
               </div>

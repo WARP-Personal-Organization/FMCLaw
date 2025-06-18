@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from "./Header";
 // For a real Next.js project, you might prefer to import Link from 'next/link' for client-side navigation
 // and Image from 'next/image' for optimized images.
 // import Link from 'next/link';
@@ -38,34 +39,7 @@ const AboutUsPage: React.FC = () => {
   return (
     <>
       {/* 1. Sticky Top Nav */}
-      <nav className="sticky top-0 z-50 bg-black text-white shadow-md font-sans">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0">
-                <PlaceholderIcon className="h-8 w-8 text-[#D4AF37]" />
-              </div>
-              <a href="/" className="ml-3 text-xl font-bold font-serif text-white">FMC Law</a>
-            </div>
-            <div className="hidden md:flex items-center space-x-1">
-              <a href="/" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-              <a href="/about" className="text-white bg-gray-700 px-3 py-2 rounded-md text-sm font-medium" aria-current="page">About Us</a>
-              <a href="/partners" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Our Partners</a>
-              <a href="/contact" className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
-            </div>
-            <div className="flex items-center">
-              <a
-                href="/book-consultation"
-                className="bg-[#D4AF37] text-black px-4 py-2 rounded-sm text-sm font-semibold hover:bg-opacity-80 transition-colors"
-              >
-                Book Consultation
-              </a>
-              {/* Mobile menu button can be added here */}
-            </div>
-          </div>
-        </div>
-      </nav>
-
+      <Header/>
       <main className="font-sans text-gray-800"> {/* Default body font */}
         {/* 2. Hero / Title */}
         <section className="bg-white py-16 md:py-24 lg:py-32">
