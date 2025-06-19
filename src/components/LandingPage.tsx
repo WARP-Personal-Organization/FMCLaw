@@ -424,36 +424,40 @@ const FmcLawLandingPage: React.FC = () => {
                 </h3>
                 {[
                   {
-                    title: "Integrity",
-                    text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships.",
-                    imageUrl: "/assets/icons/scales-outline.svg",
-                  },
-                  {
                     title: "Excellence",
-                    text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management.",
+                    text: "Top-tier lawyers with proven expertise.",
                     imageUrl: "/assets/Why_choose_FMC/award-pin-solid.svg",
                   },
                   {
-                    title: "Collaboration",
-                    text: "We work closely with our clients, building partnerships based on mutual respect and shared goals.",
+                    title: "Client-Focused",
+                    text: "Your goals guide everything we do.",
                     imageUrl: "/assets/Why_choose_FMC/handshake-solid.svg",
                   },
                   {
-                    title: "Innovation",
-                    text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions.",
-                    imageUrl: "/assets/lightbulb-outline.png",
+                    title: "Integrity",
+                    text: "Trust built on honesty and professionalism.",
+                    imageUrl: "/assets/icons/scales-solid.svg",
+                  },
+
+                  {
+                    title: "Foresight",
+                    text: "We anticipate issues before they arise, keeping you ahead.",
+                    imageUrl: "/assets/Why_choose_FMC/eye-solid.svg",
                   },
                 ].map((value) => (
                   <div
                     key={value.title}
-                    className="flex items-start space-x-3 text-black mb-4"
+                    className="flex items-start space-x-3 text-black mb-4 "
                   >
-                    <Image
-                      src="/assets/icons/scales-outline.png"
-                      alt={`${value.title} icon`}
-                      width={24}
-                      height={24}
-                    />
+                    <div className="w-[36px] h-[36px] bg-[#D4AF37] rounded-full flex items-center justify-center">
+                      <Image
+                        src={value.imageUrl}
+                        alt={`${value.title} icon`}
+                        className=""
+                        width={24}
+                        height={24}
+                      />
+                    </div>
                     <div>
                       <p className="font-bold mb-1">{value.title}</p>
                       <p className="text-sm text-[#374151]">{value.text}</p>
