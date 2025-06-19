@@ -89,8 +89,7 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Excellence",
       image: "/assets/Why_choose_FMC/award-pin-solid.png",
-      description:
-        "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields.",
+      description: "Top-tier lawyers with proven expertise.",
     },
     {
       name: "Innovation",
@@ -101,20 +100,17 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Client-Focused",
       image: "/assets/Why_choose_FMC/handshake-solid.png",
-      description:
-        "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
+      description: "Your goals guide everything we do.",
     },
     {
       name: "Integrity",
       image: "/assets/Our_expertise/scales-solid.png",
-      description:
-        "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
+      description: "PTrust built on honesty and professionalism.",
     },
     {
       name: "Foresight",
       image: "/assets/Why_choose_FMC/eye-solid.png",
-      description:
-        "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
+      description: "We anticipate issues before they arise, keeping you ahead.",
     },
   ];
 
