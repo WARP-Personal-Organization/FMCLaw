@@ -1,126 +1,152 @@
+// components/Footer.tsx
 import Link from "next/link";
+import Image from "next/image";
 import React from "react";
 
 function Footer() {
+  const socialLinks = [
+    { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
+    { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
+    { href: "#", src: "/assets/facebook-solid.png", alt: "Facebook" },
+    { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
+  ];
+
+  const companyLinks = [
+    { href: "#home", text: "Home" }, // Assuming #home for Hero section
+    { href: "#about", text: "About Us" },
+    { href: "#partners", text: "Our Partners" },
+    { href: "#contact", text: "Contact" },
+  ];
+
+  const contactInfo = [
+    {
+      icon: "/assets/pin-solid.png",
+      alt: "Location Pin Icon",
+      lines: [
+        "Iloilo Office: 2F, Daily Guardian Center,",
+        "Guzman Jasena, Mandurriao, Iloilo City",
+      ],
+      href: "#", // Placeholder, could be a Google Maps link
+    },
+    {
+      icon: "/assets/phone-solid.png",
+      alt: "Phone Icon",
+      lines: ["0917-702-1298"],
+      href: "tel:09177021298",
+    },
+    {
+      icon: "/assets/mail-solid.png",
+      alt: "Mail Icon",
+      lines: ["admin@fmclaw.com.ph"],
+      href: "mailto:admin@fmclaw.com.ph",
+    },
+    {
+      icon: "/assets/clock-solid.png",
+      alt: "Clock Icon",
+      lines: ["Mon-Fri: 9:00 AM - 6:00 PM"],
+      href: "#", // Placeholder
+    },
+  ];
+
   return (
     <>
-      {/* 9. Footer (UNCHANGED) */}
       <footer className="relative bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-roboto">
         <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#CE9930]/25 via-transparent to-black/30 pointer-events-none" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 ">
-          <div className="gap-12 mb-12 flex justify-between">
-            <div className="space-y-6 w-md">
-              <Link href="/" className="flex items-center space-x-2">
-                <img
-                  src="assets/Logo Main.png"
-                  alt=""
-                  className="object-cover"
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+          <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 mb-12">
+            <div className="space-y-6 w-full lg:w-auto lg:max-w-sm">
+              <Link href="/" className="inline-block">
+                <Image
+                  src="/assets/Logo Main.png"
+                  alt="FMC Law Logo"
+                  width={180}
+                  height={45}
+                  className="object-contain"
                 />
               </Link>
               <p className="text-sm">
                 Combining traditional legal expertise with innovative approaches
-                for today&apos;s complex challenges.
+                for today's complex challenges.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="assets/linkedin-solid.png" alt="" />
-                </a>
-                <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="assets/twitter-solid.png" alt="" />
-                </a>
-                <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="assets/facebook-solid.png" alt="" />
-                </a>
-                <a href="#" className="text-[#D4AF37] hover:text-white">
-                  <img src="assets/insta-outline.png" alt="" />
-                </a>
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.alt}
+                    href={social.href}
+                    className="text-[#D4AF37] hover:text-white"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={social.src}
+                      alt={social.alt}
+                      width={24}
+                      height={24}
+                    />
+                  </a>
+                ))}
               </div>
             </div>
 
-            <div>
+            <div className="w-full lg:w-auto">
               <h5 className="text-lg font-semibold text-white mb-4">Company</h5>
               <ul className="space-y-2 text-sm">
-                <li>
-                  <a
-                    href="#about"
-                    className="hover:text-white transition-colors"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#partners"
-                    className="hover:text-white transition-colors"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Our Partners
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-white transition-colors">
-                    Contact
-                  </a>
-                </li>
+                {companyLinks.map((link) => (
+                  <li key={link.text}>
+                    <Link
+                      href={link.href}
+                      className="hover:text-white transition-colors"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
-            <div className="w-md">
+
+            <div className="w-full lg:w-auto lg:max-w-md">
               <h5 className="text-lg font-semibold text-white mb-4">Contact</h5>
-              <ul className="text-sm space-y-2 ">
-                <li>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/pin-solid.png" alt="" />
-                    <a
-                      href="#"
-                      className="hover:text-white transition-colors leading-none"
-                    >
-                      Iloilo Office: 2F, Daily Guardian Center,
-                      <br /> Guzman Jasena, Mandurriao, Iloilo City
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/phone-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
-                      0917-702-1298
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/mail-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
-                      admin@fmclaw.com.ph
-                    </a>
-                  </div>
-                </li>
-                <li>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/clock-solid.png" alt="" />
-                    <a href="#" className="hover:text-white transition-colors">
-                      Mon-Fri: 9:00 AM - 6:00 PM
-                    </a>
-                  </div>
-                </li>
+              <ul className="text-sm space-y-3">
+                {contactInfo.map((item, index) => (
+                  <li key={index}>
+                    <div className="flex items-start space-x-3">
+                      <Image
+                        src={item.icon}
+                        alt={item.alt}
+                        width={20}
+                        height={20}
+                        className="mt-0.5"
+                      />
+                      <a
+                        href={item.href}
+                        className="hover:text-white transition-colors leading-snug"
+                      >
+                        {item.lines.map((line, lineIndex) => (
+                          <React.Fragment key={lineIndex}>
+                            {line}
+                            {lineIndex < item.lines.length - 1 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </a>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
           <div className="mt-8 text-sm text-[#CE9930]">
-            <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-yellow-400 to-transparent mb-8 h-[2px]" />
+            <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mb-8 h-[2px]" />
             <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-              <p>© {new Date().getFullYear()} FMC Law. All rights reserved.</p>
-              <div className="space-x-4 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white">
+              <p className="mb-4 md:mb-0">
+                © {new Date().getFullYear()} FMC Law. All rights reserved.
+              </p>
+              <div className="space-x-4">
+                <Link href="/privacy-policy" className="hover:text-white">
                   Privacy Policy
-                </a>
-                <a href="#" className="hover:text-white">
+                </Link>
+                <Link href="/terms-of-service" className="hover:text-white">
                   Terms of Service
-                </a>
+                </Link>
               </div>
             </div>
           </div>
