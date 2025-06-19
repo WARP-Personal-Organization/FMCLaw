@@ -426,18 +426,22 @@ const FmcLawLandingPage: React.FC = () => {
                   {
                     title: "Integrity",
                     text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships.",
+                    imageUrl: "/assets/scales-outline.png",
                   },
                   {
                     title: "Excellence",
                     text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management.",
+                    imageUrl: "/assets/Why_choose_FMC/award-pin-solid.svg",
                   },
                   {
                     title: "Collaboration",
                     text: "We work closely with our clients, building partnerships based on mutual respect and shared goals.",
+                    imageUrl: "/assets/Why_choose_FMC/handshake-solid.svg",
                   },
                   {
                     title: "Innovation",
                     text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions.",
+                    imageUrl: "/assets/lightbulb-outline.png",
                   },
                 ].map((value) => (
                   <div
