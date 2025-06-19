@@ -92,26 +92,35 @@ const FmcLawLandingPage: React.FC = () => {
       description: "Top-tier lawyers with proven expertise.",
     },
     {
+      name: "Innovation",
+      image: "/assets/Why_choose_FMC/lightbulb-solid.svg",
+      description:
+        "Advanced legal solutions delivered through innovative strategies and technologies.",
+    },
+    {
       name: "Client-Focused",
       image: "/assets/Why_choose_FMC/handshake-solid.svg",
-      description: "Your goals guide everything we do.",
+      description:
+        "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
     },
     {
       name: "Integrity",
       image: "/assets/scales-solid.svg",
-      description: "Trust built on honesty and professionalism.",
+      description:
+        "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
     },
     {
       name: "Foresight",
       image: "/assets/Why_choose_FMC/eye-solid.svg",
-      description: "We anticipate issues before they arise, keeping you ahead.",
+      description:
+        "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
     },
   ];
 
   const partnersData: Partner[] = [
     {
       id: 1,
-      name: "Lcid Crescent Fernandez",
+      name: "Alexandra Reynolds",
       role: "Managing Partner",
       imageUrl: "/assets/alexandra.png",
       details: [
@@ -138,8 +147,8 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 2,
-      name: "Carl Vincent Mondejar, CPA",
-      role: "Partner",
+      name: "Jonathan Blackwell",
+      role: "Senior Partner",
       imageUrl: "/assets/jonathan.png",
       details: [
         {
@@ -166,7 +175,7 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 3,
-      name: "Ryan Carlo Cordero",
+      name: "Michelle Chen",
       role: "Partner",
       imageUrl: "/assets/michelle.png",
       details: [
@@ -324,7 +333,7 @@ const FmcLawLandingPage: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
               Why Choose FMC Law?
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 font-roboto">
               {whyChooseReasons.map((reason) => (
                 <div key={reason.name} className="flex flex-col items-center">
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
