@@ -22,7 +22,7 @@ const coreValuesData = [
   {
     title: "Integrity",
     description: "Trust built on honesty and professionalism.",
-    iconSrc: "/assets/scales-solid.svg",
+    iconSrc: "/assets/icons/scales-solid.svg",
     iconAlt: "Integrity icon",
   },
 
@@ -40,21 +40,21 @@ const leadershipData = [
     name: "Lcid Crescent Fernandez",
     role: "Managing Partner",
     bio: "With over 20 years of experience in corporate law, Alexandra leads our firm with vision and integrity, specializing in complex commercial litigation.",
-    imageUrl: "/assets/alexandra.png",
+    imageUrl: "/assets/partners/alexandra.png",
   },
   {
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "Partner",
     bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.",
-    imageUrl: "/assets/jonathan.png",
+    imageUrl: "/assets/partners/jonathan.png",
   },
   {
     id: 3,
     name: "Ryan Carlo Cordero",
     role: "Partner",
     bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.",
-    imageUrl: "/assets/michelle.png",
+    imageUrl: "/assets/partners/michelle.png",
   },
 ];
 

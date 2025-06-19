@@ -55,7 +55,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
                 <Image
-                  src="/assets/header-logo.png"
+                  src="/assets/icons/header-logo.png"
                   alt="FMC LAW Logo"
                   width={150}
                   height={40}

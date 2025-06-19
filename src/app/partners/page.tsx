@@ -28,7 +28,7 @@ const partnersData: Partner[] = [
     id: 1,
     name: "Lcid Crescent Fernandez",
     role: "MANAGING PARTNER",
-    imageUrl: "/assets/alexandra.png",
+    imageUrl: "/assets/partners/alexandra.png",
     specialties: [
       "Commercial Litigation",
       "International Arbitration",
@@ -72,7 +72,7 @@ const partnersData: Partner[] = [
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "PARTNER",
-    imageUrl: "/assets/jonathan.png",
+    imageUrl: "/assets/partners/jonathan.png",
     specialties: [
       "Mergers & Acquisitions",
       "Venture Capital",
@@ -117,7 +117,7 @@ const partnersData: Partner[] = [
     id: 3,
     name: "Ryan Carlo Cordero",
     role: "PARTNER",
-    imageUrl: "/assets/jonathan.png",
+    imageUrl: "/assets/partners/michelle.png",
     specialties: [
       "Patent Litigation",
       "Tech Transactions",
@@ -254,7 +254,7 @@ const OurPartnersPage: NextPage = () => {
         <section
           className="relative bg-cover bg-center py-28 md:py-40 lg:py-56"
           style={{
-            backgroundImage: "url('/assets/meet-partners-banner.png')",
+            backgroundImage: "url('/assets/bg_images/meet-partners-banner.png')",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
