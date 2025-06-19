@@ -203,17 +203,14 @@ const ContactUsPage: React.FC = () => {
                     >
                       Subject
                     </label>
-                    <select
+                    <input 
+                      type="subject"
+                      name='subject'
                       id="subject"
-                      name="subject"
-                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white"
-                    >
-                      <option>General Inquiry</option>
-                      <option>Consultation Request</option>
-                      <option>Corporate Law</option>
-                      <option>Litigation</option>
-                      <option>Other</option>
-                    </select>
+                      required 
+                      autoComplete="subject"
+                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                    />
                   </div>
                   <div>
                     <label

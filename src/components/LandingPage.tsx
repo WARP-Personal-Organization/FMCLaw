@@ -93,24 +93,27 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       name: "Innovation",
-      image: "/assets/Why_choose_FMC/lightbulb-solid.png",
+      image: "/assets/Why_choose_FMC/lightbulb-solid.svg",
       description:
         "Advanced legal solutions delivered through innovative strategies and technologies.",
     },
     {
       name: "Client-Focused",
-      image: "/assets/Why_choose_FMC/handshake-solid.png",
-      description: "Your goals guide everything we do.",
+      image: "/assets/Why_choose_FMC/handshake-solid.svg",
+      description:
+        "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
     },
     {
       name: "Integrity",
-      image: "/assets/Our_expertise/scales-solid.png",
-      description: "PTrust built on honesty and professionalism.",
+      image: "/assets/scales-solid.svg",
+      description:
+        "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
     },
     {
       name: "Foresight",
-      image: "/assets/Why_choose_FMC/eye-solid.png",
-      description: "We anticipate issues before they arise, keeping you ahead.",
+      image: "/assets/Why_choose_FMC/eye-solid.svg",
+      description:
+        "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
     },
   ];
 
