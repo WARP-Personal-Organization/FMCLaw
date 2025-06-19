@@ -218,7 +218,7 @@ const FmcLawLandingPage: React.FC = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex max-w-[1200px]">
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-6xl">
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
               <div className="md:w-3/5 text-center md:text-left py-8 md:py-0">
                 <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
@@ -245,7 +245,7 @@ const FmcLawLandingPage: React.FC = () => {
                 </div>
               </div>
               <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
-                <div className="relative w-full max-w-[300px] aspect-square">
+                <div className="relative w-full max-w-[500px] aspect-square">
                   <Image
                     src="/assets/fmc-emblem-large.svg"
                     alt="FMC Law Emblem"
