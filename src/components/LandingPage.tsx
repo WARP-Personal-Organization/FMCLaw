@@ -499,8 +499,16 @@ const FmcLawLandingPage: React.FC = () => {
             </div>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-16">
               <div className="md:w-3/5 bg-white p-6 sm:p-8 rounded-lg shadow-lg">
-                <form action="#" method="POST" className="space-y-6">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <form
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  className="space-y-6"
+                >
+                  <input type="hidden" name="form-name" value="landing" />
+                  <input type="hidden" name="bot-field" />
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
                         htmlFor="first-name"

@@ -129,7 +129,15 @@ const ContactUsPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-8 font-oswald">
                   Send Us a Message
                 </h2>
-                <form action="#" method="POST" className="space-y-6 font-sans">
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+                className="space-y-6 font-sans"
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
