@@ -1,105 +1,129 @@
-// components/FmcLawLandingPage.jsx
+// components/FmcLawLandingPage.tsx
 import React from "react";
+import Link from 'next/link';
+import Image from 'next/image';
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
-// For a real Next.js project, you'd import Link and Image:
-// import Link from 'next/link';
-// import Image from 'next/image';
 
-const FmcLawLandingPage = () => {
-  const practiceAreas = [
+interface PracticeArea {
+  name: string;
+  description: string;
+  image: string;
+}
+
+interface WhyChooseReason {
+  name: string;
+  image: string;
+  description: string;
+}
+
+interface PartnerDetailItem {
+  label: string;
+  value: string;
+}
+
+interface Partner {
+  id: number;
+  name: string;
+  role: string;
+  imageUrl: string;
+  details: PartnerDetailItem[];
+}
+
+const FmcLawLandingPage: React.FC = () => {
+  const practiceAreas: PracticeArea[] = [
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
-      image: "assets/Our_expertise/scales-solid.png",
+      image: "/assets/Our_expertise/scales-solid.png",
     },
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
-      image: "assets/Our_expertise/commercial-law-solid.png",
+      image: "/assets/Our_expertise/commercial-law-solid.png",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
-      image: "assets/Our_expertise/judge-hammer-solid.png",
+      image: "/assets/Our_expertise/judge-hammer-solid.png",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
-      image: "assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
-      image: "assets/Our_expertise/labor-law-solid.png",
+      image: "/assets/Our_expertise/labor-law-solid.png",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
-      image: "assets/Our_expertise/criminal-law-solid.png",
+      image: "/assets/Our_expertise/criminal-law-solid.png",
     },
     {
       name: "Administrative Law",
       description: "Challenging governmental decisions and regulatory actions.",
-      image: "assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Civil Law",
       description: "Resolving disputes between individuals and organizations.",
-      image: "assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Election Law",
       description: "Ensuring fair and lawful electoral processes.",
-      image: "assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.png",
     },
     {
       name: "Compliance",
       description: "Ensuring adherence to laws and regulatory standards.",
-      image: "assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.png",
     },
   ];
 
-  const whyChooseReasons = [
+  const whyChooseReasons: WhyChooseReason[] = [
     {
       name: "Excellence",
-      image: "assets/Why_choose_FMC/award-pin-solid.png",
+      image: "/assets/Why_choose_FMC/award-pin-solid.png",
       description:
         "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields.",
     },
     {
       name: "Innovation",
-      image: "assets/Why_choose_FMC/lightbulb-solid.png",
+      image: "/assets/Why_choose_FMC/lightbulb-solid.png",
       description:
         "Advanced legal solutions delivered through innovative strategies and technologies.",
     },
     {
       name: "Client-Focused",
-      image: "assets/Why_choose_FMC/handshake-solid.png",
+      image: "/assets/Why_choose_FMC/handshake-solid.png",
       description:
         "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
     },
     {
       name: "Integrity",
-      image: "assets/Our_expertise/scales-solid.png",
+      image: "/assets/Our_expertise/scales-solid.png",
       description:
         "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
     },
     {
       name: "Foresight",
-      image: "assets/Why_choose_FMC/eye-solid.png",
+      image: "/assets/Why_choose_FMC/eye-solid.png",
       description:
         "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
     },
   ];
 
-  const partnersData = [
+  const partnersData: Partner[] = [
     {
       id: 1,
       name: "Alexandra Reynolds",
       role: "Managing Partner",
-      imageUrl: "assets/alexandra.png",
+      imageUrl: "/assets/alexandra.png",
       details: [
         {
           label: "Credentials",
@@ -126,7 +150,7 @@ const FmcLawLandingPage = () => {
       id: 2,
       name: "Jonathan Blackwell",
       role: "Senior Partner",
-      imageUrl: "assets/jonathan.png",
+      imageUrl: "/assets/jonathan.png",
       details: [
         {
           label: "Credentials",
@@ -154,7 +178,7 @@ const FmcLawLandingPage = () => {
       id: 3,
       name: "Michelle Chen",
       role: "Partner",
-      imageUrl: "assets/michelle.png",
+      imageUrl: "/assets/michelle.png",
       details: [
         {
           label: "Credentials",
@@ -184,7 +208,6 @@ const FmcLawLandingPage = () => {
     <>
       <Header />
       <main>
-        {/* 1. Hero Section (UNCHANGED) */}
         <section
           id="home"
           className="relative bg-[#CE9930] min-h-[600px] flex items-center justify-center text-white overflow-hidden"
@@ -195,85 +218,82 @@ const FmcLawLandingPage = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex max-w-[1200px] ">
-            <div className="items-center justify-center flex">
-              <div className=" md:text-left-300 flex-3/5">
-                <h1 className="text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 flex max-w-[1200px]">
+            <div className="flex flex-col md:flex-row items-center justify-center w-full">
+              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0">
+                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
                   Legal Guidance That Moves You Forward
                 </h1>
-                <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10">
+                <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl">
                   Bringing together diverse perspectives, we deliver dedicated
                   legal representation focused on achieving the best possible
                   outcome for you.
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
-                  <a
+                  <Link
                     href="#contact"
                     className="bg-[#D4AF37] text-black px-8 py-3 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
                   >
                     Contact Us
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="#about"
                     className="border-2 border-white text-white px-8 py-3 font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
                   >
                     Learn More
-                  </a>
+                  </Link>
                 </div>
               </div>
-              <div className="hidden md:flex justify-center items-center flex-2/5 overflow-hidden">
-                <img
-                  src="/assets/fmc-emblem-large.svg"
-                  alt="FMC Law Emblem"
-                  className="aspect-square h-xl w-xl"
-                />
+              <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
+                <div className="relative w-full max-w-[300px] aspect-square">
+                  <Image
+                    src="/assets/fmc-emblem-large.svg"
+                    alt="FMC Law Emblem"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 2. Intro Section (UPDATED) */}
         <section className="bg-white">
-          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-[64px]">
+          <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-[64px]">
             <div className="grid md:grid-cols-5 gap-12 lg:gap-16 items-center font-inter">
               <div className="md:col-span-3">
-                {" "}
-                {/* Text (60%) */}
-                <h2 className="text-3xl lg:text-4xl font-[Avenir Next Family] font-bold  text-gray-900 mb-6">
+                <h2 className="text-3xl lg:text-4xl font-[Avenir Next Family] font-bold text-gray-900 mb-6">
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-[50ch]">
-                  At FMC Law, we&apos;ve redefined the traditional law firm
+                  At FMC Law, we've redefined the traditional law firm
                   model. Our modern, client-centric approach prioritizes
                   transparent communication, innovative solutions, and a deep
                   understanding of your unique needs, ensuring you feel
                   empowered and informed every step of the way.
                 </p>
-                <a
-                  href="#about-us-detailed" // Point to a relevant section or page
+                <Link
+                  href="#about"
                   className="inline-block border border-black text-black py-[10px] px-[32px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Learn More
-                </a>
+                </Link>
               </div>
               <div className="md:col-span-2 relative mt-10 md:mt-0">
-                {" "}
-                {/* Image (40%) */}
-                <div className="relative">
-                  <img
-                    className="border-4 border-black shadow-xl w-full aspect-[5/5] object-cover"
-                    src="\assets\diff-kind-of-law-firm.png" // Replace with actual portrait image
+                <div className="relative w-full aspect-[1/1] border-4 border-black shadow-xl">
+                  <Image
+                    src="/assets/diff-kind-of-law-firm.png"
                     alt="Modern Legal Professional at FMC Law"
+                    fill
+                    style={{ objectFit: 'cover' }}
                   />
                   <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
-                  {/* Decorative square */}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 3. Practice Areas Section (UNCHANGED) */}
         <section className="bg-[#F7F8FA] py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-inter">
             <h2 className="text-3xl lg:text-4xl font-bold font-sans text-center text-gray-900 mb-16">
@@ -286,8 +306,7 @@ const FmcLawLandingPage = () => {
                   className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
                 >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
-                    {/* <PlaceholderIcon className="w-8 h-8" /> */}
-                    <img src={area.image} alt={area.name} className="" />
+                    <Image src={area.image} alt={`${area.name} icon`} width={32} height={32} />
                   </div>
                   <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">
                     {area.name}
@@ -301,7 +320,6 @@ const FmcLawLandingPage = () => {
           </div>
         </section>
 
-        {/* 4. Why Choose FMC Law Section (UNCHANGED) */}
         <section className="bg-black text-white py-14 md:py-[56px]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
@@ -310,8 +328,8 @@ const FmcLawLandingPage = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 font-roboto">
               {whyChooseReasons.map((reason) => (
                 <div key={reason.name} className="flex flex-col items-center">
-                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37] bg-[#D4AF37]">
-                    <img src={reason.image} alt={reason.name} />
+                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
+                    <Image src={reason.image} alt={`${reason.name} icon`} width={32} height={32} />
                   </div>
                   <p className="text-lg font-semibold italic mb-3">
                     {reason.name}
@@ -325,7 +343,6 @@ const FmcLawLandingPage = () => {
           </div>
         </section>
 
-        {/* 5. Mid-page CTA Banner (UNCHANGED) */}
         <section
           className="relative bg-cover bg-fixed bg-center py-24 md:py-32"
           style={{
@@ -339,23 +356,21 @@ const FmcLawLandingPage = () => {
             <h2 className="text-white text-[2.25rem] md:text-4xl leading-tight font-bold mb-8">
               Ready to Work with FMC Law?
             </h2>
-            <p className="text-[#D1D5DB] text-lg leading-relaxed flex-grow mb-10 mx-40">
+            <p className="text-[#D1D5DB] text-lg leading-relaxed mb-10 max-w-2xl mx-auto">
               Schedule a consultation with our experienced attorneys and
               discover how we can help you navigate your legal challenges.
             </p>
-            <a
+            <Link
               href="#contact"
               className="bg-[#D4AF37] text-black px-10 py-4 font-semibold text-lg hover:bg-opacity-80 transition-colors"
             >
               Get in Touch Today
-            </a>
+            </Link>
           </div>
         </section>
 
-        {/* 6. About FMC Law Section (UNCHANGED) */}
         <section id="about" className="bg-white py-16 md:py-20 font-inter">
           <div className="text-center mb-12">
-            {/* mb-12 is 48px */}
             <h2 className="text-3xl lg:text-4xl font-bold font-sans text-gray-900 mb-3">
               About FMC Law
             </h2>
@@ -363,11 +378,12 @@ const FmcLawLandingPage = () => {
           </div>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16 md:space-y-24">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-              <div>
-                <img
-                  className="rounded-lg shadow-xl object-cover"
-                  src="assets/table-people.png"
-                  alt=""
+              <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
+                <Image
+                  src="/assets/table-people.png"
+                  alt="FMC Law team in a meeting"
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div>
@@ -384,65 +400,38 @@ const FmcLawLandingPage = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    &quot;Excellence is our standard, not our goal.&quot;
+                    "Excellence is our standard, not our goal."
                   </p>
                 </div>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-              <div className="order-1 md:order-2">
-                <img
-                  className="rounded-lg shadow-xl"
-                  src="assets/table-empty.png"
-                  alt="FMC Law Conference Table"
+              <div className="order-1 md:order-2 relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
+                <Image
+                  src="/assets/table-empty.png"
+                  alt="FMC Law conference room"
+                  fill
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
               <div className="order-2 md:order-1 font-sans">
                 <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
                   Our Values
                 </h3>
-                <div className="flex items-start space-x-3 text-black mb-4">
-                  <img src="assets/scales-outline.png" alt="" />
-                  <div>
-                    <p className="font-bold mb-4">Integrity</p>
-                    <p className="text-sm text-[#374151]">
-                      We adhere to the highest ethical standards in all our
-                      dealings, ensuring transparency and honesty in our client
-                      relationships.
-                    </p>
+                {[
+                  { title: "Integrity", text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships." },
+                  { title: "Excellence", text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management." },
+                  { title: "Collaboration", text: "We work closely with our clients, building partnerships based on mutual respect and shared goals." },
+                  { title: "Innovation", text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions." }
+                ].map(value => (
+                  <div key={value.title} className="flex items-start space-x-3 text-black mb-4">
+                    <Image src="/assets/scales-outline.png" alt={`${value.title} icon`} width={24} height={24} />
+                    <div>
+                      <p className="font-bold mb-1">{value.title}</p>
+                      <p className="text-sm text-[#374151]">{value.text}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex items-start space-x-3 text-black mb-4">
-                  <img src="assets/scales-outline.png" alt="" />
-                  <div>
-                    <p className="font-bold mb-4">Excellence</p>
-                    <p className="text-sm text-[#374151]">
-                      We strive for excellence in everything we do, from legal
-                      analysis and strategy to client communication and case
-                      management.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3 text-black mb-4">
-                  <img src="assets/scales-outline.png" alt="" />
-                  <div>
-                    <p className="font-bold mb-4">Collaboration</p>
-                    <p className="text-sm text-[#374151]">
-                      We work closely with our clients, building partnerships
-                      based on mutual respect and shared goals.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3 text-black mb-4">
-                  <img src="assets/scales-outline.png" alt="" />
-                  <div>
-                    <p className="font-bold mb-4">Innovation</p>
-                    <p className="text-sm text-[#374151]">
-                      We embrace creative thinking and new technologies to
-                      deliver efficient, effective legal solutions.
-                    </p>
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
@@ -451,7 +440,7 @@ const FmcLawLandingPage = () => {
         <section id="partners" className="bg-white py-16 md:py-20 font-inter">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                 Our Partners
               </h2>
               <p className="text-base text-[#5A5A5A] mb-6 max-w-2xl mx-auto">
@@ -469,15 +458,13 @@ const FmcLawLandingPage = () => {
           </div>
         </section>
 
-        {/* 8. Contact Section (UNCHANGED) */}
         <section
           id="contact"
           className="bg-[#FAFBFC] py-16 md:py-20 font-inter"
         >
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              {/* mb-12 is 48px */}
-              <h2 className="text-3xl lg:text-4xl font-bold  text-gray-900 mb-3">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
                 Contact Us
               </h2>
               <p className="text-base text-[#5A5A5A] font-sans mb-6 max-w-2xl mx-auto">
@@ -487,7 +474,7 @@ const FmcLawLandingPage = () => {
               <div className="mx-auto w-[56px] h-[3px] bg-[#D4AF37]"></div>
             </div>
             <div className="flex flex-col md:flex-row gap-10 lg:gap-16">
-              <div className="md:w-3/5 bg-white p-8 rounded-lg shadow-lg">
+              <div className="md:w-3/5 bg-white p-6 sm:p-8 rounded-lg shadow-lg">
                 <form action="#" method="POST" className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
@@ -576,44 +563,21 @@ const FmcLawLandingPage = () => {
                 </form>
               </div>
               <div className="md:w-2/5 space-y-8 mt-10 md:mt-0">
-                <div className=" bg-black p-8 rounded-lg shadow-lg space-y-6">
-                  <h3 className="text-xl font-bold font-sans text-white">
+                <div className="bg-black p-6 sm:p-8 rounded-lg shadow-lg space-y-6 text-white">
+                  <h3 className="text-xl font-bold font-sans">
                     Firm Contact Details
                   </h3>
-                  <div className="flex items-start space-x-3 text-white">
-                    <img src="assets/pin-outline.png" alt="" />
-                    <span className="font-sans">
-                      <b>Address</b>
-                      <br />
-                      Iloilo Office: 2F, Daily Guardian Center,
-                      <br />
-                      Guzman Jasena, Mandurriao, Iloilo City
-                    </span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/phone-outline.png" alt="" />
-                    <span className="font-sans ">
-                      <b>Phone</b>
-                      <br />
-                      0917-702-1298
-                    </span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/mail-outline.png" alt="" />
-                    <span className="font-sans ">
-                      <b>Email</b>
-                      <br />
-                      admin@fmclaw.com.ph
-                    </span>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <img src="assets/clock-outline.png" alt="" />
-                    <span className="font-sans ">
-                      <b>Office Hours</b>
-                      <br />
-                      Mon-Fri: 9:00 AM - 6:00 PM
-                    </span>
-                  </div>
+                  {[
+                    { icon: "/assets/pin-outline.png", alt: "Location pin icon", lines: ["<b>Address</b>", "Iloilo Office: 2F, Daily Guardian Center,", "Guzman Jasena, Mandurriao, Iloilo City"] },
+                    { icon: "/assets/phone-outline.png", alt: "Phone icon", lines: ["<b>Phone</b>", "0917-702-1298"] },
+                    { icon: "/assets/mail-outline.png", alt: "Email icon", lines: ["<b>Email</b>", "admin@fmclaw.com.ph"] },
+                    { icon: "/assets/clock-outline.png", alt: "Clock icon", lines: ["<b>Office Hours</b>", "Mon-Fri: 9:00 AM - 6:00 PM"] },
+                  ].map(item => (
+                    <div key={item.alt} className="flex items-start space-x-3">
+                      <Image src={item.icon} alt={item.alt} width={24} height={24} className="mt-1"/>
+                      <span className="font-sans text-sm" dangerouslySetInnerHTML={{ __html: item.lines.join('<br />') }} />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
