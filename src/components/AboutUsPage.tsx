@@ -8,32 +8,29 @@ import Image from "next/image";
 
 const coreValuesData = [
   {
-    title: "Integrity",
-    description:
-      "Upholding the highest ethical standards in every action and decision we make.",
-    iconSrc: "/assets/Our_expertise/scales-solid.png",
-    iconAlt: "Integrity icon",
-  },
-  {
     title: "Excellence",
-    description:
-      "Consistently delivering superior legal services and achieving outstanding results.",
+    description: "Top-tier lawyers with proven expertise.",
     iconSrc: "/assets/Why_choose_FMC/award-pin-solid.png",
     iconAlt: "Excellence icon",
   },
   {
-    title: "Innovation",
-    description:
-      "Embracing creative thinking and cutting-edge solutions to complex legal challenges.",
-    iconSrc: "/assets/Why_choose_FMC/lightbulb-solid.png",
-    iconAlt: "Innovation icon",
-  },
-  {
-    title: "Collaboration",
-    description:
-      "Working closely with clients and colleagues to achieve shared goals effectively.",
+    title: "Client-Focused",
+    description: "Your goals guide everything we do.",
     iconSrc: "/assets/Why_choose_FMC/handshake-solid.png",
     iconAlt: "Collaboration icon",
+  },
+  {
+    title: "Integrity",
+    description: "Trust built on honesty and professionalism.",
+    iconSrc: "/assets/scales-solid.svg",
+    iconAlt: "Integrity icon",
+  },
+
+  {
+    title: "Foresight",
+    description: "We anticipate issues before they arise, keeping you ahead.",
+    iconSrc: "/assets/Why_choose_FMC/eye-solid.svg",
+    iconAlt: "Integrity icon",
   },
 ];
 
