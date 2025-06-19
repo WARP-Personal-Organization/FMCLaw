@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 import "./globals.css"; // This now imports your Tailwind styles and custom fonts
 
 export const metadata: Metadata = {
-  title: "FMC Law - Reimagining Legal Solutions", // Update title
+  title: "FMC Law - Legal Guidance That Moves You Forward", // Update title
   description:
-    "Premium law firm offering expert legal services for complex challenges.", // Update description
+    "Bringing together diverse perspectives, we deliver dedicated legal representation focused on achieving the best possible outcome for you.", // Update description
   icons: {
     icon: "FMCfavicon.svg", 
   }
