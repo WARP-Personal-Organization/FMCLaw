@@ -36,52 +36,52 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
-      image: "/assets/Our_expertise/scales-solid.png",
+      image: "/assets/scales-solid.svg",
     },
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
-      image: "/assets/Our_expertise/commercial-law-solid.png",
+      image: "/assets/Our_expertise/commercial-law-solid.svg",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
-      image: "/assets/Our_expertise/judge-hammer-solid.png",
+      image: "/assets/Our_expertise/judge-hammer-solid.svg",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.svg",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
-      image: "/assets/Our_expertise/labor-law-solid.png",
+      image: "/assets/Our_expertise/labor-law-solid.svg",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
-      image: "/assets/Our_expertise/criminal-law-solid.png",
+      image: "/assets/Our_expertise/criminal-law-solid.svg",
     },
     {
       name: "Administrative Law",
       description: "Challenging governmental decisions and regulatory actions.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/administrative-law-solid.svg",
     },
     {
       name: "Civil Law",
       description: "Resolving disputes between individuals and organizations.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/scroll-solid.svg",
     },
     {
       name: "Election Law",
       description: "Ensuring fair and lawful electoral processes.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/election-solid.svg",
     },
     {
       name: "Compliance",
       description: "Ensuring adherence to laws and regulatory standards.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/compliance-solid.svg",
     },
   ];
 
