@@ -41,27 +41,27 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
-      image: "/assets/Our_expertise/commercial-law-solid.svg",
+      image: "/assets/icons/commercial-law-solid.svg",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
-      image: "/assets/Our_expertise/judge-hammer-solid.svg",
+      image: "/assets/icons/judge-hammer-solid.svg",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
-      image: "/assets/Our_expertise/TM-solid.svg",
+      image: "/assets/icons/TM-solid.svg",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
-      image: "/assets/Our_expertise/labor-law-solid.svg",
+      image: "/assets/icons/labor-law-solid.svg",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
-      image: "/assets/Our_expertise/criminal-law-solid.svg",
+      image: "/assets/icons/criminal-law-solid.svg",
     },
     // {
     //   name: "Administrative Law",
@@ -88,22 +88,22 @@ const FmcLawLandingPage: React.FC = () => {
   const whyChooseReasons: WhyChooseReason[] = [
     {
       name: "Excellence",
-      image: "/assets/Why_choose_FMC/award-pin-solid.svg",
+      image: "/assets/icons/award-pin-solid.svg",
       description: "Top-tier lawyers with proven expertise.",
     },
     {
       name: "Client-Focused",
-      image: "/assets/Why_choose_FMC/handshake-solid.svg",
+      image: "/assets/icons/handshake-solid.svg",
       description: "Your goals guide everything we do.",
     },
     {
       name: "Integrity",
-      image: "/assets/Why_choose_FMC/scales-solid.svg",
+      image: "/assets/icons/scales-solid.svg",
       description: "Trust built on honesty and professionalism.",
     },
     {
       name: "Foresight",
-      image: "/assets/Why_choose_FMC/eye-solid.svg",
+      image: "/assets/icons/eye-solid.svg",
       description: "We anticipate issues before they arise, keeping you ahead.",
     },
   ];
