@@ -237,7 +237,7 @@ const FmcLawLandingPage: React.FC = () => {
               <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
                 <div className="relative w-full max-w-[500px] aspect-square">
                   <Image
-                    src="/assets/fmc-emblem-large.svg"
+                    src="/assets/logos/fmc-emblem-large.svg"
                     alt="FMC Law Emblem"
                     fill
                     style={{ objectFit: "contain" }}
