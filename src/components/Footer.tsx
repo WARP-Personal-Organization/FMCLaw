@@ -66,7 +66,7 @@ function Footer() {
               </Link>
               <p className="text-sm">
                 Combining traditional legal expertise with innovative approaches
-                for today's complex challenges.
+                for today&apos;s complex challenges.
               </p>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (
