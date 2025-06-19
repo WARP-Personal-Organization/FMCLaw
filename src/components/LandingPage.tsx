@@ -426,12 +426,12 @@ const FmcLawLandingPage: React.FC = () => {
                   {
                     title: "Excellence",
                     text: "Top-tier lawyers with proven expertise.",
-                    imageUrl: "/assets/Why_choose_FMC/award-pin-solid.svg",
+                    imageUrl: "/assets/icons/award-pin-solid.svg",
                   },
                   {
                     title: "Client-Focused",
                     text: "Your goals guide everything we do.",
-                    imageUrl: "/assets/Why_choose_FMC/handshake-solid.svg",
+                    imageUrl: "/assets/icons/handshake-solid.svg",
                   },
                   {
                     title: "Integrity",
@@ -442,7 +442,7 @@ const FmcLawLandingPage: React.FC = () => {
                   {
                     title: "Foresight",
                     text: "We anticipate issues before they arise, keeping you ahead.",
-                    imageUrl: "/assets/Why_choose_FMC/eye-solid.svg",
+                    imageUrl: "/assets/icons/eye-solid.svg",
                   },
                 ].map((value) => (
                   <div
