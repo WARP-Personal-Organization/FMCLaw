@@ -1,7 +1,7 @@
 // components/FmcLawLandingPage.tsx
 import React from "react";
-import Link from 'next/link';
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
@@ -36,52 +36,52 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
-      image: "/assets/Our_expertise/scales-solid.png",
+      image: "/assets/scales-solid.svg",
     },
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
-      image: "/assets/Our_expertise/commercial-law-solid.png",
+      image: "/assets/Our_expertise/commercial-law-solid.svg",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
-      image: "/assets/Our_expertise/judge-hammer-solid.png",
+      image: "/assets/Our_expertise/judge-hammer-solid.svg",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/TM-solid.svg",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
-      image: "/assets/Our_expertise/labor-law-solid.png",
+      image: "/assets/Our_expertise/labor-law-solid.svg",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
-      image: "/assets/Our_expertise/criminal-law-solid.png",
+      image: "/assets/Our_expertise/criminal-law-solid.svg",
     },
     {
       name: "Administrative Law",
       description: "Challenging governmental decisions and regulatory actions.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/administrative-law-solid.svg",
     },
     {
       name: "Civil Law",
       description: "Resolving disputes between individuals and organizations.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/scroll-solid.svg",
     },
     {
       name: "Election Law",
       description: "Ensuring fair and lawful electoral processes.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/election-solid.svg",
     },
     {
       name: "Compliance",
       description: "Ensuring adherence to laws and regulatory standards.",
-      image: "/assets/Our_expertise/TM-solid.png",
+      image: "/assets/Our_expertise/compliance-solid.svg",
     },
   ];
 
@@ -89,39 +89,29 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Excellence",
       image: "/assets/Why_choose_FMC/award-pin-solid.png",
-      description:
-        "Legal expertise exemplified by a team of accomplished practitioners at the forefront of their fields.",
-    },
-    {
-      name: "Innovation",
-      image: "/assets/Why_choose_FMC/lightbulb-solid.png",
-      description:
-        "Advanced legal solutions delivered through innovative strategies and technologies.",
+      description: "Top-tier lawyers with proven expertise.",
     },
     {
       name: "Client-Focused",
-      image: "/assets/Why_choose_FMC/handshake-solid.png",
-      description:
-        "Your success is our priority. Client success serves as the ultimate measure, with full commitment to realizing those goals.",
+      image: "/assets/Why_choose_FMC/handshake-solid.svg",
+      description: "Your goals guide everything we do.",
     },
     {
       name: "Integrity",
-      image: "/assets/Our_expertise/scales-solid.png",
-      description:
-        "Professional conduct of the highest standard establishes relationships built on transparency and trust.",
+      image: "/assets/scales-solid.svg",
+      description: "Trust built on honesty and professionalism.",
     },
     {
       name: "Foresight",
-      image: "/assets/Why_choose_FMC/eye-solid.png",
-      description:
-        "Proactive identification and resolution of potential legal challenges, ensuring clients consistently maintain an advantageous position.",
+      image: "/assets/Why_choose_FMC/eye-solid.svg",
+      description: "We anticipate issues before they arise, keeping you ahead.",
     },
   ];
 
   const partnersData: Partner[] = [
     {
       id: 1,
-      name: "Alexandra Reynolds",
+      name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
       imageUrl: "/assets/alexandra.png",
       details: [
@@ -148,8 +138,8 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 2,
-      name: "Jonathan Blackwell",
-      role: "Senior Partner",
+      name: "Carl Vincent Mondejar, CPA",
+      role: "Partner",
       imageUrl: "/assets/jonathan.png",
       details: [
         {
@@ -176,7 +166,7 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 3,
-      name: "Michelle Chen",
+      name: "Ryan Carlo Cordero",
       role: "Partner",
       imageUrl: "/assets/michelle.png",
       details: [
@@ -250,7 +240,7 @@ const FmcLawLandingPage: React.FC = () => {
                     src="/assets/fmc-emblem-large.svg"
                     alt="FMC Law Emblem"
                     fill
-                    style={{ objectFit: 'contain' }}
+                    style={{ objectFit: "contain" }}
                   />
                 </div>
               </div>
@@ -266,11 +256,15 @@ const FmcLawLandingPage: React.FC = () => {
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-[50ch]">
-                  At FMC Law, we&apos;ve redefined the traditional law firm
-                  model. Our modern, client-centric approach prioritizes
-                  transparent communication, innovative solutions, and a deep
-                  understanding of your unique needs, ensuring you feel
-                  empowered and informed every step of the way.
+                  Facing big challenges means you need legal support that’s
+                  smart, practical, and trustworthy.
+                  <br />
+                  <br />
+                  FMC Law delivers exactly that: client-focused, reliable
+                  solutions that blend legal expertise with flexible strategies
+                  to keep your goals front and center. With offices in Metro
+                  Manila and Iloilo City, the firm serves clients across regions
+                  with consistency, accessibility, and care.
                 </p>
                 <Link
                   href="/about"
@@ -285,7 +279,7 @@ const FmcLawLandingPage: React.FC = () => {
                     src="/assets/diff-kind-of-law-firm.png"
                     alt="Modern Legal Professional at FMC Law"
                     fill
-                    style={{ objectFit: 'cover' }}
+                    style={{ objectFit: "cover" }}
                   />
                   <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#D4AF37] rounded-sm z-10"></div>{" "}
                 </div>
@@ -306,7 +300,12 @@ const FmcLawLandingPage: React.FC = () => {
                   className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
                 >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
-                    <Image src={area.image} alt={`${area.name} icon`} width={32} height={32} />
+                    <Image
+                      src={area.image}
+                      alt={`${area.name} icon`}
+                      width={32}
+                      height={32}
+                    />
                   </div>
                   <h3 className="text-xl font-bold font-sans text-gray-900 mb-3">
                     {area.name}
@@ -325,11 +324,16 @@ const FmcLawLandingPage: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
               Why Choose FMC Law?
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10 font-roboto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto">
               {whyChooseReasons.map((reason) => (
                 <div key={reason.name} className="flex flex-col items-center">
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
-                    <Image src={reason.image} alt={`${reason.name} icon`} width={32} height={32} />
+                    <Image
+                      src={reason.image}
+                      alt={`${reason.name} icon`}
+                      width={32}
+                      height={32}
+                    />
                   </div>
                   <p className="text-lg font-semibold italic mb-3">
                     {reason.name}
@@ -383,7 +387,7 @@ const FmcLawLandingPage: React.FC = () => {
                   src="/assets/table-people.png"
                   alt="FMC Law team in a meeting"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div>
@@ -400,7 +404,7 @@ const FmcLawLandingPage: React.FC = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    &quot;Excellence is our standard, not our goal.&quot;
+                    "Excellence is our standard, not our goal."
                   </p>
                 </div>
               </div>
@@ -411,7 +415,7 @@ const FmcLawLandingPage: React.FC = () => {
                   src="/assets/table-empty.png"
                   alt="FMC Law conference room"
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: "cover" }}
                 />
               </div>
               <div className="order-2 md:order-1 font-sans">
@@ -419,13 +423,33 @@ const FmcLawLandingPage: React.FC = () => {
                   Our Values
                 </h3>
                 {[
-                  { title: "Integrity", text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships." },
-                  { title: "Excellence", text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management." },
-                  { title: "Collaboration", text: "We work closely with our clients, building partnerships based on mutual respect and shared goals." },
-                  { title: "Innovation", text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions." }
-                ].map(value => (
-                  <div key={value.title} className="flex items-start space-x-3 text-black mb-4">
-                    <Image src="/assets/scales-outline.png" alt={`${value.title} icon`} width={24} height={24} />
+                  {
+                    title: "Integrity",
+                    text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships.",
+                  },
+                  {
+                    title: "Excellence",
+                    text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management.",
+                  },
+                  {
+                    title: "Collaboration",
+                    text: "We work closely with our clients, building partnerships based on mutual respect and shared goals.",
+                  },
+                  {
+                    title: "Innovation",
+                    text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions.",
+                  },
+                ].map((value) => (
+                  <div
+                    key={value.title}
+                    className="flex items-start space-x-3 text-black mb-4"
+                  >
+                    <Image
+                      src="/assets/scales-outline.png"
+                      alt={`${value.title} icon`}
+                      width={24}
+                      height={24}
+                    />
                     <div>
                       <p className="font-bold mb-1">{value.title}</p>
                       <p className="text-sm text-[#374151]">{value.text}</p>
@@ -568,14 +592,51 @@ const FmcLawLandingPage: React.FC = () => {
                     Firm Contact Details
                   </h3>
                   {[
-                    { icon: "/assets/pin-outline.png", alt: "Location pin icon", lines: ["<b>Address</b>", "Iloilo Office: 2F, Daily Guardian Center,", "Guzman Jasena, Mandurriao, Iloilo City"] },
-                    { icon: "/assets/phone-outline.png", alt: "Phone icon", lines: ["<b>Phone</b>", "0917-702-1298"] },
-                    { icon: "/assets/mail-outline.png", alt: "Email icon", lines: ["<b>Email</b>", "admin@fmclaw.com.ph"] },
-                    { icon: "/assets/clock-outline.png", alt: "Clock icon", lines: ["<b>Office Hours</b>", "Mon-Fri: 9:00 AM - 6:00 PM"] },
-                  ].map(item => (
+                    {
+                      icon: "/assets/pin-outline.png",
+                      alt: "Location pin icon",
+                      lines: [
+                        "<b>Address</b>",
+                        "Iloilo Office: 2F, Daily Guardian Center,",
+                        "Guzman Jasena, Mandurriao, Iloilo City",
+                        "",
+                        "Manila Office: #62 Saint Peter Street,",
+                        "Brgy. Oranbo, Pasig City",
+                      ],
+                    },
+                    {
+                      icon: "/assets/phone-outline.png",
+                      alt: "Phone icon",
+                      lines: ["<b>Phone</b>", "(033) 329-28-38"],
+                    },
+                    {
+                      icon: "/assets/mail-outline.png",
+                      alt: "Email icon",
+                      lines: ["<b>Email</b>", "admin@fmclaw.com.ph"],
+                    },
+                    {
+                      icon: "/assets/clock-outline.png",
+                      alt: "Clock icon",
+                      lines: [
+                        "<b>Office Hours</b>",
+                        "Mon-Fri: 9:00 AM - 6:00 PM",
+                      ],
+                    },
+                  ].map((item) => (
                     <div key={item.alt} className="flex items-start space-x-3">
-                      <Image src={item.icon} alt={item.alt} width={24} height={24} className="mt-1"/>
-                      <span className="font-sans text-sm" dangerouslySetInnerHTML={{ __html: item.lines.join('<br />') }} />
+                      <Image
+                        src={item.icon}
+                        alt={item.alt}
+                        width={24}
+                        height={24}
+                        className="mt-1"
+                      />
+                      <span
+                        className="font-sans text-sm"
+                        dangerouslySetInnerHTML={{
+                          __html: item.lines.join("<br />"),
+                        }}
+                      />
                     </div>
                   ))}
                 </div>

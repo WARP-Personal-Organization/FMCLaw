@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: "FMC Law - Reimagining Legal Solutions", // Update title
   description:
     "Premium law firm offering expert legal services for complex challenges.", // Update description
+  icons: {
+    icon: "FMCfavicon.svg", 
+  }
 };
 
 export default function RootLayout({
