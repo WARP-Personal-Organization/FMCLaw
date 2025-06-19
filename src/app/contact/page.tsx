@@ -1,13 +1,10 @@
-// pages/contact.tsx
-"use client"; // Required for useState (mobile menu) if using App Router.
+"use client";
+
+import React from 'react';
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-// If using 'pages' directory, this line is not needed.
-
-// import type { NextPage } from 'next'; // For 'pages' directory. Not strictly needed for App Router.
-// import Head from 'next/head'; // For 'pages' directory. Use metadata export for App Router.
-
-// --- ICON COMPONENTS (Defined within the same file) ---
+import Image from 'next/image';
+import Link from 'next/link';
 
 const RightArrowIcon: React.FC<{ className?: string }> = ({
   className = "w-5 h-5 ml-2",
@@ -28,8 +25,7 @@ const RightArrowIcon: React.FC<{ className?: string }> = ({
   </svg>
 );
 
-// --- DATA ---
-const firmName = "FMC Law"; // Replace with your actual firm name
+const firmName = "FMC Law";
 
 const faqData = [
   {
@@ -61,7 +57,7 @@ const faqData = [
 
 const contactInfo = [
   {
-    iconPath: "assets/pin-outline.png", // Home icon for address
+    iconPath: "/assets/pin-outline.png",
     label: "Address",
     valueLines: [
       "Iloilo Office: 2F, Daily Guardian Center,",
@@ -69,20 +65,19 @@ const contactInfo = [
     ],
   },
   {
-    iconPath: "/assets/phone-outline.png", // Phone icon
+    iconPath: "/assets/phone-outline.png",
     label: "Phone",
     valueLines: ["0917-702-1298"],
-    href: "tel:+63917-702-1298",
+    href: "tel:+639177021298",
   },
   {
-    iconPath: "assets/mail-outline.png", // Mail icon
+    iconPath: "/assets/mail-outline.png",
     label: "Email",
     valueLines: ["admin@fmclaw.com.ph"],
     href: "mailto:admin@fmclaw.com.ph",
   },
   {
-    iconPath: "assets/clock-outline.png",
-
+    iconPath: "/assets/clock-outline.png",
     label: "Office Hours",
     valueLines: ["Monday - Friday: 9:00 AM - 6:00 PM"],
   },
@@ -92,36 +87,26 @@ const socialLinks = [
   {
     href: "#",
     label: "LinkedIn",
-    icon: <img src="assets/linkedin-solid-gray.png" alt="" />,
+    iconSrc: "/assets/linkedin-solid-gray.png",
   },
   {
     href: "#",
     label: "Twitter",
-    icon: <img src="assets/twitter-solid-gray.png" alt="" />,
+    iconSrc: "/assets/twitter-solid-gray.png",
   },
   {
     href: "#",
     label: "Facebook",
-    icon: <img src="assets/facebook-solid-gray.png" alt="" />,
+    iconSrc: "/assets/facebook-solid-gray.png",
   },
 ];
 
-// --- MAIN PAGE COMPONENT ---
-// `NextPage` type is for the 'pages' dir. For App Router, it's just `React.FC` or default function.
 const ContactUsPage: React.FC = () => {
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/our-partners", label: "Our Partners" },
-    { href: "/contact", label: "Contact", current: true },
-  ];
-
   return (
     <>
       <Header />
 
       <main className="font-sans text-gray-800">
-        {/* 1. Header Strip */}
         <section className="bg-gray-100 py-16 md:py-20 text-center">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-4xl sm:text-5xl font-bold font-oswald text-gray-900 mb-6">
@@ -133,18 +118,15 @@ const ContactUsPage: React.FC = () => {
               assistance to address your concerns and guide you through your
               legal journey with our experienced attorneys.
             </p>
-            <div className="mx-auto w-12 h-1 bg-[#D4AF37]"></div>{" "}
-            {/* 48px gold divider */}
+            <div className="mx-auto w-12 h-1 bg-[#D4AF37]"></div>
           </div>
         </section>
 
-        {/* 2. Contact Block */}
         <section className="bg-gray-100 py-16 md:py-24 font-inter">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-12">
-              {/* Left Card: Form */}
-              <div className="bg-white p-8 md:p-10 rounded-lg shadow-lg border border-gray-200">
-                <h2 className="text-2xl font-bold text-gray-900 mb-8">
+              <div className="bg-white p-8 md:p-10 shadow-lg border border-gray-200">
+                <h2 className="text-2xl font-bold text-gray-900 mb-8 font-oswald">
                   Send Us a Message
                 </h2>
                 <form action="#" method="POST" className="space-y-6 font-sans">
@@ -161,7 +143,7 @@ const ContactUsPage: React.FC = () => {
                         name="first-name"
                         id="first-name"
                         required
-                        className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                        className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                       />
                     </div>
                     <div>
@@ -176,7 +158,7 @@ const ContactUsPage: React.FC = () => {
                         name="last-name"
                         id="last-name"
                         required
-                        className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                        className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                       />
                     </div>
                   </div>
@@ -193,7 +175,7 @@ const ContactUsPage: React.FC = () => {
                       id="email"
                       required
                       autoComplete="email"
-                      className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -208,7 +190,7 @@ const ContactUsPage: React.FC = () => {
                       name="phone"
                       id="phone"
                       autoComplete="tel"
-                      className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -221,7 +203,7 @@ const ContactUsPage: React.FC = () => {
                     <select
                       id="subject"
                       name="subject"
-                      className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white"
+                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37] bg-white"
                     >
                       <option>General Inquiry</option>
                       <option>Consultation Request</option>
@@ -242,7 +224,7 @@ const ContactUsPage: React.FC = () => {
                       id="message"
                       rows={5}
                       required
-                      className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     ></textarea>
                   </div>
                   <div className="flex items-start">
@@ -252,7 +234,7 @@ const ContactUsPage: React.FC = () => {
                         name="consent"
                         type="checkbox"
                         required
-                        className="h-4 w-4 text-[#D4AF37] border-gray-300 rounded focus:ring-[#D4AF37] mt-0.5"
+                        className="h-4 w-4 text-[#D4AF37] border-gray-300 focus:ring-[#D4AF37] mt-0.5"
                       />
                     </div>
                     <div className="ml-3 text-sm">
@@ -261,12 +243,12 @@ const ContactUsPage: React.FC = () => {
                         className="font-medium text-gray-700"
                       >
                         I agree to the{" "}
-                        <a
+                        <Link
                           href="/privacy-policy"
                           className="text-[#D4AF37] hover:underline"
                         >
                           privacy policy
-                        </a>{" "}
+                        </Link>{" "}
                         and consent to being contacted regarding my inquiry.*
                       </label>
                     </div>
@@ -274,7 +256,7 @@ const ContactUsPage: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center bg-black text-white px-8 py-3.5 rounded-md font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                      className="w-full flex items-center justify-center bg-black text-white px-8 py-3.5 font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
                     >
                       Send Message <RightArrowIcon />
                     </button>
@@ -282,17 +264,14 @@ const ContactUsPage: React.FC = () => {
                 </form>
               </div>
 
-              {/* Right Card: Contact Details */}
-              <div className="bg-black text-white p-8 md:p-10 rounded-lg shadow-lg lg:order-last order-first font-inter">
-                {" "}
-                {/* Stack form first on mobile */}
-                <h2 className="text-2xl font-bold text-white mb-10">
+              <div className="bg-black text-white p-8 md:p-10 shadow-lg lg:order-last order-first font-inter">
+                <h2 className="text-2xl font-bold text-white mb-10 font-oswald">
                   Firm Contact Details
                 </h2>
                 <div className="space-y-8 font-sans">
                   {contactInfo.map((info) => (
                     <div key={info.label} className="flex items-start">
-                      <img src={info.iconPath} alt="" className="mx-4" />
+                      <Image src={info.iconPath} alt="" width={24} height={24} className="mr-4 mt-1 flex-shrink-0" />
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-1">
                           {info.label}
@@ -319,11 +298,7 @@ const ContactUsPage: React.FC = () => {
                     </div>
                   ))}
                   <div className="flex items-start">
-                    <img
-                      src="assets/share-outline.png"
-                      alt=""
-                      className="mx-4"
-                    />
+                    <Image src="/assets/share-outline.png" alt="" width={24} height={24} className="mr-4 mt-1 flex-shrink-0" />
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">
                         Connect With Us
@@ -336,7 +311,7 @@ const ContactUsPage: React.FC = () => {
                             aria-label={link.label}
                             className="text-[#D4AF37] hover:text-white transition-colors"
                           >
-                            {link.icon}
+                            <Image src={link.iconSrc} alt={link.label} width={20} height={20} />
                           </a>
                         ))}
                       </div>
@@ -344,15 +319,16 @@ const ContactUsPage: React.FC = () => {
                   </div>
                 </div>
                 <div className="mt-12 pt-8 border-t border-gray-700">
-                  <div className="aspect-[16/9] bg-gray-700 rounded-md overflow-hidden shadow-md">
-                    {/* Replace with actual map embed or image */}
-                    <img
-                      src="/images/map-placeholder-grayscale.jpg"
-                      alt="FMC Law Headquarters Location Map"
+                  <div className="aspect-[16/9] bg-gray-700 overflow-hidden shadow-md">
+                    <Image
+                      src="/assets/map-placeholder-grayscale.png"
+                      alt={`${firmName} Headquarters Location Map`}
+                      width={1600}
+                      height={900}
                       className="w-full h-full object-cover grayscale"
                     />
                   </div>
-                  <div className="bg-gray-800 text-center py-3 px-4 rounded-b-md -mt-1 relative z-10">
+                  <div className="bg-gray-800 text-center py-3 px-4 -mt-1 relative z-10">
                     <p className="text-xs text-gray-300 font-sans">
                       {firmName} Headquarters - Open Weekdays 9 AM to 6 PM
                     </p>
@@ -363,11 +339,10 @@ const ContactUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* 3. FAQ Section */}
         <section className="bg-white py-16 md:py-24 font-inter">
           <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12 md:mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-oswald">
                 Frequently Asked Questions
               </h2>
               <p className="text-gray-600 font-sans max-w-2xl mx-auto text-lg leading-relaxed">
@@ -392,26 +367,25 @@ const ContactUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* 4. CTA Banner */}
         <section
-          className="relative  py-20 md:py-28 bg-cover bg-center bg-no-repeat font-inter"
-          style={{ backgroundImage: "url('assets/contact-us-banner.png')" }}
+          className="relative py-20 md:py-28 bg-cover bg-center bg-no-repeat font-inter"
+          style={{ backgroundImage: "url('/assets/contact-us-banner.png')" }}
         >
           <div className="absolute inset-0 bg-black opacity-60"></div>
           <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white ">
-            <h3 className="text-3xl md:text-4xl font-bold mb-5">
+            <h3 className="text-3xl md:text-4xl font-bold mb-5 font-oswald">
               Ready to Work with Us?
             </h3>
             <p className="text-lg font-sans mb-10 max-w-xl mx-auto">
               Schedule a consultation with our experienced attorneys and
               discover how we can help you navigate your legal challenges.
             </p>
-            <a
-              href="/book-consultation"
-              className="bg-[#D4AF37] text-black px-8 py-3.5 rounded-md font-semibold font-sans text-base lg:text-lg hover:bg-opacity-85 transition-opacity"
+            <Link
+              href="/contact"
+              className="bg-[#D4AF37] text-black px-8 py-3.5 font-semibold font-sans text-base lg:text-lg hover:bg-opacity-85 transition-opacity"
             >
               Book a Consultation Now
-            </a>
+            </Link>
           </div>
         </section>
       </main>
@@ -421,9 +395,3 @@ const ContactUsPage: React.FC = () => {
 };
 
 export default ContactUsPage;
-
-// If using App Router and want to define metadata:
-// export const metadata = {
-//   title: `Contact Us | ${firmName}`,
-//   description: `Get in touch with ${firmName}. We are here to assist with your legal needs, schedule consultations, and answer your questions.`,
-// };
