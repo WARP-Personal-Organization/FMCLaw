@@ -449,11 +449,10 @@ const FmcLawLandingPage: React.FC = () => {
                     key={value.title}
                     className="flex items-start space-x-3 text-black mb-4 "
                   >
-                    <div className="w-[36px] h-[36px] bg-[#D4AF37] rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
                       <Image
                         src={value.imageUrl}
                         alt={`${value.title} icon`}
-                        className=""
                         width={24}
                         height={24}
                       />
