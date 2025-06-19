@@ -1,14 +1,12 @@
 "use client";
-// pages/our-partners.tsx
+
 import type { NextPage } from "next";
 import Head from "next/head";
-import AboutPartnerCard from "@/components/AboutPartnerCard";
+import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-// --- HELPER COMPONENTS (Defined within the same file) ---
-
-// --- PARTNER DATA AND TYPES ---
 interface PartnerInfoGroup {
   heading: string;
   items: string[];
@@ -23,14 +21,58 @@ interface Partner {
   infoGroups: PartnerInfoGroup[];
 }
 
-const firmName = "FMC Law"; // Example Firm Name
+const firmName = "FMC Law";
 
 const partnersData: Partner[] = [
-  {
+    {
     id: 1,
+    name: "Lcid Crescent Fernandez",
+    role: "MANAGING PARTNER",
+    imageUrl: "/assets/alexandra.png",
+    specialties: [
+      "Commercial Litigation",
+      "International Arbitration",
+      "White-Collar Defense",
+    ],
+    infoGroups: [
+      {
+        heading: "Credentials",
+        items: [
+          "Bar Admission: California, 1998; England & Wales (Solicitor), 2003",
+          "Member, Chartered Institute of Arbitrators (MCIArb)",
+        ],
+      },
+      {
+        heading: "Employment History",
+        items: [
+          `Partner, ${firmName} (2012-Present)`,
+          "Head of Litigation, Ainsworth & Crane (2004-2012)",
+          "Barrister, Temple Chambers (1999-2003)",
+        ],
+      },
+      {
+        heading: "Areas of Practice",
+        items: [
+          "High-Stakes Contractual Disputes",
+          "Securities Fraud Litigation",
+          "Cross-Border Insolvency",
+        ],
+      },
+      {
+        heading: "Education & Background",
+        items: [
+          "LL.M., Columbia Law School (Harlan Fiske Stone Scholar)",
+          "B.C.L., University of Oxford",
+          "B.A. in Law, University of Cambridge (First Class Honours)",
+        ],
+      },
+    ],
+  },
+  {
+    id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "PARTNER",
-    imageUrl: "/assets/Jonathan-portrait.png", // Replace with actual image paths
+    imageUrl: "/assets/jonathan.png",
     specialties: [
       "Mergers & Acquisitions",
       "Venture Capital",
@@ -72,54 +114,10 @@ const partnersData: Partner[] = [
     ],
   },
   {
-    id: 2,
-    name: "Lcid Crescent Fernandez",
-    role: "MANAGING PARTNER",
-    imageUrl: "/assets/Alexandra-portrait.png",
-    specialties: [
-      "Commercial Litigation",
-      "International Arbitration",
-      "White-Collar Defense",
-    ],
-    infoGroups: [
-      {
-        heading: "Credentials",
-        items: [
-          "Bar Admission: California, 1998; England & Wales (Solicitor), 2003",
-          "Member, Chartered Institute of Arbitrators (MCIArb)",
-        ],
-      },
-      {
-        heading: "Employment History",
-        items: [
-          `Partner, ${firmName} (2012-Present)`,
-          "Head of Litigation, Ainsworth & Crane (2004-2012)",
-          "Barrister, Temple Chambers (1999-2003)",
-        ],
-      },
-      {
-        heading: "Areas of Practice",
-        items: [
-          "High-Stakes Contractual Disputes",
-          "Securities Fraud Litigation",
-          "Cross-Border Insolvency",
-        ],
-      },
-      {
-        heading: "Education & Background",
-        items: [
-          "LL.M., Columbia Law School (Harlan Fiske Stone Scholar)",
-          "B.C.L., University of Oxford",
-          "B.A. in Law, University of Cambridge (First Class Honours)",
-        ],
-      },
-    ],
-  },
-  {
     id: 3,
     name: "Ryan Carlo Cordero",
     role: "PARTNER",
-    imageUrl: "/assets/Jonathan-portrait.png",
+    imageUrl: "/assets/jonathan.png",
     specialties: [
       "Patent Litigation",
       "Tech Transactions",
@@ -160,14 +158,86 @@ const partnersData: Partner[] = [
     ],
   },
 ];
-const OurPartnersPage: NextPage = () => {
-  const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/our-partners", label: "Our Partners", current: true },
-    { href: "/contact", label: "Contact" },
-  ];
 
+interface AboutPartnerCardProps {
+  partner: Partner;
+  imageSide?: "left" | "right";
+}
+
+const AboutPartnerCard: React.FC<AboutPartnerCardProps> = ({
+  partner,
+  imageSide = "left",
+}) => {
+  const imageOrderClass = imageSide === "left" ? "md:order-1" : "md:order-2";
+  const contentOrderClass = imageSide === "left" ? "md:order-2" : "md:order-1";
+
+  return (
+    <div className="bg-white shadow-xl overflow-hidden md:grid md:grid-cols-12 md:gap-0">
+      <div
+        className={`md:col-span-4 relative ${imageOrderClass} min-h-[300px] md:min-h-0`}
+      >
+        <Image
+          src={partner.imageUrl}
+          alt={`Portrait of ${partner.name}`}
+          fill
+          className="object-cover object-top"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent md:bg-gradient-to-r md:from-black/10 md:to-transparent"></div>
+      </div>
+
+      <div
+        className={`md:col-span-8 p-6 sm:p-8 lg:p-10 ${contentOrderClass} flex flex-col`}
+      >
+        <h3 className="text-2xl sm:text-3xl font-bold font-oswald text-gray-900">
+          {partner.name}
+        </h3>
+        <p className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wider mb-4 font-sans">
+          {partner.role}
+        </p>
+
+        {partner.specialties && partner.specialties.length > 0 && (
+          <div className="mb-6">
+            <h4 className="text-sm font-semibold text-gray-500 uppercase mb-2 font-sans">
+              Key Specialties
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {partner.specialties.map((spec, idx) => (
+                <span
+                  key={idx}
+                  className="bg-gray-200 text-gray-700 px-3 py-1 text-xs font-medium rounded-full font-sans"
+                >
+                  {spec}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-grow">
+          {partner.infoGroups.map((group) => (
+            <div key={group.heading}>
+              <h5 className="text-base font-semibold text-gray-800 mb-2 font-sans">
+                {group.heading}
+              </h5>
+              <ul className="list-disc list-inside space-y-1 pl-1">
+                {group.items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="text-sm text-gray-600 font-sans leading-relaxed"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const OurPartnersPage: NextPage = () => {
   return (
     <>
       <Head>
@@ -184,26 +254,27 @@ const OurPartnersPage: NextPage = () => {
         <section
           className="relative bg-cover bg-center py-28 md:py-40 lg:py-56"
           style={{
-            backgroundImage: "url('assets/meet-partners-banner.png')",
-          }} // Ensure this image is in /public/images/backgrounds
+            backgroundImage: "url('/assets/meet-partners-banner.png')",
+          }}
         >
-          <div className="absolute inset-0 bg-black opacity-70"></div>{" "}
-          {/* Darkening overlay */}
-          <div className="relative z-10  px-4 sm:px-6 lg:px-8 text-left mx-32">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
-              Meet Our <span className="text-[#D4AF37]">Legal Experts</span>
-            </h1>
-            <p className="mt-5 md:mt-6 text-lg md:text-xl text-gray-200 font-inter max-w-3xl">
-              Our team of accomplished attorneys brings decades of combined
-              experience across diverse practice areas to deliver exceptional
-              legal representation.
-            </p>
+          <div className="absolute inset-0 bg-black opacity-70"></div>
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+            <div className="md:w-3/4 lg:w-2/3">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
+                Meet Our <span className="text-[#D4AF37]">Legal Experts</span>
+              </h1>
+              <p className="mt-5 md:mt-6 text-lg md:text-xl text-gray-200 font-inter max-w-3xl">
+                Our team of accomplished attorneys brings decades of combined
+                experience across diverse practice areas to deliver exceptional
+                legal representation.
+              </p>
+            </div>
           </div>
         </section>
-        {/* 2. Intro Block */}
+
         <section className="py-16 md:py-24 bg-gray-100 font-inter">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 font-oswald">
               The Minds Behind {firmName}
             </h2>
             <p className="text-lg text-gray-600 font-sans leading-relaxed">
@@ -212,26 +283,24 @@ const OurPartnersPage: NextPage = () => {
             </p>
           </div>
         </section>
-        {/* 3. Partner Profile Cards */}
+
         <section className="py-16 md:py-20 bg-gray-100">
-          {" "}
-          {/* Slightly different bg for contrast */}
-          <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="space-y-12 md:space-y-16">
+          <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="space-y-12 md:space-y-16 lg:space-y-20">
               {partnersData.map((partner, index) => (
                 <AboutPartnerCard
                   key={partner.id}
                   partner={partner}
-                  imageSide={index % 2 === 0 ? "left" : "right"} // Alternating image side for desktop
+                  imageSide={index % 2 === 0 ? "left" : "right"}
                 />
               ))}
             </div>
           </div>
         </section>
-        {/* 4. CTA Band */}
+
         <section className="bg-black text-white py-16 md:py-20 font-inter">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold mb-5">
+            <h3 className="text-3xl md:text-4xl font-bold mb-5 font-oswald">
               Connect With Our Legal Experts
             </h3>
             <p className="text-lg text-gray-300 font-sans mb-10 max-w-xl mx-auto">
@@ -240,18 +309,18 @@ const OurPartnersPage: NextPage = () => {
               to assist you.
             </p>
             <div className="flex flex-col sm:flex-row sm:justify-center gap-4 sm:gap-6">
-              <a
-                href="/book-consultation" // Replace with actual link
-                className="bg-[#D4AF37] text-black px-8 py-3.5 rounded-md font-semibold font-sans text-base lg:text-lg hover:bg-opacity-85 transition-opacity w-full sm:w-auto"
+              <Link
+                href="/contact"
+                className="bg-[#D4AF37] text-black px-8 py-3.5 font-semibold font-sans text-base lg:text-lg hover:bg-opacity-85 transition-opacity w-full sm:w-auto"
               >
                 Book a Consultation
-              </a>
-              <a
-                href="/contact" // Replace with actual link
-                className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-3.5 rounded-md font-semibold font-sans text-base lg:text-lg hover:bg-[#D4AF37] hover:text-black transition-colors w-full sm:w-auto"
+              </Link>
+              <Link
+                href="/contact"
+                className="border-2 border-[#D4AF37] text-[#D4AF37] px-8 py-3.5 font-semibold font-sans text-base lg:text-lg hover:bg-[#D4AF37] hover:text-black transition-colors w-full sm:w-auto"
               >
                 Contact a Specific Partner
-              </a>
+              </Link>
             </div>
           </div>
         </section>
