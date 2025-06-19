@@ -5,10 +5,10 @@ import React from "react";
 
 function Footer() {
   const socialLinks = [
-    { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
-    { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
+    // { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
+    // { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
     { href: "#", src: "/assets/facebook-solid.png", alt: "Facebook" },
-    { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
+    // { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
   ];
 
   const companyLinks = [

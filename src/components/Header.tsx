@@ -69,7 +69,7 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="text-gray-300 hover:text-[#CE9930] px-3 py-2 rounded-md text-sm font-medium font-sans"
+                  className="text-gray-300 hover:text-[#CE9930] px-3 py-2 text-sm font-medium font-sans"
                 >
                   {link.label}
                 </Link>
@@ -79,7 +79,7 @@ export default function Header() {
             <div className="flex items-center">
               <Link
                 href="/contact"
-                className="hidden sm:block bg-[#D4AF37] text-black px-4 py-2 text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors rounded-md"
+                className="hidden sm:block bg-[#D4AF37] text-black px-4 py-2 text-sm font-semibold font-sans hover:bg-opacity-80 transition-colors"
               >
                 Book Consultation
               </Link>
@@ -111,7 +111,7 @@ export default function Header() {
                   key={link.label}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium font-sans"
+                  className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 text-base font-medium font-sans"
                 >
                   {link.label}
                 </Link>
@@ -119,7 +119,7 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="mt-2 block w-full text-center bg-[#D4AF37] text-black px-4 py-2 text-base font-semibold font-sans hover:bg-opacity-80 transition-colors rounded-md"
+                className="mt-2 block w-full text-center bg-[#D4AF37] text-black px-4 py-2 text-base font-semibold font-sans hover:bg-opacity-80 transition-colors"
               >
                 Book Consultation
               </Link>
