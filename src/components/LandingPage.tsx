@@ -231,13 +231,13 @@ const FmcLawLandingPage: React.FC = () => {
                 </p>
                 <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
                   <Link
-                    href="#contact"
+                    href="/contact"
                     className="bg-[#D4AF37] text-black px-8 py-3 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
                   >
                     Contact Us
                   </Link>
                   <Link
-                    href="#about"
+                    href="/about"
                     className="border-2 border-white text-white px-8 py-3 font-semibold font-sans text-lg hover:bg-white hover:text-black transition-colors"
                   >
                     Learn More
@@ -273,7 +273,7 @@ const FmcLawLandingPage: React.FC = () => {
                   empowered and informed every step of the way.
                 </p>
                 <Link
-                  href="#about"
+                  href="/about"
                   className="inline-block border border-black text-black py-[10px] px-[32px] text-sm font-semibold font-sans hover:bg-black hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
                 >
                   Learn More
@@ -361,7 +361,7 @@ const FmcLawLandingPage: React.FC = () => {
               discover how we can help you navigate your legal challenges.
             </p>
             <Link
-              href="#contact"
+              href="/contact"
               className="bg-[#D4AF37] text-black px-10 py-4 font-semibold text-lg hover:bg-opacity-80 transition-colors"
             >
               Get in Touch Today
