@@ -88,7 +88,7 @@ const FmcLawLandingPage: React.FC = () => {
   const whyChooseReasons: WhyChooseReason[] = [
     {
       name: "Excellence",
-      image: "/assets/Why_choose_FMC/award-pin-solid.png",
+      image: "/assets/Why_choose_FMC/award-pin-solid.svg",
       description: "Top-tier lawyers with proven expertise.",
     },
     {
