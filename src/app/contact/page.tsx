@@ -57,7 +57,7 @@ const faqData = [
 
 const contactInfo = [
   {
-    iconPath: "/assets/pin-outline.png",
+    iconPath: "/assets/icons/pin-outline.png",
     label: "Address",
     valueLines: [
       "Iloilo Office: 2F, Daily Guardian Center,",
@@ -68,19 +68,19 @@ const contactInfo = [
     ],
   },
   {
-    iconPath: "/assets/phone-outline.png",
+    iconPath: "/assets/icons/phone-outline.png",
     label: "Phone",
     valueLines: ["0917-702-1298"],
     href: "tel:+639177021298",
   },
   {
-    iconPath: "/assets/mail-outline.png",
+    iconPath: "/assets/icons/mail-outline.png",
     label: "Email",
     valueLines: ["admin@fmclaw.com.ph"],
     href: "mailto:admin@fmclaw.com.ph",
   },
   {
-    iconPath: "/assets/clock-outline.png",
+    iconPath: "/assets/icons/clock-outline.png",
     label: "Office Hours",
     valueLines: ["Monday - Friday: 9:00 AM - 6:00 PM"],
   },
@@ -90,17 +90,17 @@ const socialLinks = [
   {
     href: "#",
     label: "LinkedIn",
-    iconSrc: "/assets/linkedin-solid-gray.png",
+    iconSrc: "/assets/icons/linkedin-solid-gray.png",
   },
   {
     href: "#",
     label: "Twitter",
-    iconSrc: "/assets/twitter-solid-gray.png",
+    iconSrc: "/assets/icons/twitter-solid-gray.png",
   },
   {
     href: "#",
     label: "Facebook",
-    iconSrc: "/assets/facebook-solid-gray.png",
+    iconSrc: "/assets/icons/facebook-solid-gray.png",
   },
 ];
 
@@ -203,11 +203,11 @@ const ContactUsPage: React.FC = () => {
                     >
                       Subject
                     </label>
-                    <input 
+                    <input
                       type="subject"
-                      name='subject'
+                      name="subject"
                       id="subject"
-                      required 
+                      required
                       autoComplete="subject"
                       className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
@@ -306,7 +306,7 @@ const ContactUsPage: React.FC = () => {
                   ))}
                   <div className="flex items-start">
                     <Image
-                      src="/assets/share-outline.png"
+                      src="/assets/icons/share-outline.png"
                       alt=""
                       width={24}
                       height={24}
@@ -365,8 +365,8 @@ const ContactUsPage: React.FC = () => {
               </h2>
               <p className="text-gray-600 font-sans max-w-2xl mx-auto text-lg leading-relaxed">
                 Find quick answers to common questions about our services and
-                processes. If you don&apos;t find your answer here, please don&apos;t
-                hesitate to reach out.
+                processes. If you don&apos;t find your answer here, please
+                don&apos;t hesitate to reach out.
               </p>
               <div className="mt-8 mx-auto w-12 h-1 bg-[#D4AF37]"></div>
             </div>
