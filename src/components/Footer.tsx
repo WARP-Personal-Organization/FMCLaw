@@ -20,7 +20,7 @@ function Footer() {
 
   const contactInfo = [
     {
-      icon: "/assets/pin-solid.png",
+      icon: "/assets/pin-solid.svg",
       alt: "Location Pin Icon",
       lines: [
         "Iloilo Office: 2F, Daily Guardian Center,",
