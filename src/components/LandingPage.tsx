@@ -63,26 +63,26 @@ const FmcLawLandingPage: React.FC = () => {
       description: "Robust defense for individuals facing criminal charges.",
       image: "/assets/Our_expertise/criminal-law-solid.svg",
     },
-    {
-      name: "Administrative Law",
-      description: "Challenging governmental decisions and regulatory actions.",
-      image: "/assets/Our_expertise/administrative-law-solid.svg",
-    },
-    {
-      name: "Civil Law",
-      description: "Resolving disputes between individuals and organizations.",
-      image: "/assets/Our_expertise/scroll-solid.svg",
-    },
-    {
-      name: "Election Law",
-      description: "Ensuring fair and lawful electoral processes.",
-      image: "/assets/Our_expertise/election-solid.svg",
-    },
-    {
-      name: "Compliance",
-      description: "Ensuring adherence to laws and regulatory standards.",
-      image: "/assets/Our_expertise/compliance-solid.svg",
-    },
+    // {
+    //   name: "Administrative Law",
+    //   description: "Challenging governmental decisions and regulatory actions.",
+    //   image: "/assets/Our_expertise/administrative-law-solid.svg",
+    // },
+    // {
+    //   name: "Civil Law",
+    //   description: "Resolving disputes between individuals and organizations.",
+    //   image: "/assets/Our_expertise/scroll-solid.svg",
+    // },
+    // {
+    //   name: "Election Law",
+    //   description: "Ensuring fair and lawful electoral processes.",
+    //   image: "/assets/Our_expertise/election-solid.svg",
+    // },
+    // {
+    //   name: "Compliance",
+    //   description: "Ensuring adherence to laws and regulatory standards.",
+    //   image: "/assets/Our_expertise/compliance-solid.svg",
+    // },
   ];
 
   const whyChooseReasons: WhyChooseReason[] = [
@@ -212,7 +212,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
               <div className="md:w-3/5 text-center md:text-left py-8 md:py-0">
                 <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
-                  Legal Guidance That Moves You Forward
+                  Legal Guidance <br></br>That Moves You Forward
                 </h1>
                 <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl">
                   Bringing together diverse perspectives, we deliver dedicated

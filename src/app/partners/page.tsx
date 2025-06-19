@@ -261,18 +261,17 @@ const OurPartnersPage: NextPage = () => {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
             <div className="md:w-3/4 lg:w-2/3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
-                Meet Our <span className="text-[#D4AF37]">Legal Experts</span>
+                The Minds Behind <span className="text-[#D4AF37]">{firmName}</span>
               </h1>
               <p className="mt-5 md:mt-6 text-lg md:text-xl text-gray-200 font-inter max-w-3xl">
-                Our team of accomplished attorneys brings decades of combined
-                experience across diverse practice areas to deliver exceptional
-                legal representation.
+              Our partners bring new ideas and a strong commitment to quality in
+              every case.
               </p>
             </div>
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-gray-100 font-inter">
+        {/* <section className="py-16 md:py-24 bg-gray-100 font-inter">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-5 font-oswald">
               The Minds Behind {firmName}
@@ -282,7 +281,7 @@ const OurPartnersPage: NextPage = () => {
               every case.
             </p>
           </div>
-        </section>
+        </section> */}
 
         <section className="py-16 md:py-20 bg-gray-100">
           <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -244,7 +244,7 @@ const AboutUsPage: React.FC = () => {
           <div className="bg-black p-12 sm:p-20 max-w-7xl mx-auto my-10 sm:my-20 relative">
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-oswald mb-4">
-                Experience the FMC Law Difference
+                Experience the Difference
               </h2>
               <p className="text-lg text-gray-200 font-inter mb-10 max-w-2xl mx-auto">
                 Talk to our legal team and see how we can help you move forward.
