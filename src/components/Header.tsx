@@ -3,9 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
+import path from "path";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathName = usePathname();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -68,7 +71,9 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-gray-300 hover:text-[#CE9930] px-3 py-2 text-sm font-medium font-sans"
+                className={` hover:text-[#CE9930] px-3 py-2 text-sm font-medium ${
+                  pathName === link.href ? "text-[#CE9930]" : "text-gray-300"
+                }`}
               >
                 {link.label}
               </Link>
