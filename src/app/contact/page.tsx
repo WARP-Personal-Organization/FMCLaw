@@ -339,7 +339,7 @@ const ContactUsPage: React.FC = () => {
                 <div className="mt-12 pt-8 border-t border-gray-700">
                   <div className="aspect-[16/9] bg-gray-700 overflow-hidden shadow-md">
                     <Image
-                      src="/assets/bg_images/map-placeholder-grayscale.jpg"
+                      src="/assets/background/map-placeholder-grayscale.jpg"
                       alt=""
                       width={1600}
                       height={900}

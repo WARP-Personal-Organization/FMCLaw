@@ -384,7 +384,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/bg_images/table-people.png"
+                  src="/assets/background/table-people.png"
                   alt="FMC Law team in a meeting"
                   fill
                   style={{ objectFit: "cover" }}
@@ -412,7 +412,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="order-1 md:order-2 relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/bg_images/table-empty.png"
+                  src="/assets/background/table-empty.png"
                   alt="FMC Law conference room"
                   fill
                   style={{ objectFit: "cover" }}
