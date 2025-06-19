@@ -67,8 +67,7 @@ function Footer() {
               />
             </Link>
             <p className="text-sm">
-              Combining traditional legal expertise with innovative approaches
-              for today&apos;s complex challenges.
+We combine forward-thinking and dynamic approaches with innovative strategies to deliver exceptional legal representation for your most critical matters.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (
