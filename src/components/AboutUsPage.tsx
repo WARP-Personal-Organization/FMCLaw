@@ -1,47 +1,29 @@
+"use client";
+
 import React from 'react';
 import Header from "./Header";
 import Footer from './Footer';
-// For a real Next.js project, you might prefer to import Link from 'next/link' for client-side navigation
-// and Image from 'next/image' for optimized images.
-// import Link from 'next/link';
-// import Image from 'next/image';
-
-// Placeholder for icons (as provided in the initial context)
-const PlaceholderIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-  </svg>
-);
+import Link from 'next/link';
+import Image from 'next/image';
 
 const coreValuesData = [
-  { title: "Integrity", description: "Upholding the highest ethical standards in every action and decision we make.", icon: <img src="/assets/scales-solid.svg" alt="" /> },
-  { title: "Excellence", description: "Consistently delivering superior legal services and achieving outstanding results.", icon: <img src="/assets/trophy-solid.svg" alt="" /> },
-  { title: "Innovation", description: "Embracing creative thinking and cutting-edge solutions to complex legal challenges.", icon: <img src="/assets/lightbulb-solid.svg" alt="" /> },
-  { title: "Collaboration", description: "Working closely with clients and colleagues to achieve shared goals effectively.", icon: <img src="/assets/handshake-solid.svg" alt="" /> },
+  { title: "Integrity", description: "Upholding the highest ethical standards in every action and decision we make.", iconSrc: "/assets/Our_expertise/scales-solid.png", iconAlt: "Integrity icon" },
+  { title: "Excellence", description: "Consistently delivering superior legal services and achieving outstanding results.", iconSrc: "/assets/Why_choose_FMC/award-pin-solid.png", iconAlt: "Excellence icon" },
+  { title: "Innovation", description: "Embracing creative thinking and cutting-edge solutions to complex legal challenges.", iconSrc: "/assets/Why_choose_FMC/lightbulb-solid.png", iconAlt: "Innovation icon" },
+  { title: "Collaboration", description: "Working closely with clients and colleagues to achieve shared goals effectively.", iconSrc: "/assets/Why_choose_FMC/handshake-solid.png", iconAlt: "Collaboration icon" },
 ];
 
 const leadershipData = [
-  { id: 1, name: "Alexandra Reynolds", role: "Managing Partner", bio: "With over 20 years of experience in corporate law, Alexandra leads our firm with vision and integrity, specializing in complex commercial litigation.", imageUrl: "/assets/alexandra-About.svg" },
-  { id: 2, name: "Jonathan Blackwell", role: "Senior Partner, Litigation", bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.", imageUrl: "/assets/jonathan-about.png" },
-  { id: 3, name: "Michelle Chen", role: "Partner, Mergers & Acquisitions", bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.", imageUrl: "/assets/michelle-about.png" },
+  { id: 1, name: "Alexandra Reynolds", role: "Managing Partner", bio: "With over 20 years of experience in corporate law, Alexandra leads our firm with vision and integrity, specializing in complex commercial litigation.", imageUrl: "/assets/alexandra.png" },
+  { id: 2, name: "Jonathan Blackwell", role: "Senior Partner, Litigation", bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.", imageUrl: "/assets/jonathan.png" },
+  { id: 3, name: "Michelle Chen", role: "Partner, Mergers & Acquisitions", bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.", imageUrl: "/assets/michelle.png" },
 ];
-
-const practiceAreasFooter = [
-  { name: "Corporate Law", href: "#" },
-  { name: "Commercial Law", href: "#" },
-  { name: "Litigation", href: "#" },
-  { name: "Intellectual Property", href: "#" },
-  { name: "Labor Law", href: "#" },
-];
-
 
 const AboutUsPage: React.FC = () => {
   return (
     <>
-      {/* 1. Sticky Top Nav */}
       <Header/>
-      <main className="text-gray-800"> {/* Default body font */}
-        {/* 2. Hero / Title */}
+      <main className="text-gray-800">
         <section className="bg-white py-16 md:py-24 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h1 className="text-5xl md:text-6xl font-bold font-oswald text-gray-900 text-center">
@@ -54,7 +36,6 @@ const AboutUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* 3. Firm Profile Section */}
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -70,19 +51,21 @@ const AboutUsPage: React.FC = () => {
                 </p>
               </div>
               <div className="relative mt-10 md:mt-0">
-                <img
-                  src="/assets/firm-profile.png" // Replace with actual team photo
-                  alt="FMC Law team discussion"
-                  className="w-full aspect-[4/3] object-cover shadow-xl"
-                />
+                <div className="relative w-full aspect-[4/3] shadow-xl">
+                  <Image
+                    src="/assets/table-people.png"
+                    alt="FMC Law team discussion"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="absolute -bottom-3 -left-3 md:-bottom-4 md:-left-4 w-20 h-20 bg-[#D4AF37] z-10"></div>
-                <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-15 h-15 bg-black z-10"></div>
+                <div className="absolute -top-3 -right-3 md:-top-4 md:-right-4 w-16 h-16 bg-black z-10"></div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 4. Core Values */}
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl lg:text-4xl font-bold font-oswald text-center text-gray-900 mb-16">
@@ -91,7 +74,9 @@ const AboutUsPage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {coreValuesData.map((value) => (
                 <div key={value.title} className="bg-white border border-gray-100 p-8 shadow-md hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center">
-                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-[#D4AF37] bg-[#D4AF37]">{value.icon}</div>
+                  <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
+                    <Image src={value.iconSrc} alt={value.iconAlt} width={32} height={32} />
+                  </div>
                   <h3 className="text-xl font-semibold font-inter text-gray-900 mb-3">{value.title}</h3>
                   <p className="text-gray-600 font-inter text-sm leading-relaxed flex-grow">{value.description}</p>
                 </div>
@@ -100,13 +85,12 @@ const AboutUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* 5. Mission Banner */}
         <section className="bg-white text-white py-16 md:py-5">
           <div className="bg-black max-w-7xl mx-auto px-4 py-20 sm:px-6 lg:px-8">
             <h3 className="text-3xl lg:text-4xl font-bold font-sans text-center mb-10">
               Our Mission
             </h3>
-            <div className="max-w-6xl mx-auto space-y-6 text-center text-gray-300 font-inter leading-relaxed text-lg text-justify">
+            <div className="max-w-3xl mx-auto space-y-6 text-center text-gray-300 font-inter leading-relaxed text-lg">
               <p>
                 To deliver exceptional legal services with unwavering integrity, profound expertise, and a commitment to achieving the best possible outcomes for our clients.
               </p>
@@ -123,7 +107,6 @@ const AboutUsPage: React.FC = () => {
           </div>
         </section>
 
-        {/* 6. Leadership Grid */}
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl lg:text-4xl font-oswald font-bold text-center text-gray-900 mb-16">
@@ -132,15 +115,16 @@ const AboutUsPage: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 font-inter">
               {leadershipData.map((leader) => (
                 <div key={leader.id} className="bg-white border border-gray-200 shadow-md overflow-hidden flex flex-col transition-shadow hover:shadow-xl">
-                  <div className="relative w-full aspect bg-gray-200"> {/* Placeholder bg if image fails */}
-                    <img
+                  <div className="relative w-full aspect-[3/4]">
+                    <Image
                       src={leader.imageUrl}
                       alt={`Portrait of ${leader.name}`}
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
                     />
-                    <div className='absolute inset-0 justify-end items-center text-center flex flex-col bg-gradient-to-r from-black/60 to-transparent'> 
-                      <h4 className=" text-2xl font-sans text-white mb-1">{leader.name}</h4>
-                      <p className=" text-2sm font-medium text-[#D4AF37] font-sans mb-3">{leader.role}</p>
+                    <div className='absolute inset-0 flex flex-col justify-end items-center text-center bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4'>
+                      <h4 className="text-2xl font-sans text-white mb-1">{leader.name}</h4>
+                      <p className="text-sm font-medium text-[#D4AF37] font-sans mb-2">{leader.role}</p>
                     </div>
                   </div>
                   <div className="p-6 flex flex-col flex-grow">
@@ -150,19 +134,15 @@ const AboutUsPage: React.FC = () => {
               ))}
             </div>
             <div className="text-center mt-16">
-              <a href="/partners" className="text-black font-bold font-sans hover:underline text-lg transition-colors">
+              <Link href="/partners" className="text-black font-bold font-sans hover:underline text-lg transition-colors">
                 View All Partners →
-              </a>
+              </Link>
             </div>
           </div>
         </section>
 
-        {/* 8. CTA Banner */}
-        <section
-          className="bg-white md:py-8"
-        >
-          {/* <div className="absolute inset-0 bg-white"></div> */}
-          <div className='bg-black p-20 max-w-7xl mx-auto mb-20 relative'>
+        <section className="bg-white md:py-8">
+          <div className='bg-black p-12 sm:p-20 max-w-7xl mx-auto my-10 sm:my-20 relative'>
             <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-oswald mb-4">
                 Experience the FMC Law Difference
@@ -170,18 +150,17 @@ const AboutUsPage: React.FC = () => {
               <p className="text-lg text-gray-200 font-inter mb-10 max-w-2xl mx-auto">
                 Partner with a law firm that prioritizes your success. Discover how our expertise can make a tangible impact on your legal outcomes.
               </p>
-              <a
+              <Link
                 href="/contact"
                 className="bg-[#D4AF37] text-black px-10 py-4 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
               >
                 Get in Touch Today
-              </a>
+              </Link>
             </div>
           </div>
         </section>
       </main>
 
-      {/* 9. Footer */}
       <Footer />
     </>
   );
