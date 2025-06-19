@@ -48,14 +48,14 @@ const leadershipData = [
   {
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
-    role: "PARTNER",
+    role: "Partner",
     bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.",
     imageUrl: "/assets/jonathan.png",
   },
   {
     id: 3,
     name: "Ryan Carlo Cordero",
-    role: "PARTNER",
+    role: "Partner",
     bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.",
     imageUrl: "/assets/michelle.png",
   },
@@ -219,7 +219,7 @@ const AboutUsPage: React.FC = () => {
                       <h4 className="text-2xl font-sans text-white mb-1">
                         {leader.name}
                       </h4>
-                      <p className="text-sm font-medium text-[#D4AF37] font-sans mb-2">
+                      <p className="text-md font-medium text-[#D4AF37] font-sans mb-2">
                         {leader.role}
                       </p>
                     </div>

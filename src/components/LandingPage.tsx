@@ -120,7 +120,7 @@ const FmcLawLandingPage: React.FC = () => {
   const partnersData: Partner[] = [
     {
       id: 1,
-      name: "Alexandra Reynolds",
+      name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
       imageUrl: "/assets/alexandra.png",
       details: [
@@ -147,8 +147,8 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 2,
-      name: "Jonathan Blackwell",
-      role: "Senior Partner",
+      name: "Carl Vincent Mondejar, CPA",
+      role: "Partner",
       imageUrl: "/assets/jonathan.png",
       details: [
         {
@@ -175,7 +175,7 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       id: 3,
-      name: "Michelle Chen",
+      name: "Ryan Carlo Cordero",
       role: "Partner",
       imageUrl: "/assets/michelle.png",
       details: [
