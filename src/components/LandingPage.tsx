@@ -98,7 +98,7 @@ const FmcLawLandingPage: React.FC = () => {
     },
     {
       name: "Integrity",
-      image: "/assets/scales-solid.svg",
+      image: "/assets/Why_choose_FMC/scales-solid.svg",
       description: "Trust built on honesty and professionalism.",
     },
     {
