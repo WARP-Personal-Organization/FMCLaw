@@ -116,10 +116,7 @@ const ContactUsPage: React.FC = () => {
               Contact Us
             </h1>
             <p className="text-lg text-gray-700 font-inter leading-relaxed mb-10">
-              Ready to discuss your legal needs? Reach out to us today. Our team
-              is committed to providing prompt, professional, and confidential
-              assistance to address your concerns and guide you through your
-              legal journey with our experienced attorneys.
+              Ready to discuss your legal needs? Reach out to schedule a consultation with one of our experienced attorneys.
             </p>
             <div className="mx-auto w-12 h-1 bg-[#D4AF37]"></div>
           </div>
