@@ -52,110 +52,108 @@ function Footer() {
   ];
 
   return (
-    <>
-      <footer className="relative bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-roboto">
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#CE9930]/25 via-transparent to-black/30 pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
-          <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 mb-12">
-            <div className="space-y-6 w-full lg:w-auto lg:max-w-sm">
-              <Link href="/" className="inline-block">
-                <Image
-                  src="/assets/Logo Main.png"
-                  alt="FMC Law Logo"
-                  width={180}
-                  height={45}
-                  className="object-contain"
-                />
-              </Link>
-              <p className="text-sm">
-                Combining traditional legal expertise with innovative approaches
-                for today's complex challenges.
-              </p>
-              <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.alt}
-                    href={social.href}
-                    className="text-[#D4AF37] hover:text-white"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={social.src}
-                      alt={social.alt}
-                      width={24}
-                      height={24}
-                    />
-                  </a>
-                ))}
-              </div>
-            </div>
-
-            <div className="w-full lg:w-auto">
-              <h5 className="text-lg font-semibold text-white mb-4">Company</h5>
-              <ul className="space-y-2 text-sm">
-                {companyLinks.map((link) => (
-                  <li key={link.text}>
-                    <Link
-                      href={link.href}
-                      className="hover:text-white transition-colors"
-                    >
-                      {link.text}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="w-full lg:w-auto lg:max-w-md">
-              <h5 className="text-lg font-semibold text-white mb-4">Contact</h5>
-              <ul className="text-sm space-y-3">
-                {contactInfo.map((item, index) => (
-                  <li key={index}>
-                    <div className="flex items-start space-x-3">
-                      <Image
-                        src={item.icon}
-                        alt={item.alt}
-                        width={20}
-                        height={20}
-                        className="mt-0.5"
-                      />
-                      <a
-                        href={item.href}
-                        className="hover:text-white transition-colors leading-snug"
-                      >
-                        {item.lines.map((line, lineIndex) => (
-                          <React.Fragment key={lineIndex}>
-                            {line}
-                            {lineIndex < item.lines.length - 1 && <br />}
-                          </React.Fragment>
-                        ))}
-                      </a>
-                    </div>
-                  </li>
-                ))}
-              </ul>
+    <footer className="relative bg-black text-gray-400 border-t-4 border-[#D4AF37] pt-16 pb-8 font-roboto">
+      <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#CE9930]/25 via-transparent to-black/30 pointer-events-none" />
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className="flex flex-col lg:flex-row lg:justify-between gap-10 lg:gap-12 mb-12">
+          <div className="space-y-6 w-full lg:w-auto lg:max-w-sm">
+            <Link href="/" className="inline-block">
+              <Image
+                src="/assets/Logo Main.png"
+                alt="FMC Law Logo"
+                width={180}
+                height={45}
+                className="object-contain"
+              />
+            </Link>
+            <p className="text-sm">
+              Combining traditional legal expertise with innovative approaches
+              for today&apos;s complex challenges.
+            </p>
+            <div className="flex space-x-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.alt}
+                  href={social.href}
+                  className="text-[#D4AF37] hover:text-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={social.src}
+                    alt={social.alt}
+                    width={24}
+                    height={24}
+                  />
+                </a>
+              ))}
             </div>
           </div>
-          <div className="mt-8 text-sm text-[#CE9930]">
-            <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mb-8 h-[2px]" />
-            <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-              <p className="mb-4 md:mb-0">
-                © {new Date().getFullYear()} FMC Law. All rights reserved.
-              </p>
-              <div className="space-x-4">
-                <Link href="/privacy-policy" className="hover:text-white">
-                  Privacy Policy
-                </Link>
-                <Link href="/terms-of-service" className="hover:text-white">
-                  Terms of Service
-                </Link>
-              </div>
+
+          <div className="w-full lg:w-auto">
+            <h5 className="text-lg font-semibold text-white mb-4">Company</h5>
+            <ul className="space-y-2 text-sm">
+              {companyLinks.map((link) => (
+                <li key={link.text}>
+                  <Link
+                    href={link.href}
+                    className="hover:text-white transition-colors"
+                  >
+                    {link.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="w-full lg:w-auto lg:max-w-md">
+            <h5 className="text-lg font-semibold text-white mb-4">Contact</h5>
+            <ul className="text-sm space-y-3">
+              {contactInfo.map((item, index) => (
+                <li key={index}>
+                  <div className="flex items-start space-x-3">
+                    <Image
+                      src={item.icon}
+                      alt={item.alt}
+                      width={20}
+                      height={20}
+                      className="mt-0.5"
+                    />
+                    <a
+                      href={item.href}
+                      className="hover:text-white transition-colors leading-snug"
+                    >
+                      {item.lines.map((line, lineIndex) => (
+                        <React.Fragment key={lineIndex}>
+                          {line}
+                          {lineIndex < item.lines.length - 1 && <br />}
+                        </React.Fragment>
+                      ))}
+                    </a>
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="mt-8 text-sm text-[#CE9930]">
+          <div className="w-full mx-auto opacity-60 bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent mb-8 h-[2px]" />
+          <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p className="mb-4 md:mb-0">
+              © {new Date().getFullYear()} FMC Law. All rights reserved.
+            </p>
+            <div className="space-x-4">
+              <Link href="/privacy-policy" className="hover:text-white">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="hover:text-white">
+                Terms of Service
+              </Link>
             </div>
           </div>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 }
 
