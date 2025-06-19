@@ -36,7 +36,7 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
-      image: "/assets/scales-solid.svg",
+      image: "/assets/icons/scales-solid.svg",
     },
     {
       name: "Commercial Law",
@@ -113,7 +113,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
-      imageUrl: "/assets/alexandra.png",
+      imageUrl: "/assets/partners/alexandra.png",
       details: [
         {
           label: "Credentials",
@@ -140,7 +140,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 2,
       name: "Carl Vincent Mondejar, CPA",
       role: "Partner",
-      imageUrl: "/assets/jonathan.png",
+      imageUrl: "/assets/partners/jonathan.png",
       details: [
         {
           label: "Credentials",
@@ -168,7 +168,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 3,
       name: "Ryan Carlo Cordero",
       role: "Partner",
-      imageUrl: "/assets/michelle.png",
+      imageUrl: "/assets/partners/michelle.png",
       details: [
         {
           label: "Credentials",
@@ -384,7 +384,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/table-people.png"
+                  src="/assets/bg_images/table-people.png"
                   alt="FMC Law team in a meeting"
                   fill
                   style={{ objectFit: "cover" }}
@@ -412,7 +412,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="order-1 md:order-2 relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/table-empty.png"
+                  src="/assets/bg_images/table-empty.png"
                   alt="FMC Law conference room"
                   fill
                   style={{ objectFit: "cover" }}
@@ -426,7 +426,7 @@ const FmcLawLandingPage: React.FC = () => {
                   {
                     title: "Integrity",
                     text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships.",
-                    imageUrl: "/assets/scales-outline.png",
+                    imageUrl: "/assets/icons/scales-outline.svg",
                   },
                   {
                     title: "Excellence",
@@ -449,7 +449,7 @@ const FmcLawLandingPage: React.FC = () => {
                     className="flex items-start space-x-3 text-black mb-4"
                   >
                     <Image
-                      src="/assets/scales-outline.png"
+                      src="/assets/icons/scales-outline.png"
                       alt={`${value.title} icon`}
                       width={24}
                       height={24}
@@ -597,7 +597,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </h3>
                   {[
                     {
-                      icon: "/assets/pin-outline.png",
+                      icon: "/assets/icons/pin-outline.png",
                       alt: "Location pin icon",
                       lines: [
                         "<b>Address</b>",
@@ -609,17 +609,17 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                     {
-                      icon: "/assets/phone-outline.png",
+                      icon: "/assets/icons/phone-outline.png",
                       alt: "Phone icon",
                       lines: ["<b>Phone</b>", "(033) 329-28-38"],
                     },
                     {
-                      icon: "/assets/mail-outline.png",
+                      icon: "/assets/icons/mail-outline.png",
                       alt: "Email icon",
                       lines: ["<b>Email</b>", "admin@fmclaw.com.ph"],
                     },
                     {
-                      icon: "/assets/clock-outline.png",
+                      icon: "/assets/icons/clock-outline.png",
                       alt: "Clock icon",
                       lines: [
                         "<b>Office Hours</b>",
