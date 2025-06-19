@@ -247,9 +247,7 @@ const AboutUsPage: React.FC = () => {
                 Experience the FMC Law Difference
               </h2>
               <p className="text-lg text-gray-200 font-inter mb-10 max-w-2xl mx-auto">
-                Partner with a law firm that prioritizes your success. Discover
-                how our expertise can make a tangible impact on your legal
-                outcomes.
+                Talk to our legal team and see how we can help you move forward.
               </p>
               <Link
                 href="/contact"
