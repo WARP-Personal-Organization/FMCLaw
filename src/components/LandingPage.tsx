@@ -36,32 +36,32 @@ const FmcLawLandingPage: React.FC = () => {
     {
       name: "Corporate Law",
       description: "Expert advice on corporate governance and structuring.",
-      image: "/assets/scales-solid.svg",
+      image: "/assets/icons/scales-solid.svg",
     },
     {
       name: "Commercial Law",
       description: "Navigating complex commercial transactions and agreements.",
-      image: "/assets/Our_expertise/commercial-law-solid.svg",
+      image: "/assets/icons/commercial-law-solid.svg",
     },
     {
       name: "Litigation",
       description: "Strategic representation in contentious legal disputes.",
-      image: "/assets/Our_expertise/judge-hammer-solid.svg",
+      image: "/assets/icons/judge-hammer-solid.svg",
     },
     {
       name: "Intellectual Property",
       description: "Protecting your innovations and creative works.",
-      image: "/assets/Our_expertise/TM-solid.svg",
+      image: "/assets/icons/TM-solid.svg",
     },
     {
       name: "Labor Law",
       description: "Guidance on employment relations and workplace compliance.",
-      image: "/assets/Our_expertise/labor-law-solid.svg",
+      image: "/assets/icons/labor-law-solid.svg",
     },
     {
       name: "Criminal Law",
       description: "Robust defense for individuals facing criminal charges.",
-      image: "/assets/Our_expertise/criminal-law-solid.svg",
+      image: "/assets/icons/criminal-law-solid.svg",
     },
     // {
     //   name: "Administrative Law",
@@ -88,22 +88,22 @@ const FmcLawLandingPage: React.FC = () => {
   const whyChooseReasons: WhyChooseReason[] = [
     {
       name: "Excellence",
-      image: "/assets/Why_choose_FMC/award-pin-solid.svg",
+      image: "/assets/icons/award-pin-solid.svg",
       description: "Top-tier lawyers with proven expertise.",
     },
     {
       name: "Client-Focused",
-      image: "/assets/Why_choose_FMC/handshake-solid.svg",
+      image: "/assets/icons/handshake-solid.svg",
       description: "Your goals guide everything we do.",
     },
     {
       name: "Integrity",
-      image: "/assets/scales-solid.svg",
+      image: "/assets/icons/scales-solid.svg",
       description: "Trust built on honesty and professionalism.",
     },
     {
       name: "Foresight",
-      image: "/assets/Why_choose_FMC/eye-solid.svg",
+      image: "/assets/icons/eye-solid.svg",
       description: "We anticipate issues before they arise, keeping you ahead.",
     },
   ];
@@ -113,7 +113,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
-      imageUrl: "/assets/alexandra.png",
+      imageUrl: "/assets/partners/alexandra.png",
       details: [
         {
           label: "Credentials",
@@ -140,7 +140,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 2,
       name: "Carl Vincent Mondejar, CPA",
       role: "Partner",
-      imageUrl: "/assets/jonathan.png",
+      imageUrl: "/assets/partners/jonathan.png",
       details: [
         {
           label: "Credentials",
@@ -168,7 +168,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 3,
       name: "Ryan Carlo Cordero",
       role: "Partner",
-      imageUrl: "/assets/michelle.png",
+      imageUrl: "/assets/partners/michelle.png",
       details: [
         {
           label: "Credentials",
@@ -237,7 +237,7 @@ const FmcLawLandingPage: React.FC = () => {
               <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
                 <div className="relative w-full max-w-[500px] aspect-square">
                   <Image
-                    src="/assets/fmc-emblem-large.svg"
+                    src="/assets/logos/fmc-emblem-large.svg"
                     alt="FMC Law Emblem"
                     fill
                     style={{ objectFit: "contain" }}
@@ -384,7 +384,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/table-people.png"
+                  src="/assets/background/table-people.png"
                   alt="FMC Law team in a meeting"
                   fill
                   style={{ objectFit: "cover" }}
@@ -412,7 +412,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="order-1 md:order-2 relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/table-empty.png"
+                  src="/assets/background/table-empty.png"
                   alt="FMC Law conference room"
                   fill
                   style={{ objectFit: "cover" }}
@@ -424,32 +424,39 @@ const FmcLawLandingPage: React.FC = () => {
                 </h3>
                 {[
                   {
-                    title: "Integrity",
-                    text: "We adhere to the highest ethical standards in all our dealings, ensuring transparency and honesty in our client relationships.",
-                  },
-                  {
                     title: "Excellence",
-                    text: "We strive for excellence in everything we do, from legal analysis and strategy to client communication and case management.",
+                    text: "Top-tier lawyers with proven expertise.",
+                    imageUrl: "/assets/icons/award-pin-solid.svg",
                   },
                   {
-                    title: "Collaboration",
-                    text: "We work closely with our clients, building partnerships based on mutual respect and shared goals.",
+                    title: "Client-Focused",
+                    text: "Your goals guide everything we do.",
+                    imageUrl: "/assets/icons/handshake-solid.svg",
                   },
                   {
-                    title: "Innovation",
-                    text: "We embrace creative thinking and new technologies to deliver efficient, effective legal solutions.",
+                    title: "Integrity",
+                    text: "Trust built on honesty and professionalism.",
+                    imageUrl: "/assets/icons/scales-solid.svg",
+                  },
+
+                  {
+                    title: "Foresight",
+                    text: "We anticipate issues before they arise, keeping you ahead.",
+                    imageUrl: "/assets/icons/eye-solid.svg",
                   },
                 ].map((value) => (
                   <div
                     key={value.title}
-                    className="flex items-start space-x-3 text-black mb-4"
+                    className="flex items-start space-x-3 text-black mb-4 "
                   >
-                    <Image
-                      src="/assets/scales-outline.png"
-                      alt={`${value.title} icon`}
-                      width={24}
-                      height={24}
-                    />
+                    <div className="w-12 h-12 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
+                      <Image
+                        src={value.imageUrl}
+                        alt={`${value.title} icon`}
+                        width={24}
+                        height={24}
+                      />
+                    </div>
                     <div>
                       <p className="font-bold mb-1">{value.title}</p>
                       <p className="text-sm text-[#374151]">{value.text}</p>
@@ -601,7 +608,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </h3>
                   {[
                     {
-                      icon: "/assets/pin-outline.png",
+                      icon: "/assets/icons/pin-outline.png",
                       alt: "Location pin icon",
                       lines: [
                         "<b>Address</b>",
@@ -613,17 +620,17 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                     {
-                      icon: "/assets/phone-outline.png",
+                      icon: "/assets/icons/phone-outline.png",
                       alt: "Phone icon",
                       lines: ["<b>Phone</b>", "(033) 329-28-38"],
                     },
                     {
-                      icon: "/assets/mail-outline.png",
+                      icon: "/assets/icons/mail-outline.png",
                       alt: "Email icon",
                       lines: ["<b>Email</b>", "admin@fmclaw.com.ph"],
                     },
                     {
-                      icon: "/assets/clock-outline.png",
+                      icon: "/assets/icons/clock-outline.png",
                       alt: "Clock icon",
                       lines: [
                         "<b>Office Hours</b>",

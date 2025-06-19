@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Bringing together diverse perspectives, we deliver dedicated legal representation focused on achieving the best possible outcome for you.", // Update description
   icons: {
-    icon: "FMCfavicon.svg", 
+    icon: "/FMC-logo-favicon.png", 
   }
 };
 

@@ -7,7 +7,7 @@ function Footer() {
   const socialLinks = [
     // { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
     // { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
-    { href: "#", src: "/assets/facebook-solid.png", alt: "Facebook" },
+    { href: "#", src: "/assets/icons/facebook-solid.png", alt: "Facebook" },
     // { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
   ];
 
@@ -20,7 +20,7 @@ function Footer() {
 
   const contactInfo = [
     {
-      icon: "/assets/pin-solid.svg",
+      icon: "/assets/icons/pin-solid.svg",
       alt: "Location Pin Icon",
       lines: [
         "Iloilo Office: 2F, Daily Guardian Center,",
@@ -32,19 +32,19 @@ function Footer() {
       href: "#", // Placeholder, could be a Google Maps link
     },
     {
-      icon: "/assets/phone-solid.png",
+      icon: "/assets/icons/phone-solid.png",
       alt: "Phone Icon",
       lines: ["(033) 329-28-38"],
       href: "tel:(033) 329-28-38",
     },
     {
-      icon: "/assets/mail-solid.png",
+      icon: "/assets/icons/mail-solid.png",
       alt: "Mail Icon",
       lines: ["admin@fmclaw.com.ph"],
       href: "mailto:admin@fmclaw.com.ph",
     },
     {
-      icon: "/assets/clock-solid.png",
+      icon: "/assets/icons/clock-solid.png",
       alt: "Clock Icon",
       lines: ["Mon-Fri: 9:00 AM - 6:00 PM"],
       href: "#", // Placeholder
@@ -59,7 +59,7 @@ function Footer() {
           <div className="space-y-6 w-full lg:w-auto lg:max-w-sm">
             <Link href="/" className="inline-block">
               <Image
-                src="/assets/Logo Main.png"
+                src="/assets/logos/Logo Main.png"
                 alt="FMC Law Logo"
                 width={180}
                 height={45}
@@ -67,7 +67,9 @@ function Footer() {
               />
             </Link>
             <p className="text-sm">
-We combine forward-thinking and dynamic approaches with innovative strategies to deliver exceptional legal representation for your most critical matters.
+              We combine forward-thinking and dynamic approaches with innovative
+              strategies to deliver exceptional legal representation for your
+              most critical matters.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((social) => (

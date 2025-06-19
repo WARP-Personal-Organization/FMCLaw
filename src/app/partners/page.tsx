@@ -24,11 +24,11 @@ interface Partner {
 const firmName = "FMC Law";
 
 const partnersData: Partner[] = [
-    {
+  {
     id: 1,
     name: "Lcid Crescent Fernandez",
     role: "MANAGING PARTNER",
-    imageUrl: "/assets/alexandra.png",
+    imageUrl: "/assets/partners/alexandra.png",
     specialties: [
       "Commercial Litigation",
       "International Arbitration",
@@ -72,7 +72,7 @@ const partnersData: Partner[] = [
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "PARTNER",
-    imageUrl: "/assets/jonathan.png",
+    imageUrl: "/assets/partners/jonathan.png",
     specialties: [
       "Mergers & Acquisitions",
       "Venture Capital",
@@ -117,7 +117,7 @@ const partnersData: Partner[] = [
     id: 3,
     name: "Ryan Carlo Cordero",
     role: "PARTNER",
-    imageUrl: "/assets/jonathan.png",
+    imageUrl: "/assets/partners/michelle.png",
     specialties: [
       "Patent Litigation",
       "Tech Transactions",
@@ -254,18 +254,20 @@ const OurPartnersPage: NextPage = () => {
         <section
           className="relative bg-cover bg-center py-28 md:py-40 lg:py-56"
           style={{
-            backgroundImage: "url('/assets/meet-partners-banner.png')",
+            backgroundImage:
+              "url('/assets/background/meet-partners-banner.png')",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
             <div className="md:w-3/4 lg:w-2/3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
-                The Minds Behind <span className="text-[#D4AF37]">{firmName}</span>
+                The Minds Behind{" "}
+                <span className="text-[#D4AF37]">{firmName}</span>
               </h1>
               <p className="mt-5 md:mt-6 text-lg md:text-xl text-gray-200 font-inter max-w-3xl">
-              Our partners bring new ideas and a strong commitment to quality in
-              every case.
+                Our partners bring new ideas and a strong commitment to quality
+                in every case.
               </p>
             </div>
           </div>
