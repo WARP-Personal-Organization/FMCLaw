@@ -40,22 +40,22 @@ const coreValuesData = [
 const leadershipData = [
   {
     id: 1,
-    name: "Alexandra Reynolds",
+    name: "Lcid Crescent Fernandez",
     role: "Managing Partner",
     bio: "With over 20 years of experience in corporate law, Alexandra leads our firm with vision and integrity, specializing in complex commercial litigation.",
     imageUrl: "/assets/alexandra.png",
   },
   {
     id: 2,
-    name: "Jonathan Blackwell",
-    role: "Senior Partner, Litigation",
+    name: "Carl Vincent Mondejar, CPA",
+    role: "PARTNER",
     bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.",
     imageUrl: "/assets/jonathan.png",
   },
   {
     id: 3,
-    name: "Michelle Chen",
-    role: "Partner, Mergers & Acquisitions",
+    name: "Ryan Carlo Cordero",
+    role: "PARTNER",
     bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.",
     imageUrl: "/assets/michelle.png",
   },
@@ -184,23 +184,15 @@ const AboutUsPage: React.FC = () => {
             </h3>
             <div className="max-w-3xl mx-auto space-y-6 text-center text-gray-300 font-inter leading-relaxed text-lg">
               <p>
-                To deliver exceptional legal services with unwavering integrity,
-                profound expertise, and a commitment to achieving the best
-                possible outcomes for our clients.
-              </p>
-              <p>
-                We strive to be trusted advisors, providing strategic counsel
-                and vigorous advocacy while fostering a culture of
-                collaboration, innovation, and respect.
-              </p>
-              <p>
-                Our mission is to empower our clients by navigating complex
-                legal landscapes with clarity, diligence, and a personalized
-                approach that addresses their unique needs and goals.
+                FMC Law is driven by a mission to offer effective legal
+                representation built on professionalism and genuine commitment
+                to each client. We commit to understanding individual client
+                needs and crafting specific solutions that deliver desired
+                outcomes.
               </p>
             </div>
             <p className="text-[#D4AF37] text-2xl lg:text-3xl font-inter mt-12 text-center max-w-2xl mx-auto">
-              “Excellence is our standard, not our goal.”
+              &quot;Excellence is our standard, not our goal.&quot;
             </p>
           </div>
         </section>

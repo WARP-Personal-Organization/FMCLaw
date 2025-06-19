@@ -605,12 +605,15 @@ const FmcLawLandingPage: React.FC = () => {
                         "<b>Address</b>",
                         "Iloilo Office: 2F, Daily Guardian Center,",
                         "Guzman Jasena, Mandurriao, Iloilo City",
+                        "",
+                        "Manila Office: #62 Saint Peter Street,",
+                        "Brgy. Oranbo, Pasig City",
                       ],
                     },
                     {
                       icon: "/assets/phone-outline.png",
                       alt: "Phone icon",
-                      lines: ["<b>Phone</b>", "0917-702-1298"],
+                      lines: ["<b>Phone</b>", "(033) 329-28-38"],
                     },
                     {
                       icon: "/assets/mail-outline.png",

@@ -1,10 +1,10 @@
 "use client";
 
-import React from 'react';
+import React from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
 
 const RightArrowIcon: React.FC<{ className?: string }> = ({
   className = "w-5 h-5 ml-2",
@@ -62,6 +62,9 @@ const contactInfo = [
     valueLines: [
       "Iloilo Office: 2F, Daily Guardian Center,",
       "Guzman Jasena, Mandurriao, Iloilo City",
+      "",
+      "Manila Office: #62 Saint Peter Street,",
+      "Brgy. Oranbo, Pasig City",
     ],
   },
   {
@@ -271,7 +274,13 @@ const ContactUsPage: React.FC = () => {
                 <div className="space-y-8 font-sans">
                   {contactInfo.map((info) => (
                     <div key={info.label} className="flex items-start">
-                      <Image src={info.iconPath} alt="" width={24} height={24} className="mr-4 mt-1 flex-shrink-0" />
+                      <Image
+                        src={info.iconPath}
+                        alt=""
+                        width={24}
+                        height={24}
+                        className="mr-4 mt-1 flex-shrink-0"
+                      />
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-1">
                           {info.label}
@@ -291,6 +300,7 @@ const ContactUsPage: React.FC = () => {
                               className="text-gray-300 text-sm leading-relaxed"
                             >
                               {line}
+                              <br />
                             </p>
                           )
                         )}
@@ -298,7 +308,13 @@ const ContactUsPage: React.FC = () => {
                     </div>
                   ))}
                   <div className="flex items-start">
-                    <Image src="/assets/share-outline.png" alt="" width={24} height={24} className="mr-4 mt-1 flex-shrink-0" />
+                    <Image
+                      src="/assets/share-outline.png"
+                      alt=""
+                      width={24}
+                      height={24}
+                      className="mr-4 mt-1 flex-shrink-0"
+                    />
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">
                         Connect With Us
@@ -311,7 +327,12 @@ const ContactUsPage: React.FC = () => {
                             aria-label={link.label}
                             className="text-[#D4AF37] hover:text-white transition-colors"
                           >
-                            <Image src={link.iconSrc} alt={link.label} width={20} height={20} />
+                            <Image
+                              src={link.iconSrc}
+                              alt={link.label}
+                              width={20}
+                              height={20}
+                            />
                           </a>
                         ))}
                       </div>
@@ -322,7 +343,7 @@ const ContactUsPage: React.FC = () => {
                   <div className="aspect-[16/9] bg-gray-700 overflow-hidden shadow-md">
                     <Image
                       src="/assets/map-placeholder-grayscale.png"
-                      alt={`${firmName} Headquarters Location Map`}
+                      alt=""
                       width={1600}
                       height={900}
                       className="w-full h-full object-cover grayscale"

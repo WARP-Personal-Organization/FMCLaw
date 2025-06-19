@@ -24,15 +24,18 @@ function Footer() {
       alt: "Location Pin Icon",
       lines: [
         "Iloilo Office: 2F, Daily Guardian Center,",
-        "Guzman Jasena, Mandurriao, Iloilo City",
+        "Guzman Jasena, Mandurriao, Iloilo City ",
+        "",
+        "Manila Office: #62 Saint Peter Street,",
+        "Brgy. Oranbo, Pasig City",
       ],
       href: "#", // Placeholder, could be a Google Maps link
     },
     {
       icon: "/assets/phone-solid.png",
       alt: "Phone Icon",
-      lines: ["0917-702-1298"],
-      href: "tel:09177021298",
+      lines: ["(033) 329-28-38"],
+      href: "tel:(033) 329-28-38",
     },
     {
       icon: "/assets/mail-solid.png",
