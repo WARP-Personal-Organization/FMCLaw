@@ -10,13 +10,13 @@ const coreValuesData = [
   {
     title: "Excellence",
     description: "Top-tier lawyers with proven expertise.",
-    iconSrc: "/assets/Why_choose_FMC/award-pin-solid.png",
+    iconSrc: "/assets/Why_choose_FMC/award-pin-solid.svg",
     iconAlt: "Excellence icon",
   },
   {
     title: "Client-Focused",
     description: "Your goals guide everything we do.",
-    iconSrc: "/assets/Why_choose_FMC/handshake-solid.png",
+    iconSrc: "/assets/Why_choose_FMC/handshake-solid.svg",
     iconAlt: "Collaboration icon",
   },
   {
