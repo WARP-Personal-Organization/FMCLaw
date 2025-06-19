@@ -70,8 +70,8 @@ const contactInfo = [
   {
     iconPath: "/assets/icons/phone-outline.png",
     label: "Phone",
-    valueLines: ["0917-702-1298"],
-    href: "tel:+639177021298",
+    valueLines: ["(033) 329-28-38"],
+    href: "tel:(033) 329-28-38",
   },
   {
     iconPath: "/assets/icons/mail-outline.png",
