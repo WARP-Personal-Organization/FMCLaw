@@ -266,7 +266,7 @@ const FmcLawLandingPage: React.FC = () => {
                   A Different Kind of Law Firm
                 </h2>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed max-w-[50ch]">
-                  At FMC Law, we've redefined the traditional law firm
+                  At FMC Law, we&apos;ve redefined the traditional law firm
                   model. Our modern, client-centric approach prioritizes
                   transparent communication, innovative solutions, and a deep
                   understanding of your unique needs, ensuring you feel
