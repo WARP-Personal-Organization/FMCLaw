@@ -404,7 +404,7 @@ const FmcLawLandingPage: React.FC = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    "Excellence is our standard, not our goal."
+                    &quot;Excellence is our standard, not our goal.&quot;
                   </p>
                 </div>
               </div>
