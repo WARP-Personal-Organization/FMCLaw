@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Premium law firm offering expert legal services for complex challenges.", // Update description
   icons: {
-    icon: "FMCfavicon.svg", 
+    icon: "/FMC-logo-favicon.png", 
   }
 };
 
