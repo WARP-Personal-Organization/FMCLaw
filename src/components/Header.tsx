@@ -70,8 +70,8 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={` hover:text-[#CE9930] px-3 py-2 text-sm font-medium ${
-                  pathName === link.href ? "text-[#CE9930]" : "text-gray-300"
+                className={` hover:text-[#ffd329] px-3 py-2 text-sm font-medium ${
+                  pathName === link.href ? "text-[#ffd329]" : "text-gray-300"
                 }`}
               >
                 {link.label}
