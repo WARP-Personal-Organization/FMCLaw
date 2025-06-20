@@ -57,19 +57,11 @@ export default function Header() {
             {/* Desktop Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="/assets/logos/header-logo.png"
+                src="/assets/logos/FMC-logo.png"
                 alt="FMC LAW Logo"
                 width={150}
                 height={40}
-                className="h-8 md:h-10 w-auto opacity-90 hidden md:block"
-              />
-              {/* Mobile Logo */}
-              <Image
-                src="/assets/logos/FMC-horizontal-logo-mobile.png"
-                alt="FMC LAW Logo"
-                width={150}
-                height={40}
-                className="h-16 md:h-10 w-auto opacity-90 md:hidden"
+                className="h-16 w-auto opacity-90"
               />
             </Link>
           </div>
