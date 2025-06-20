@@ -107,33 +107,54 @@ const socialLinks = [
 
 const ContactUsPage: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submissionStatus, setSubmissionStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [submissionStatus, setSubmissionStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
-  const handleContactSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleContactSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
     setIsSubmitting(true);
     setSubmissionStatus(null);
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    
+
     try {
       const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams(
+          formData as unknown as Record<string, string>
+        ).toString(),
       });
 
       if (response.ok) {
-        setSubmissionStatus({ type: 'success', message: "Thank you! Your message has been sent successfully." });
+        setSubmissionStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent successfully.",
+        });
         form.reset();
       } else {
         const errorText = await response.text();
-        setSubmissionStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
+        setSubmissionStatus({
+          type: "error",
+          message: `Submission failed: ${errorText || "Please try again."}`,
+        });
       }
-    } catch (submitError) { // Changed 'error' to 'submitError'
-      console.error("Network or other error during form submission:", submitError); // Use 'submitError'
-      setSubmissionStatus({ type: 'error', message: "An unexpected error occurred. Please check your connection and try again." });
+    } catch (submitError) {
+      // Changed 'error' to 'submitError'
+      console.error(
+        "Network or other error during form submission:",
+        submitError
+      ); // Use 'submitError'
+      setSubmissionStatus({
+        type: "error",
+        message:
+          "An unexpected error occurred. Please check your connection and try again.",
+      });
     } finally {
       setIsSubmitting(false);
     }
@@ -149,7 +170,8 @@ const ContactUsPage: React.FC = () => {
               Contact Us
             </h1>
             <p className="text-lg text-gray-700 font-inter leading-relaxed mb-10">
-              Ready to discuss your legal needs? Reach out to schedule a consultation with one of our experienced attorneys.
+              Ready to discuss your legal needs? Reach out to schedule a
+              consultation with one of our experienced attorneys.
             </p>
             <div className="mx-auto w-12 h-1 bg-[#D4AF37]"></div>
           </div>
@@ -162,17 +184,18 @@ const ContactUsPage: React.FC = () => {
                 <h2 className="text-2xl font-bold text-gray-900 mb-8 font-oswald">
                   Send Us a Message
                 </h2>
-              <form
-                name="contact-form-page-react"
-                onSubmit={handleContactSubmit}
-                className="space-y-6 font-sans"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden">
-                  <label>
-                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
-                  </label>
-                </p>
+                <form
+                  name="contact-form-page-react"
+                  onSubmit={handleContactSubmit}
+                  className="space-y-6 font-sans"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <p className="hidden">
+                    <label>
+                      Don&apos;t fill this out if you&apos;re human:{" "}
+                      <input name="bot-field" />
+                    </label>
+                  </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
@@ -186,7 +209,7 @@ const ContactUsPage: React.FC = () => {
                         name="first-name"
                         id="first-name-contact"
                         required
-                        className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37] "
                       />
                     </div>
                     <div>
@@ -201,7 +224,7 @@ const ContactUsPage: React.FC = () => {
                         name="last-name"
                         id="last-name-contact"
                         required
-                        className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                       />
                     </div>
                   </div>
@@ -218,7 +241,7 @@ const ContactUsPage: React.FC = () => {
                       id="email-contact"
                       required
                       autoComplete="email"
-                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -233,7 +256,7 @@ const ContactUsPage: React.FC = () => {
                       name="phone"
                       id="phone-contact"
                       autoComplete="tel"
-                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -249,7 +272,7 @@ const ContactUsPage: React.FC = () => {
                       id="subject-contact"
                       required
                       autoComplete="off"
-                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
@@ -264,7 +287,7 @@ const ContactUsPage: React.FC = () => {
                       id="message-contact"
                       rows={5}
                       required
-                      className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     ></textarea>
                   </div>
                   <div className="flex items-start">
@@ -299,11 +322,18 @@ const ContactUsPage: React.FC = () => {
                       disabled={isSubmitting}
                       className="w-full flex items-center justify-center bg-black text-white px-8 py-3.5 font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-50"
                     >
-                      {isSubmitting ? 'Sending...' : 'Send Message'} <RightArrowIcon />
+                      {isSubmitting ? "Sending..." : "Send Message"}{" "}
+                      <RightArrowIcon />
                     </button>
                   </div>
                   {submissionStatus && (
-                    <p className={`mt-4 text-sm ${submissionStatus.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                    <p
+                      className={`mt-4 text-sm ${
+                        submissionStatus.type === "success"
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
+                    >
                       {submissionStatus.message}
                     </p>
                   )}
@@ -345,6 +375,7 @@ const ContactUsPage: React.FC = () => {
                               className="text-gray-300 text-sm leading-relaxed"
                             >
                               {line}
+                              <br />
                             </p>
                           )
                         )}
