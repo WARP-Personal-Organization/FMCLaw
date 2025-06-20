@@ -7,18 +7,13 @@ import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-interface PartnerInfoGroup {
-  heading: string;
-  items: string[];
-}
-
 interface Partner {
   id: number;
   name: string;
   role: string;
   imageUrl: string;
   specialties: string[];
-  infoGroups: PartnerInfoGroup[];
+  partnerInfo: string[];
 }
 
 const firmName = "FMC Law";
@@ -34,38 +29,11 @@ const partnersData: Partner[] = [
       "International Arbitration",
       "White-Collar Defense",
     ],
-    infoGroups: [
-      {
-        heading: "Credentials",
-        items: [
-          "Bar Admission: California, 1998; England & Wales (Solicitor), 2003",
-          "Member, Chartered Institute of Arbitrators (MCIArb)",
-        ],
-      },
-      {
-        heading: "Employment History",
-        items: [
-          `Partner, ${firmName} (2012-Present)`,
-          "Head of Litigation, Ainsworth & Crane (2004-2012)",
-          "Barrister, Temple Chambers (1999-2003)",
-        ],
-      },
-      {
-        heading: "Areas of Practice",
-        items: [
-          "High-Stakes Contractual Disputes",
-          "Securities Fraud Litigation",
-          "Cross-Border Insolvency",
-        ],
-      },
-      {
-        heading: "Education & Background",
-        items: [
-          "LL.M., Columbia Law School (Harlan Fiske Stone Scholar)",
-          "B.C.L., University of Oxford",
-          "B.A. in Law, University of Cambridge (First Class Honours)",
-        ],
-      },
+    partnerInfo: [
+      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
+      "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
+      "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
+      "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
     ],
   },
   {
@@ -78,39 +46,11 @@ const partnersData: Partner[] = [
       "Venture Capital",
       "Corporate Governance",
     ],
-    infoGroups: [
-      {
-        heading: "Credentials",
-        items: [
-          "Bar Admission: New York State, 2001",
-          "Certified Specialist in Business Law",
-          "Fellow, Institute of Corporate Directors",
-        ],
-      },
-      {
-        heading: "Employment History",
-        items: [
-          `Founding Partner, ${firmName} (2010-Present)`,
-          "Senior Counsel, Lex Magna LLP (2005-2010)",
-          "Associate, Global Law Group (2001-2005)",
-        ],
-      },
-      {
-        heading: "Areas of Practice",
-        items: [
-          "Complex International Transactions",
-          "Private Equity & Fund Formation",
-          "Regulatory Compliance & Advisory",
-        ],
-      },
-      {
-        heading: "Education & Background",
-        items: [
-          "J.D., Harvard Law School (magna cum laude)",
-          "M.Phil in Economics, University of Oxford (Rhodes Scholar)",
-          "B.A. in Philosophy, Politics, and Economics (PPE), Yale University",
-        ],
-      },
+    partnerInfo: [
+      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
+      "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
+      "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
+      "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
     ],
   },
   {
@@ -123,38 +63,11 @@ const partnersData: Partner[] = [
       "Tech Transactions",
       "Data Privacy & Cybersecurity",
     ],
-    infoGroups: [
-      {
-        heading: "Credentials",
-        items: [
-          "Registered Patent Attorney, USPTO",
-          "Certified Information Privacy Professional (CIPP/US, CIPP/E)",
-        ],
-      },
-      {
-        heading: "Employment History",
-        items: [
-          `Partner, ${firmName} (2015-Present)`,
-          "Senior IP Counsel, Innovatech Solutions (2010-2015)",
-          "Associate, TechLaw Partners (2007-2010)",
-        ],
-      },
-      {
-        heading: "Areas of Practice",
-        items: [
-          "Software & SaaS Licensing",
-          "AI & Machine Learning Law",
-          "E-commerce & Digital Media",
-        ],
-      },
-      {
-        heading: "Education & Background",
-        items: [
-          "J.D., Stanford Law School (with distinction in Law, Science & Technology)",
-          "M.S. in Computer Science, Massachusetts Institute of Technology (MIT)",
-          "B.S. in Electrical Engineering, Caltech",
-        ],
-      },
+    partnerInfo: [
+      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
+      "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
+      "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
+      "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
     ],
   },
 ];
@@ -213,32 +126,19 @@ const AboutPartnerCard: React.FC<AboutPartnerCardProps> = ({
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-grow">
-          {partner.infoGroups.map((group) => (
-            <div key={group.heading}>
-              <div className="flex gap-2 align-middle mb-2">
-                <Image
-                  src={`assets/icons/${group.heading}.svg`}
-                  alt={`${group.heading}.svg`}
-                  width={24}
-                  height={24}
-                />
-                <h5 className="text-base font-semibold text-gray-800 font-sans">
-                  {group.heading}
-                </h5>
-              </div>
-              <ul className="list-disc list-inside space-y-1 pl-1">
-                {group.items.map((item, idx) => (
-                  <li
-                    key={idx}
-                    className="text-sm text-gray-600 font-sans leading-relaxed"
-                  >
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+        <div
+        // className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-grow"
+        >
+          <ul className="list-none list-inside space-y-1 pl-1">
+            {partner.partnerInfo.map((info, groupIndex) => (
+              <li
+                key={groupIndex}
+                className="text-sm text-gray-600 font-inter leading-relaxed mb-4 text-justify"
+              >
+                {info}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
