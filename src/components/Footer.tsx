@@ -12,10 +12,10 @@ function Footer() {
   ];
 
   const companyLinks = [
-    { href: "#home", text: "Home" }, // Assuming #home for Hero section
-    { href: "#about", text: "About Us" },
-    { href: "#partners", text: "Our Partners" },
-    { href: "#contact", text: "Contact" },
+    { href: "/", text: "Home" }, // Assuming #home for Hero section
+    { href: "/about", text: "About Us" },
+    { href: "/partners", text: "Our Partners" },
+    { href: "/contact", text: "Contact" },
   ];
 
   const contactInfo = [
