@@ -211,7 +211,7 @@ const FmcLawLandingPage: React.FC = () => {
       const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {
@@ -221,7 +221,8 @@ const FmcLawLandingPage: React.FC = () => {
         const errorText = await response.text();
         setLandingFormStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
       }
-    } catch (error) {
+      } catch (submitError) { 
+      console.error("Landing form submission error:", submitError); // Use 'submitError'
       setLandingFormStatus({ type: 'error', message: "An unexpected error occurred. Please try again." });
     } finally {
       setIsLandingFormSubmitting(false);

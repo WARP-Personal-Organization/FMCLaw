@@ -121,7 +121,7 @@ const ContactUsPage: React.FC = () => {
       const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {
@@ -131,7 +131,8 @@ const ContactUsPage: React.FC = () => {
         const errorText = await response.text();
         setSubmissionStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
       }
-    } catch (error) {
+    } catch (submitError) { // Changed 'error' to 'submitError'
+      console.error("Network or other error during form submission:", submitError); // Use 'submitError'
       setSubmissionStatus({ type: 'error', message: "An unexpected error occurred. Please check your connection and try again." });
     } finally {
       setIsSubmitting(false);
