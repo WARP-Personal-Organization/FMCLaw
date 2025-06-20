@@ -1,9 +1,10 @@
 // components/FmcLawLandingPage.tsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, useAnimation, useInView } from "framer-motion";
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
@@ -32,6 +33,53 @@ interface Partner {
   imageUrl: string;
   details: PartnerDetailItem[];
 }
+
+const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?: string, staggerAmount?: number, once?: boolean }> = ({ children, className, staggerAmount = 0.1, once = true }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: once, amount: 0.3 });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start("visible");
+    } else if (!once) {
+      controls.start("hidden");
+    }
+  }, [isInView, controls, once]);
+
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: staggerAmount,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      ref={ref}
+      className={className}
+      variants={containerVariants}
+      initial="hidden"
+      animate={controls}
+    >
+      {children}
+    </motion.div>
+  );
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 const FmcLawLandingPage: React.FC = () => {
   const practiceAreas: PracticeArea[] = [
@@ -65,26 +113,6 @@ const FmcLawLandingPage: React.FC = () => {
       description: "Robust defense for individuals facing criminal charges.",
       image: "/assets/icons/criminal-law-solid.svg",
     },
-    // {
-    //   name: "Administrative Law",
-    //   description: "Challenging governmental decisions and regulatory actions.",
-    //   image: "/assets/Our_expertise/administrative-law-solid.svg",
-    // },
-    // {
-    //   name: "Civil Law",
-    //   description: "Resolving disputes between individuals and organizations.",
-    //   image: "/assets/Our_expertise/scroll-solid.svg",
-    // },
-    // {
-    //   name: "Election Law",
-    //   description: "Ensuring fair and lawful electoral processes.",
-    //   image: "/assets/Our_expertise/election-solid.svg",
-    // },
-    // {
-    //   name: "Compliance",
-    //   description: "Ensuring adherence to laws and regulatory standards.",
-    //   image: "/assets/Our_expertise/compliance-solid.svg",
-    // },
   ];
 
   const whyChooseReasons: WhyChooseReason[] = [
@@ -195,7 +223,6 @@ const FmcLawLandingPage: React.FC = () => {
       ],
     },
   ];
-
   const [isLandingFormSubmitting, setIsLandingFormSubmitting] = useState(false);
   const [landingFormStatus, setLandingFormStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
 
@@ -222,11 +249,38 @@ const FmcLawLandingPage: React.FC = () => {
         setLandingFormStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
       }
       } catch (submitError) { 
-      console.error("Landing form submission error:", submitError); // Use 'submitError'
+      console.error("Landing form submission error:", submitError);
       setLandingFormStatus({ type: 'error', message: "An unexpected error occurred. Please try again." });
     } finally {
       setIsLandingFormSubmitting(false);
     }
+  };
+
+  const heroTextVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
+  const heroImageVariants = {
+    hidden: { opacity: 0, scale: 0.8, x: 50 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      x: 0,
+      transition: {
+        delay: 0.6,
+        duration: 0.8,
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
@@ -245,16 +299,32 @@ const FmcLawLandingPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
           <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
-              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0 ">
-                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930] ">
+              <motion.div 
+                className="md:w-3/5 text-center md:text-left py-8 md:py-0"
+                initial="hidden"
+                animate="visible"
+              >
+                <motion.h1 
+                  className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]"
+                  variants={heroTextVariants}
+                  custom={0}
+                >
                   Legal Guidance <br></br>That Moves You Forward
-                </h1>
-                <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl">
+                </motion.h1>
+                <motion.p 
+                  className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl"
+                  variants={heroTextVariants}
+                  custom={1}
+                >
                   Bringing together diverse perspectives, we deliver dedicated
                   legal representation focused on achieving the best possible
                   outcome for you.
-                </p>
-                <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                </motion.p>
+                <motion.div 
+                  className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start"
+                  variants={heroTextVariants}
+                  custom={2}
+                >
                   <Link
                     href="/contact"
                     className="bg-[#D4AF37] text-black px-8 py-3 font-semibold font-sans text-lg hover:bg-opacity-80 transition-colors"
@@ -267,9 +337,14 @@ const FmcLawLandingPage: React.FC = () => {
                   >
                     Learn More
                   </Link>
-                </div>
-              </div>
-              <div className="hidden md:flex md:w-2/5 justify-center items-center overflow-hidden p-4">
+                </motion.div>
+              </motion.div>
+              <motion.div 
+                className="hidden md:flex md:w-2/5 justify-center items-center overflow-hidden p-4"
+                variants={heroImageVariants}
+                initial="hidden"
+                animate="visible"
+              >
                 <div className="relative w-[600px] aspect-square ">
                   <Image
                     src="/assets/logos/fmc-emblem-large.png"
@@ -278,7 +353,7 @@ const FmcLawLandingPage: React.FC = () => {
                     style={{ objectFit: "contain" }}
                   />
                 </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -328,11 +403,12 @@ const FmcLawLandingPage: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl font-bold font-sans text-center text-gray-900 mb-16">
               Our Expertise
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <StaggeredChildAnimation className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
               {practiceAreas.map((area) => (
-                <div
+                <motion.div
                   key={area.name}
                   className="bg-white p-8 rounded-md shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center"
+                  variants={itemVariants}
                 >
                   <div className="w-16 h-16 rounded-full bg-[#D4AF37] flex items-center justify-center mb-6 text-white">
                     <Image
@@ -348,9 +424,9 @@ const FmcLawLandingPage: React.FC = () => {
                   <p className="text-gray-600 font-sans text-sm leading-relaxed flex-grow">
                     {area.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </StaggeredChildAnimation>
           </div>
         </section>
 
@@ -359,9 +435,16 @@ const FmcLawLandingPage: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
               Why Choose FMC Law?
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto">
+            <StaggeredChildAnimation 
+                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto"
+                staggerAmount={0.15}
+            >
               {whyChooseReasons.map((reason) => (
-                <div key={reason.name} className="flex flex-col items-center">
+                <motion.div 
+                    key={reason.name} 
+                    className="flex flex-col items-center"
+                    variants={itemVariants}
+                >
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
                     <Image
                       src={reason.image}
@@ -376,9 +459,9 @@ const FmcLawLandingPage: React.FC = () => {
                   <p className="text-[#D1D5DB] text-sm leading-relaxed flex-grow">
                     {reason.description}
                   </p>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </StaggeredChildAnimation>
           </div>
         </section>
 
@@ -704,8 +787,8 @@ const FmcLawLandingPage: React.FC = () => {
             </div>
           </div>
         </section>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };
