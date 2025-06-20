@@ -216,9 +216,17 @@ const AboutPartnerCard: React.FC<AboutPartnerCardProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-grow">
           {partner.infoGroups.map((group) => (
             <div key={group.heading}>
-              <h5 className="text-base font-semibold text-gray-800 mb-2 font-sans">
-                {group.heading}
-              </h5>
+              <div className="flex gap-2 align-middle mb-2">
+                <Image
+                  src={`assets/icons/${group.heading}.svg`}
+                  alt={`${group.heading}.svg`}
+                  width={24}
+                  height={24}
+                />
+                <h5 className="text-base font-semibold text-gray-800 font-sans">
+                  {group.heading}
+                </h5>
+              </div>
               <ul className="list-disc list-inside space-y-1 pl-1">
                 {group.items.map((item, idx) => (
                   <li
