@@ -54,15 +54,28 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
+            {/* Desktop Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="/assets/icons/header-logo.png"
+                src="/assets/logos/header-logo.png"
                 alt="FMC LAW Logo"
                 width={150}
                 height={40}
-                className="h-8 md:h-10 w-auto opacity-90"
+                className="h-8 md:h-10 w-auto opacity-90 hidden md:block"
+              />
+              {/* Mobile Logo */}
+              <Image
+                src="/assets/logos/header-logo-mobile.png"
+                alt="FMC LAW Logo"
+                width={150}
+                height={40}
+                className="h-8 md:h-10 w-auto opacity-90 md:hidden"
               />
             </Link>
+          </div>
+
+          <div className="flex md:hidden items-center w-auto opacity-90">
+            <h1 className="font-merriweather text-[#CE9930]">FMC LAW</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
