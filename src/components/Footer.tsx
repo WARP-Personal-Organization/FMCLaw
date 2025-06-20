@@ -7,7 +7,7 @@ function Footer() {
   const socialLinks = [
     // { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
     // { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
-    { href: "#", src: "/assets/icons/facebook-solid.png", alt: "Facebook" },
+    { href: "#", src: "/assets/icons/facebook-solid.svg", alt: "Facebook" },
     // { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
   ];
 
@@ -32,19 +32,19 @@ function Footer() {
       href: "#", // Placeholder, could be a Google Maps link
     },
     {
-      icon: "/assets/icons/phone-solid.png",
+      icon: "/assets/icons/phone-solid.svg",
       alt: "Phone Icon",
       lines: ["(033) 329-28-38"],
       href: "tel:(033) 329-28-38",
     },
     {
-      icon: "/assets/icons/mail-solid.png",
+      icon: "/assets/icons/mail-solid.svg",
       alt: "Mail Icon",
       lines: ["admin@fmclaw.com.ph"],
       href: "mailto:admin@fmclaw.com.ph",
     },
     {
-      icon: "/assets/icons/clock-solid.png",
+      icon: "/assets/icons/clock-solid.svg",
       alt: "Clock Icon",
       lines: ["Mon-Fri: 9:00 AM - 6:00 PM"],
       href: "#", // Placeholder
