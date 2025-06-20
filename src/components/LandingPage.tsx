@@ -4,12 +4,35 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useAnimation, useInView, Variants, Easing } from "framer-motion"; // Import Variants and Easing
+import { motion, useAnimation, useInView, Variants, Easing } from "framer-motion";
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
 
-// ... (interfaces and other code)
+interface PracticeArea {
+  name: string;
+  description: string;
+  image: string;
+}
+
+interface WhyChooseReason {
+  name: string;
+  image: string;
+  description: string;
+}
+
+interface PartnerDetailItem {
+  label: string;
+  value: string;
+}
+
+interface Partner {
+  id: number;
+  name: string;
+  role: string;
+  imageUrl: string;
+  details: PartnerDetailItem[];
+}
 
 const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?: string, staggerAmount?: number, once?: boolean }> = ({ children, className, staggerAmount = 0.1, once = true }) => {
   const ref = useRef(null);
@@ -24,7 +47,7 @@ const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?:
     }
   }, [isInView, controls, once]);
 
-  const containerVariants: Variants = { // Add Variants type
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -46,21 +69,19 @@ const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?:
   );
 };
 
-const itemVariants: Variants = { // Add Variants type
+const itemVariants: Variants = {
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut" as Easing, // Cast to Easing
+      ease: "easeOut" as Easing,
     },
   },
 };
 
-
 const FmcLawLandingPage: React.FC = () => {
-  // ... (practiceAreas, whyChooseReasons, partnersData, form state and handler remain the same)
   const practiceAreas: PracticeArea[] = [
     {
       name: "Corporate Law",
@@ -235,8 +256,7 @@ const FmcLawLandingPage: React.FC = () => {
     }
   };
 
-
-  const heroTextVariants: Variants = { // Add Variants type
+  const heroTextVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -244,12 +264,12 @@ const FmcLawLandingPage: React.FC = () => {
       transition: {
         delay: i * 0.2,
         duration: 0.6,
-        ease: "easeOut" as Easing, // Cast "easeOut" to Easing type
+        ease: "easeOut" as Easing,
       },
     }),
   };
 
-  const heroImageVariants: Variants = { // Add Variants type
+  const heroImageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8, x: 50 },
     visible: {
       opacity: 1,
@@ -258,7 +278,7 @@ const FmcLawLandingPage: React.FC = () => {
       transition: {
         delay: 0.6,
         duration: 0.8,
-        ease: "easeOut" as Easing, // Cast "easeOut" to Easing type
+        ease: "easeOut" as Easing,
       },
     },
   };
