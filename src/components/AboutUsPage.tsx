@@ -51,7 +51,7 @@ const leadershipData = [
   },
   {
     id: 3,
-    name: "Ryan Carlo Cordero",
+    name: "Atty. Ryan Carlo L. Cordero",
     role: "Partner",
     bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.",
     imageUrl: "/assets/partners/michelle.png",

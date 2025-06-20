@@ -115,7 +115,7 @@ const partnersData: Partner[] = [
   },
   {
     id: 3,
-    name: "Ryan Carlo Cordero",
+    name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/michelle.png",
     specialties: [
@@ -127,16 +127,25 @@ const partnersData: Partner[] = [
       {
         heading: "Credentials",
         items: [
-          "Registered Patent Attorney, USPTO",
           "Certified Information Privacy Professional (CIPP/US, CIPP/E)",
+          "Certification and Specialized Training in Government Procurement (RA 9184)",
+          "Certification and Specialized Training in Risk Reduction and Emergency Response",
+          "Certification and Specialized Training in Security Management",
+          "Civil Service Professional Eligibility",
+          "Completed Courses with the Department of Foreign Affairs",
+          "Completed Courses with the National Risk Reduction Management Council (NDRRMC)",
+          "Completed Courses with the Department of National Intelligence Agency (NICA)",
+          "Completed Courses with the Department of Metro Manila Development Authority (MMDA)",
         ],
       },
       {
         heading: "Employment History",
         items: [
           `Partner, ${firmName} (2015-Present)`,
-          "Senior IP Counsel, Innovatech Solutions (2010-2015)",
-          "Associate, TechLaw Partners (2007-2010)",
+          "Associate Attorney, Santos Paruñgao Aquino and Santos Law Offices (SPASLaw)",
+          "Planning Officer at the  Department of Foreign Affairs - Office of Intelligence and Security",
+          "Intern at the Office of Senator, Alan Peter S. Cayetano in the Senate of the Philippines",
+          "Legal Intern at Rouse Philippines/Baranda and Associates",
         ],
       },
       {
@@ -150,9 +159,8 @@ const partnersData: Partner[] = [
       {
         heading: "Education & Background",
         items: [
-          "J.D., Stanford Law School (with distinction in Law, Science & Technology)",
-          "M.S. in Computer Science, Massachusetts Institute of Technology (MIT)",
-          "B.S. in Electrical Engineering, Caltech",
+          "J.D., De La Salle University – Manila",
+          "B.S. in Consular and Diplomatic Affairs, De La Salle – College of Saint Benilde",
         ],
       },
     ],
