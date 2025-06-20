@@ -350,7 +350,8 @@ const FmcLawLandingPage: React.FC = () => {
         <section
           className="relative bg-cover bg-fixed bg-center py-24 md:py-32"
           style={{
-            backgroundImage: "url('/assets/dark-office-interior.png')",
+            backgroundImage:
+              "url('/assets/background/dark-office-interior.png')",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "scroll",
           }}
