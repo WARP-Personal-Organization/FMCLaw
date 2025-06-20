@@ -57,7 +57,7 @@ const faqData = [
 
 const contactInfo = [
   {
-    iconPath: "/assets/icons/pin-outline.png",
+    iconPath: "/assets/icons/pin-outline.svg",
     label: "Address",
     valueLines: [
       "Iloilo Office: 2F, Daily Guardian Center,",
@@ -68,19 +68,19 @@ const contactInfo = [
     ],
   },
   {
-    iconPath: "/assets/icons/phone-outline.png",
+    iconPath: "/assets/icons/phone-outline.svg",
     label: "Phone",
     valueLines: ["(033) 329-28-38"],
     href: "tel:(033) 329-28-38",
   },
   {
-    iconPath: "/assets/icons/mail-outline.png",
+    iconPath: "/assets/icons/mail-outline.svg",
     label: "Email",
     valueLines: ["admin@fmclaw.com.ph"],
     href: "mailto:admin@fmclaw.com.ph",
   },
   {
-    iconPath: "/assets/icons/clock-outline.png",
+    iconPath: "/assets/icons/clock-outline.svg",
     label: "Office Hours",
     valueLines: ["Monday - Friday: 9:00 AM - 6:00 PM"],
   },
@@ -90,17 +90,17 @@ const socialLinks = [
   {
     href: "#",
     label: "LinkedIn",
-    iconSrc: "/assets/icons/linkedin-solid-gray.png",
+    iconSrc: "/assets/icons/linkedin-solid-gray.svg",
   },
   {
     href: "#",
     label: "Twitter",
-    iconSrc: "/assets/icons/twitter-solid-gray.png",
+    iconSrc: "/assets/icons/twitter-solid-gray.svg",
   },
   {
     href: "#",
     label: "Facebook",
-    iconSrc: "/assets/icons/facebook-solid-gray.png",
+    iconSrc: "/assets/icons/facebook-solid-gray.svg",
   },
 ];
 
@@ -270,14 +270,16 @@ const ContactUsPage: React.FC = () => {
                 </h2>
                 <div className="space-y-8 font-sans">
                   {contactInfo.map((info) => (
-                    <div key={info.label} className="flex items-start">
-                      <Image
-                        src={info.iconPath}
-                        alt=""
-                        width={24}
-                        height={24}
-                        className="mr-4 mt-1 flex-shrink-0"
-                      />
+                    <div key={info.label} className="flex items-start ">
+                      <div className="mr-4 flex justify-center items-center bg-[#D4AF37] w-8 h-8 border-2 border-[#D4AF37] rounded-full">
+                        <Image
+                          src={info.iconPath}
+                          alt=""
+                          width={16}
+                          height={16}
+                          className="flex-shrink-0"
+                        />
+                      </div>
                       <div>
                         <h3 className="text-lg font-semibold text-white mb-1">
                           {info.label}
@@ -305,13 +307,15 @@ const ContactUsPage: React.FC = () => {
                     </div>
                   ))}
                   <div className="flex items-start">
-                    <Image
-                      src="/assets/icons/share-outline.png"
-                      alt=""
-                      width={24}
-                      height={24}
-                      className="mr-4 mt-1 flex-shrink-0"
-                    />
+                    <div className="mr-4 flex justify-center items-center bg-[#D4AF37] w-8 h-8 border-2 border-[#D4AF37] rounded-full">
+                      <Image
+                        src="/assets/icons/share-outline.svg"
+                        alt=""
+                        width={16}
+                        height={16}
+                        className="flex-shrink-0"
+                      />
+                    </div>
                     <div>
                       <h3 className="text-lg font-semibold text-white mb-2">
                         Connect With Us
