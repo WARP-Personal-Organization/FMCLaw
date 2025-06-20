@@ -276,7 +276,7 @@ const FmcLawLandingPage: React.FC = () => {
               <div className="md:col-span-2 relative mt-10 md:mt-0">
                 <div className="relative w-full aspect-[1/1] border-4 border-black shadow-xl">
                   <Image
-                    src="/assets/diff-kind-of-law-firm.png"
+                    src="/assets/background/diff-kind-of-law-firm.png"
                     alt="Modern Legal Professional at FMC Law"
                     fill
                     style={{ objectFit: "cover" }}
