@@ -583,13 +583,13 @@ const FmcLawLandingPage: React.FC = () => {
                         name="first-name"
                         id="first-name-landing"
                         autoComplete="given-name"
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="last-name-landing"
-                        className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                        className="focus:outline-none focus:ring-1 rounded-md block text-sm font-medium text-gray-700 font-sans mb-1"
                       >
                         Last Name
                       </label>
@@ -598,14 +598,14 @@ const FmcLawLandingPage: React.FC = () => {
                         name="last-name"
                         id="last-name-landing"
                         autoComplete="family-name"
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                       />
                     </div>
                   </div>
                   <div>
                     <label
                       htmlFor="email-landing"
-                      className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                      className="focus:outline-none focus:ring-1 rounded-md block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
                       Email
                     </label>
@@ -614,7 +614,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="email"
                       id="email-landing"
                       autoComplete="email"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     />
                   </div>
                   <div>
@@ -629,7 +629,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="phone"
                       id="phone-landing"
                       autoComplete="tel"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     />
                   </div>
                   <div>
@@ -643,7 +643,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="message"
                       id="message-landing"
                       rows={4}
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     ></textarea>
                   </div>
                   <div>
