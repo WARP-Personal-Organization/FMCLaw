@@ -208,10 +208,10 @@ const FmcLawLandingPage: React.FC = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-6xl">
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
-              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0">
-                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
+              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0 ">
+                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930] ">
                   Legal Guidance <br></br>That Moves You Forward
                 </h1>
                 <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl">
@@ -234,8 +234,8 @@ const FmcLawLandingPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-              <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
-                <div className="relative w-full max-w-[500px] aspect-square">
+              <div className="hidden md:flex md:w-2/5 justify-center items-center overflow-hidden p-4">
+                <div className="relative w-[600px] aspect-square ">
                   <Image
                     src="/assets/logos/fmc-emblem-large.png"
                     alt="FMC Law Emblem"

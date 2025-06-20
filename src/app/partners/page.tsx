@@ -275,7 +275,7 @@ const OurPartnersPage: NextPage = () => {
           }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left ">
             <div className="md:w-3/4 lg:w-2/3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
                 The Minds Behind{" "}
@@ -286,6 +286,7 @@ const OurPartnersPage: NextPage = () => {
                 in every case.
               </p>
             </div>
+            <div className="mt-8 h-1 w-24 bg-[#D4AF37]"></div>
           </div>
         </section>
 
