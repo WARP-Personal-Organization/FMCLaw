@@ -127,7 +127,10 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 text-base font-medium font-sans"
+                // className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 text-base font-medium font-inter"
+                className={` hover:text-[#ffd329] px-3 py-2 block text-sm font-medium font inter ${
+                  pathName === link.href ? "text-[#ffd329]" : "text-gray-300"
+                }`}
               >
                 {link.label}
               </Link>
