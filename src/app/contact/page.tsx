@@ -87,16 +87,16 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  {
-    href: "#",
-    label: "LinkedIn",
-    iconSrc: "/assets/icons/linkedin-solid-gray.svg",
-  },
-  {
-    href: "#",
-    label: "Twitter",
-    iconSrc: "/assets/icons/twitter-solid-gray.svg",
-  },
+  // {
+  //   href: "#",
+  //   label: "LinkedIn",
+  //   iconSrc: "/assets/icons/linkedin-solid-gray.svg",
+  // },
+  // {
+  //   href: "#",
+  //   label: "Twitter",
+  //   iconSrc: "/assets/icons/twitter-solid-gray.svg",
+  // },
   {
     href: "#",
     label: "Facebook",
