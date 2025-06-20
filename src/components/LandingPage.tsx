@@ -208,10 +208,10 @@ const FmcLawLandingPage: React.FC = () => {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
-          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 w-full max-w-6xl">
+          <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
-              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0">
-                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]">
+              <div className="md:w-3/5 text-center md:text-left py-8 md:py-0 ">
+                <h1 className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930] ">
                   Legal Guidance <br></br>That Moves You Forward
                 </h1>
                 <p className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl">
@@ -234,10 +234,10 @@ const FmcLawLandingPage: React.FC = () => {
                   </Link>
                 </div>
               </div>
-              <div className="hidden md:flex justify-center items-center md:w-2/5 overflow-hidden p-4">
-                <div className="relative w-full max-w-[500px] aspect-square">
+              <div className="hidden md:flex md:w-2/5 justify-center items-center overflow-hidden p-4">
+                <div className="relative w-[600px] aspect-square ">
                   <Image
-                    src="/assets/logos/fmc-emblem-large.svg"
+                    src="/assets/logos/fmc-emblem-large.png"
                     alt="FMC Law Emblem"
                     fill
                     style={{ objectFit: "contain" }}
@@ -276,7 +276,7 @@ const FmcLawLandingPage: React.FC = () => {
               <div className="md:col-span-2 relative mt-10 md:mt-0">
                 <div className="relative w-full aspect-[1/1] border-4 border-black shadow-xl">
                   <Image
-                    src="/assets/diff-kind-of-law-firm.png"
+                    src="/assets/background/diff-kind-of-law-firm.png"
                     alt="Modern Legal Professional at FMC Law"
                     fill
                     style={{ objectFit: "cover" }}
@@ -350,7 +350,8 @@ const FmcLawLandingPage: React.FC = () => {
         <section
           className="relative bg-cover bg-fixed bg-center py-24 md:py-32"
           style={{
-            backgroundImage: "url('/assets/dark-office-interior.png')",
+            backgroundImage:
+              "url('/assets/background/dark-office-interior.png')",
             backgroundRepeat: "no-repeat",
             backgroundAttachment: "scroll",
           }}
@@ -608,7 +609,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </h3>
                   {[
                     {
-                      icon: "/assets/icons/pin-outline.png",
+                      icon: "/assets/icons/pin-outline.svg",
                       alt: "Location pin icon",
                       lines: [
                         "<b>Address</b>",
@@ -620,17 +621,17 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                     {
-                      icon: "/assets/icons/phone-outline.png",
+                      icon: "/assets/icons/phone-outline.svg",
                       alt: "Phone icon",
                       lines: ["<b>Phone</b>", "(033) 329-28-38"],
                     },
                     {
-                      icon: "/assets/icons/mail-outline.png",
+                      icon: "/assets/icons/mail-outline.svg",
                       alt: "Email icon",
                       lines: ["<b>Email</b>", "admin@fmclaw.com.ph"],
                     },
                     {
-                      icon: "/assets/icons/clock-outline.png",
+                      icon: "/assets/icons/clock-outline.svg",
                       alt: "Clock icon",
                       lines: [
                         "<b>Office Hours</b>",
@@ -638,14 +639,15 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                   ].map((item) => (
-                    <div key={item.alt} className="flex items-start space-x-3">
-                      <Image
-                        src={item.icon}
-                        alt={item.alt}
-                        width={24}
-                        height={24}
-                        className="mt-1"
-                      />
+                    <div key={item.alt} className="flex items-start space-x-3 ">
+                      <div className="w-8 h-8 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
+                        <Image
+                          src={item.icon}
+                          alt={item.alt}
+                          width={16}
+                          height={16}
+                        />
+                      </div>
                       <span
                         className="font-sans text-sm"
                         dangerouslySetInnerHTML={{

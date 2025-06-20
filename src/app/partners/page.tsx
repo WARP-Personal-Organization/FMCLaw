@@ -216,9 +216,17 @@ const AboutPartnerCard: React.FC<AboutPartnerCardProps> = ({
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-6 flex-grow">
           {partner.infoGroups.map((group) => (
             <div key={group.heading}>
-              <h5 className="text-base font-semibold text-gray-800 mb-2 font-sans">
-                {group.heading}
-              </h5>
+              <div className="flex gap-2 align-middle mb-2">
+                <Image
+                  src={`assets/icons/${group.heading}.svg`}
+                  alt={`${group.heading}.svg`}
+                  width={24}
+                  height={24}
+                />
+                <h5 className="text-base font-semibold text-gray-800 font-sans">
+                  {group.heading}
+                </h5>
+              </div>
               <ul className="list-disc list-inside space-y-1 pl-1">
                 {group.items.map((item, idx) => (
                   <li
@@ -259,7 +267,7 @@ const OurPartnersPage: NextPage = () => {
           }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left">
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-left ">
             <div className="md:w-3/4 lg:w-2/3">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-oswald text-white leading-tight">
                 The Minds Behind{" "}
@@ -270,6 +278,7 @@ const OurPartnersPage: NextPage = () => {
                 in every case.
               </p>
             </div>
+            <div className="mt-8 h-1 w-24 bg-[#D4AF37]"></div>
           </div>
         </section>
 

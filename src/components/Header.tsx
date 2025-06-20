@@ -54,13 +54,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
+            {/* Desktop Logo */}
             <Link href="/" className="flex-shrink-0">
               <Image
-                src="/assets/icons/header-logo.png"
+                src="/assets/logos/FMC-logo.png"
                 alt="FMC LAW Logo"
                 width={150}
                 height={40}
-                className="h-8 md:h-10 w-auto opacity-90"
+                className="h-16 w-auto opacity-90"
               />
             </Link>
           </div>
@@ -70,8 +71,8 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className={` hover:text-[#CE9930] px-3 py-2 text-sm font-medium ${
-                  pathName === link.href ? "text-[#CE9930]" : "text-gray-300"
+                className={` hover:text-[#ffd329] px-3 py-2 text-sm font-medium ${
+                  pathName === link.href ? "text-[#ffd329]" : "text-gray-300"
                 }`}
               >
                 {link.label}
@@ -114,7 +115,10 @@ export default function Header() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 text-base font-medium font-sans"
+                // className="text-gray-300 hover:text-[#CE9930] hover:bg-gray-700 block px-3 py-2 text-base font-medium font-inter"
+                className={` hover:text-[#ffd329] px-3 py-2 block text-sm font-medium font-inter ${
+                  pathName === link.href ? "text-[#ce9930]" : "text-gray-300"
+                }`}
               >
                 {link.label}
               </Link>
