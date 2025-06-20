@@ -169,7 +169,7 @@ const ContactUsPage: React.FC = () => {
                 <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                   <label>
-                    Don't fill this out if you're human: <input name="bot-field" />
+                    Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                   </label>
                 </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -413,8 +413,8 @@ const ContactUsPage: React.FC = () => {
               </h2>
               <p className="text-gray-600 font-sans max-w-2xl mx-auto text-lg leading-relaxed">
                 Find quick answers to common questions about our services and
-                processes. If you don't find your answer here, please
-                don't hesitate to reach out.
+                processes. If you don&apos;t find your answer here, please
+                don&apos;t hesitate to reach out.
               </p>
               <div className="mt-8 mx-auto w-12 h-1 bg-[#D4AF37]"></div>
             </div>

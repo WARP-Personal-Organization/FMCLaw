@@ -439,7 +439,7 @@ const FmcLawLandingPage: React.FC = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    "Excellence is our standard, not our goal."
+                    &quot;Excellence is our standard, not our goal.&quot;
                   </p>
                 </div>
               </div>
@@ -549,7 +549,7 @@ const FmcLawLandingPage: React.FC = () => {
                   <input type="hidden" name="form-name" value="landing" />
                   <p className="hidden">
                     <label>
-                      Don't fill this out if you're human: <input name="bot-field" />
+                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
                     </label>
                   </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
