@@ -1,5 +1,7 @@
 // components/FmcLawLandingPage.tsx
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Footer from "./Footer";
@@ -109,7 +111,7 @@ const FmcLawLandingPage: React.FC = () => {
   ];
 
   const partnersData: Partner[] = [
-    {
+     {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
@@ -193,6 +195,38 @@ const FmcLawLandingPage: React.FC = () => {
       ],
     },
   ];
+
+  const [isLandingFormSubmitting, setIsLandingFormSubmitting] = useState(false);
+  const [landingFormStatus, setLandingFormStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  const handleLandingFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsLandingFormSubmitting(true);
+    setLandingFormStatus(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch("/netlify-forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setLandingFormStatus({ type: 'success', message: "Thank you! Your message has been sent." });
+        form.reset();
+      } else {
+        const errorText = await response.text();
+        setLandingFormStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
+      }
+    } catch (error) {
+      setLandingFormStatus({ type: 'error', message: "An unexpected error occurred. Please try again." });
+    } finally {
+      setIsLandingFormSubmitting(false);
+    }
+  };
 
   return (
     <>
@@ -405,7 +439,7 @@ const FmcLawLandingPage: React.FC = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    &quot;Excellence is our standard, not our goal.&quot;
+                    "Excellence is our standard, not our goal."
                   </p>
                 </div>
               </div>
@@ -508,18 +542,20 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="flex flex-col md:flex-row gap-10 lg:gap-16">
               <div className="md:w-3/5 bg-white p-6 sm:p-8 rounded-lg shadow-lg">
                 <form
-                  name="contact"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
+                  name="landing-page-contact-form-react"
+                  onSubmit={handleLandingFormSubmit}
                   className="space-y-6"
                 >
                   <input type="hidden" name="form-name" value="landing" />
-                  <input type="hidden" name="bot-field" />
+                  <p className="hidden">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
-                        htmlFor="first-name"
+                        htmlFor="first-name-landing"
                         className="block text-sm font-medium text-gray-700 font-sans mb-1"
                       >
                         First Name
@@ -527,14 +563,14 @@ const FmcLawLandingPage: React.FC = () => {
                       <input
                         type="text"
                         name="first-name"
-                        id="first-name"
+                        id="first-name-landing"
                         autoComplete="given-name"
                         className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor="last-name"
+                        htmlFor="last-name-landing"
                         className="block text-sm font-medium text-gray-700 font-sans mb-1"
                       >
                         Last Name
@@ -542,7 +578,7 @@ const FmcLawLandingPage: React.FC = () => {
                       <input
                         type="text"
                         name="last-name"
-                        id="last-name"
+                        id="last-name-landing"
                         autoComplete="family-name"
                         className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
                       />
@@ -550,7 +586,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </div>
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="email-landing"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
                       Email
@@ -558,14 +594,14 @@ const FmcLawLandingPage: React.FC = () => {
                     <input
                       type="email"
                       name="email"
-                      id="email"
+                      id="email-landing"
                       autoComplete="email"
                       className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
                     />
                   </div>
                   <div>
                     <label
-                      htmlFor="phone"
+                      htmlFor="phone-landing"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
                       Phone
@@ -573,21 +609,21 @@ const FmcLawLandingPage: React.FC = () => {
                     <input
                       type="tel"
                       name="phone"
-                      id="phone"
+                      id="phone-landing"
                       autoComplete="tel"
                       className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
                     />
                   </div>
                   <div>
                     <label
-                      htmlFor="message"
+                      htmlFor="message-landing"
                       className="block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
                       Message
                     </label>
                     <textarea
                       name="message"
-                      id="message"
+                      id="message-landing"
                       rows={4}
                       className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
                     ></textarea>
@@ -595,11 +631,17 @@ const FmcLawLandingPage: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-black text-white px-8 py-3 rounded-md font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                      disabled={isLandingFormSubmitting}
+                      className="w-full bg-black text-white px-8 py-3 rounded-md font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-50"
                     >
-                      Send Message
+                      {isLandingFormSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
                   </div>
+                  {landingFormStatus && (
+                    <p className={`mt-4 text-sm ${landingFormStatus.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                      {landingFormStatus.message}
+                    </p>
+                  )}
                 </form>
               </div>
               <div className="md:w-2/5 space-y-8 mt-10 md:mt-0">

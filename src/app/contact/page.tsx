@@ -1,4 +1,7 @@
-import React from "react";
+// app/contact/page.tsx
+"use client";
+
+import React, { useState } from "react";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Image from "next/image";
@@ -103,10 +106,41 @@ const socialLinks = [
 ];
 
 const ContactUsPage: React.FC = () => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submissionStatus, setSubmissionStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+
+  const handleContactSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsSubmitting(true);
+    setSubmissionStatus(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const response = await fetch("/netlify-forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setSubmissionStatus({ type: 'success', message: "Thank you! Your message has been sent successfully." });
+        form.reset();
+      } else {
+        const errorText = await response.text();
+        setSubmissionStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
+      }
+    } catch (error) {
+      setSubmissionStatus({ type: 'error', message: "An unexpected error occurred. Please check your connection and try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
       <Header />
-
       <main className="font-sans text-gray-800">
         <section className="bg-gray-100 py-16 md:py-20 text-center">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -128,18 +162,20 @@ const ContactUsPage: React.FC = () => {
                   Send Us a Message
                 </h2>
               <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
+                name="contact-form-page-react"
+                onSubmit={handleContactSubmit}
                 className="space-y-6 font-sans"
               >
                 <input type="hidden" name="form-name" value="contact" />
-                <input type="hidden" name="bot-field" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
-                        htmlFor="first-name"
+                        htmlFor="first-name-contact"
                         className="block text-sm font-medium text-gray-700 mb-1"
                       >
                         First Name*
@@ -147,14 +183,14 @@ const ContactUsPage: React.FC = () => {
                       <input
                         type="text"
                         name="first-name"
-                        id="first-name"
+                        id="first-name-contact"
                         required
                         className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                       />
                     </div>
                     <div>
                       <label
-                        htmlFor="last-name"
+                        htmlFor="last-name-contact"
                         className="block text-sm font-medium text-gray-700 mb-1"
                       >
                         Last Name*
@@ -162,7 +198,7 @@ const ContactUsPage: React.FC = () => {
                       <input
                         type="text"
                         name="last-name"
-                        id="last-name"
+                        id="last-name-contact"
                         required
                         className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                       />
@@ -170,7 +206,7 @@ const ContactUsPage: React.FC = () => {
                   </div>
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="email-contact"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
                       Email Address*
@@ -178,7 +214,7 @@ const ContactUsPage: React.FC = () => {
                     <input
                       type="email"
                       name="email"
-                      id="email"
+                      id="email-contact"
                       required
                       autoComplete="email"
                       className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
@@ -186,7 +222,7 @@ const ContactUsPage: React.FC = () => {
                   </div>
                   <div>
                     <label
-                      htmlFor="phone"
+                      htmlFor="phone-contact"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
                       Phone Number
@@ -194,37 +230,37 @@ const ContactUsPage: React.FC = () => {
                     <input
                       type="tel"
                       name="phone"
-                      id="phone"
+                      id="phone-contact"
                       autoComplete="tel"
                       className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
                     <label
-                      htmlFor="subject"
+                      htmlFor="subject-contact"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
                       Subject
                     </label>
                     <input
-                      type="subject"
+                      type="text"
                       name="subject"
-                      id="subject"
+                      id="subject-contact"
                       required
-                      autoComplete="subject"
+                      autoComplete="off"
                       className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
                     />
                   </div>
                   <div>
                     <label
-                      htmlFor="message"
+                      htmlFor="message-contact"
                       className="block text-sm font-medium text-gray-700 mb-1"
                     >
                       Your Message*
                     </label>
                     <textarea
                       name="message"
-                      id="message"
+                      id="message-contact"
                       rows={5}
                       required
                       className="w-full p-3 border border-gray-300 shadow-sm focus:ring-[#D4AF37] focus:border-[#D4AF37]"
@@ -233,7 +269,7 @@ const ContactUsPage: React.FC = () => {
                   <div className="flex items-start">
                     <div className="flex-shrink-0">
                       <input
-                        id="consent"
+                        id="consent-contact"
                         name="consent"
                         type="checkbox"
                         required
@@ -242,7 +278,7 @@ const ContactUsPage: React.FC = () => {
                     </div>
                     <div className="ml-3 text-sm">
                       <label
-                        htmlFor="consent"
+                        htmlFor="consent-contact"
                         className="font-medium text-gray-700"
                       >
                         I agree to the{" "}
@@ -259,11 +295,17 @@ const ContactUsPage: React.FC = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center bg-black text-white px-8 py-3.5 font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                      disabled={isSubmitting}
+                      className="w-full flex items-center justify-center bg-black text-white px-8 py-3.5 font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-50"
                     >
-                      Send Message <RightArrowIcon />
+                      {isSubmitting ? 'Sending...' : 'Send Message'} <RightArrowIcon />
                     </button>
                   </div>
+                  {submissionStatus && (
+                    <p className={`mt-4 text-sm ${submissionStatus.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                      {submissionStatus.message}
+                    </p>
+                  )}
                 </form>
               </div>
 
@@ -302,7 +344,6 @@ const ContactUsPage: React.FC = () => {
                               className="text-gray-300 text-sm leading-relaxed"
                             >
                               {line}
-                              <br />
                             </p>
                           )
                         )}
@@ -347,7 +388,7 @@ const ContactUsPage: React.FC = () => {
                   <div className="aspect-[16/9] bg-gray-700 overflow-hidden shadow-md">
                     <Image
                       src="/assets/background/map-placeholder-grayscale.png"
-                      alt=""
+                      alt="Map placeholder"
                       width={1600}
                       height={900}
                       className="w-full h-full object-cover grayscale"
@@ -372,8 +413,8 @@ const ContactUsPage: React.FC = () => {
               </h2>
               <p className="text-gray-600 font-sans max-w-2xl mx-auto text-lg leading-relaxed">
                 Find quick answers to common questions about our services and
-                processes. If you don&apos;t find your answer here, please
-                don&apos;t hesitate to reach out.
+                processes. If you don't find your answer here, please
+                don't hesitate to reach out.
               </p>
               <div className="mt-8 mx-auto w-12 h-1 bg-[#D4AF37]"></div>
             </div>
