@@ -600,7 +600,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </h3>
                   {[
                     {
-                      icon: "/assets/icons/pin-outline.png",
+                      icon: "/assets/icons/pin-outline.svg",
                       alt: "Location pin icon",
                       lines: [
                         "<b>Address</b>",
@@ -612,17 +612,17 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                     {
-                      icon: "/assets/icons/phone-outline.png",
+                      icon: "/assets/icons/phone-outline.svg",
                       alt: "Phone icon",
                       lines: ["<b>Phone</b>", "(033) 329-28-38"],
                     },
                     {
-                      icon: "/assets/icons/mail-outline.png",
+                      icon: "/assets/icons/mail-outline.svg",
                       alt: "Email icon",
                       lines: ["<b>Email</b>", "admin@fmclaw.com.ph"],
                     },
                     {
-                      icon: "/assets/icons/clock-outline.png",
+                      icon: "/assets/icons/clock-outline.svg",
                       alt: "Clock icon",
                       lines: [
                         "<b>Office Hours</b>",
@@ -630,14 +630,15 @@ const FmcLawLandingPage: React.FC = () => {
                       ],
                     },
                   ].map((item) => (
-                    <div key={item.alt} className="flex items-start space-x-3">
-                      <Image
-                        src={item.icon}
-                        alt={item.alt}
-                        width={24}
-                        height={24}
-                        className="mt-1"
-                      />
+                    <div key={item.alt} className="flex items-start space-x-3 ">
+                      <div className="w-8 h-8 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
+                        <Image
+                          src={item.icon}
+                          alt={item.alt}
+                          width={16}
+                          height={16}
+                        />
+                      </div>
                       <span
                         className="font-sans text-sm"
                         dangerouslySetInnerHTML={{
