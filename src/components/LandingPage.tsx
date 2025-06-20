@@ -4,35 +4,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView, Variants, Easing } from "framer-motion"; // Import Variants and Easing
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
 
-interface PracticeArea {
-  name: string;
-  description: string;
-  image: string;
-}
-
-interface WhyChooseReason {
-  name: string;
-  image: string;
-  description: string;
-}
-
-interface PartnerDetailItem {
-  label: string;
-  value: string;
-}
-
-interface Partner {
-  id: number;
-  name: string;
-  role: string;
-  imageUrl: string;
-  details: PartnerDetailItem[];
-}
+// ... (interfaces and other code)
 
 const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?: string, staggerAmount?: number, once?: boolean }> = ({ children, className, staggerAmount = 0.1, once = true }) => {
   const ref = useRef(null);
@@ -47,7 +24,7 @@ const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?:
     }
   }, [isInView, controls, once]);
 
-  const containerVariants = {
+  const containerVariants: Variants = { // Add Variants type
     hidden: {},
     visible: {
       transition: {
@@ -69,19 +46,21 @@ const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?:
   );
 };
 
-const itemVariants = {
+const itemVariants: Variants = { // Add Variants type
   hidden: { opacity: 0, y: 20 },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeOut",
+      ease: "easeOut" as Easing, // Cast to Easing
     },
   },
 };
 
+
 const FmcLawLandingPage: React.FC = () => {
+  // ... (practiceAreas, whyChooseReasons, partnersData, form state and handler remain the same)
   const practiceAreas: PracticeArea[] = [
     {
       name: "Corporate Law",
@@ -256,7 +235,8 @@ const FmcLawLandingPage: React.FC = () => {
     }
   };
 
-  const heroTextVariants = {
+
+  const heroTextVariants: Variants = { // Add Variants type
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
       opacity: 1,
@@ -264,12 +244,12 @@ const FmcLawLandingPage: React.FC = () => {
       transition: {
         delay: i * 0.2,
         duration: 0.6,
-        ease: "easeOut",
+        ease: "easeOut" as Easing, // Cast "easeOut" to Easing type
       },
     }),
   };
 
-  const heroImageVariants = {
+  const heroImageVariants: Variants = { // Add Variants type
     hidden: { opacity: 0, scale: 0.8, x: 50 },
     visible: {
       opacity: 1,
@@ -278,7 +258,7 @@ const FmcLawLandingPage: React.FC = () => {
       transition: {
         delay: 0.6,
         duration: 0.8,
-        ease: "easeOut",
+        ease: "easeOut" as Easing, // Cast "easeOut" to Easing type
       },
     },
   };
@@ -523,7 +503,7 @@ const FmcLawLandingPage: React.FC = () => {
                 <div className="flex items-center gap-5 mt-5">
                   <div className="m-0 w-[32px] h-[3px] bg-[#D4AF37]"></div>
                   <p className="font-bold italic text-black justify-start">
-                    &quot;Excellence is our standard, not our goal.&quot;
+                    "Excellence is our standard, not our goal."
                   </p>
                 </div>
               </div>
@@ -633,7 +613,7 @@ const FmcLawLandingPage: React.FC = () => {
                   <input type="hidden" name="form-name" value="landing" />
                   <p className="hidden">
                     <label>
-                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                      Don't fill this out if you're human: <input name="bot-field" />
                     </label>
                   </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
