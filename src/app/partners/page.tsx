@@ -55,7 +55,7 @@ const partnersData: Partner[] = [
   },
   {
     id: 3,
-    name: "Ryan Carlo Cordero",
+    name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/michelle.png",
     specialties: [
