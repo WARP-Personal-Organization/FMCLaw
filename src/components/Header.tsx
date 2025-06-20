@@ -61,7 +61,7 @@ export default function Header() {
                 alt="FMC LAW Logo"
                 width={150}
                 height={40}
-                className="h-16 w-auto opacity-90"
+                className="h-8 w-auto opacity-90"
               />
             </Link>
           </div>
