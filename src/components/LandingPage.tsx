@@ -139,7 +139,7 @@ const FmcLawLandingPage: React.FC = () => {
   ];
 
   const partnersData: Partner[] = [
-     {
+    {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
@@ -224,29 +224,42 @@ const FmcLawLandingPage: React.FC = () => {
     },
   ];
   const [isLandingFormSubmitting, setIsLandingFormSubmitting] = useState(false);
-  const [landingFormStatus, setLandingFormStatus] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const [landingFormStatus, setLandingFormStatus] = useState<{
+    type: "success" | "error";
+    message: string;
+  } | null>(null);
 
-  const handleLandingFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleLandingFormSubmit = async (
+    event: React.FormEvent<HTMLFormElement>
+  ) => {
     event.preventDefault();
     setIsLandingFormSubmitting(true);
     setLandingFormStatus(null);
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    
+
     try {
       const response = await fetch("/netlify-forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
+        body: new URLSearchParams(
+          formData as unknown as Record<string, string>
+        ).toString(),
       });
 
       if (response.ok) {
-        setLandingFormStatus({ type: 'success', message: "Thank you! Your message has been sent." });
+        setLandingFormStatus({
+          type: "success",
+          message: "Thank you! Your message has been sent.",
+        });
         form.reset();
       } else {
         const errorText = await response.text();
-        setLandingFormStatus({ type: 'error', message: `Submission failed: ${errorText || 'Please try again.'}` });
+        setLandingFormStatus({
+          type: "error",
+          message: `Submission failed: ${errorText || "Please try again."}`,
+        });
       }
       } catch (submitError) { 
       console.error("Landing form submission error:", submitError);
@@ -633,10 +646,11 @@ const FmcLawLandingPage: React.FC = () => {
                   <input type="hidden" name="form-name" value="landing" />
                   <p className="hidden">
                     <label>
-                      Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                      Don&apos;t fill this out if you&apos;re human:{" "}
+                      <input name="bot-field" />
                     </label>
                   </p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label
                         htmlFor="first-name-landing"
@@ -649,13 +663,13 @@ const FmcLawLandingPage: React.FC = () => {
                         name="first-name"
                         id="first-name-landing"
                         autoComplete="given-name"
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="last-name-landing"
-                        className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                        className="focus:outline-none focus:ring-1 rounded-md block text-sm font-medium text-gray-700 font-sans mb-1"
                       >
                         Last Name
                       </label>
@@ -664,14 +678,14 @@ const FmcLawLandingPage: React.FC = () => {
                         name="last-name"
                         id="last-name-landing"
                         autoComplete="family-name"
-                        className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                        className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                       />
                     </div>
                   </div>
                   <div>
                     <label
                       htmlFor="email-landing"
-                      className="block text-sm font-medium text-gray-700 font-sans mb-1"
+                      className="focus:outline-none focus:ring-1 rounded-md block text-sm font-medium text-gray-700 font-sans mb-1"
                     >
                       Email
                     </label>
@@ -680,7 +694,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="email"
                       id="email-landing"
                       autoComplete="email"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     />
                   </div>
                   <div>
@@ -695,7 +709,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="phone"
                       id="phone-landing"
                       autoComplete="tel"
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     />
                   </div>
                   <div>
@@ -709,7 +723,7 @@ const FmcLawLandingPage: React.FC = () => {
                       name="message"
                       id="message-landing"
                       rows={4}
-                      className="w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm"
+                      className="focus:outline-none focus:ring-1 rounded-md w-full p-3 border border-gray-300 rounded-md focus:ring-[#D4AF37] focus:border-[#D4AF37] font-sans shadow-sm text-gray-700"
                     ></textarea>
                   </div>
                   <div>
@@ -718,11 +732,17 @@ const FmcLawLandingPage: React.FC = () => {
                       disabled={isLandingFormSubmitting}
                       className="w-full bg-black text-white px-8 py-3 rounded-md font-semibold font-sans hover:bg-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black disabled:opacity-50"
                     >
-                      {isLandingFormSubmitting ? 'Sending...' : 'Send Message'}
+                      {isLandingFormSubmitting ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                   {landingFormStatus && (
-                    <p className={`mt-4 text-sm ${landingFormStatus.type === 'success' ? 'text-green-600' : 'text-red-600'}`}>
+                    <p
+                      className={`mt-4 text-sm ${
+                        landingFormStatus.type === "success"
+                          ? "text-green-600"
+                          : "text-red-600"
+                      }`}
+                    >
                       {landingFormStatus.message}
                     </p>
                   )}
