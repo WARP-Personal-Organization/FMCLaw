@@ -23,45 +23,38 @@ const partnersData: Partner[] = [
     id: 1,
     name: "Lcid Crescent Fernandez",
     role: "MANAGING PARTNER",
-    imageUrl: "/assets/partners/alexandra.png",
+    imageUrl: "/assets/partners/lcid.jpg",
     specialties: [
-      "Commercial Litigation",
-      "International Arbitration",
-      "White-Collar Defense",
+
     ],
     partnerInfo: [
-      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
-      "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
-      "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
-      "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
+"Atty. Lcid Crescent Fernandez is a dynamic entrepreneur and legal professional with a Juris Doctor degree from the University of San Agustin, a business degree from the University of the Philippines Visayas, and a track record of excellence in law, business, and communication. He currently serves as CEO of Prometheus, Promises Film and Creative Studio, WARP Innovations and Technologies, Inc., and 101 Food, while also holding leadership roles as Vice President – External of Daily Guardian, President and Chairman of Quiklab Diagnostics, Inc., and a founding stockholder of Asia Pacific Medical Center Iloilo.",
+"His experience spans both the private and public sectors, having served as Chief of Staff to the Provincial Federation President of the Liga ng mga Barangay and as Technical Assistant at the Department of Education Central Office. Earlier in his career, he worked as an Editorial Assistant for Daily Guardian and team leader for a gubernatorial campaign.",
+"Atty. Fernandez has been recognized for his leadership and innovation, receiving the Innovative Entrepreneur Award from the Philippine Chamber of Commerce and Industry – Iloilo Chapter, Marketing Leader of the Year at the 2023 Marketing Excellence Awards, and the Dungganon sa Barotacnon Award for Entrepreneurship. He is also a recipient of the Young Ilonggo Entrepreneur of the Year (Special Citation) and has won multiple awards in national and international moot court and debate competitions."
     ],
   },
   {
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "PARTNER",
-    imageUrl: "/assets/partners/jonathan.png",
+    imageUrl: "/assets/partners/mondejar.jpg",
     specialties: [
-      "Mergers & Acquisitions",
-      "Venture Capital",
-      "Corporate Governance",
+
     ],
     partnerInfo: [
-      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
-      "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
-      "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
-      "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
+      "Atty. Carl Mondejar holds a Juris Doctor degree from Ateneo de Manila University School of Law and has built a career at the intersection of public service and legal practice.",
+      "He began his legal career as an Associate at Gerodias Suchianco Estrella Law and previously served as a Sangguniang Bayan Member of New Lucena, Iloilo.",
+      "His professional development reflects a deep commitment to governance, civic engagement, and legal service, shaped by both private sector experience and legislative work at the local level.",
+      "He is set to assume office as the incoming Mayor of New Lucena, bringing with him a strong legal foundation, a vision for progressive leadership, and a passion for community development.",
     ],
   },
   {
     id: 3,
     name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
-    imageUrl: "/assets/partners/michelle.png",
+    imageUrl: "/assets/partners/cordero.jpg",
     specialties: [
-      "Patent Litigation",
-      "Tech Transactions",
-      "Data Privacy & Cybersecurity",
+
     ],
     partnerInfo: [
       "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",

@@ -39,22 +39,25 @@ const leadershipData = [
     id: 1,
     name: "Lcid Crescent Fernandez",
     role: "Managing Partner",
-    bio: "With over 20 years of experience in corporate law, Alexandra leads our firm with vision and integrity, specializing in complex commercial litigation.",
-    imageUrl: "/assets/partners/alexandra.png",
+    bio: 
+            "Lcid Crescent Fernandez is a multi-awarded lawyer and entrepreneur with a Juris Doctor from the University of San Agustin and a business degree from UP Visayas, currently leading multiple ventures across media, technology, healthcare, and food, while bringing a strong background in public service, advocacy, and strategic communication.",
+    imageUrl: "/assets/partners/lcid.jpg",
   },
   {
     id: 2,
     name: "Carl Vincent Mondejar, CPA",
     role: "Partner",
-    bio: "A former federal prosecutor, Jonathan brings unparalleled expertise in white-collar defense and corporate compliance matters.",
-    imageUrl: "/assets/partners/jonathan.png",
+    bio: 
+            "Carl Mondejar is an Ateneo Law School graduate and former associate at Gerodias Suchianco Estrella Law, with experience as a Sangguniang Bayan Member of New Lucena, now poised to serve as the municipality's incoming mayor.",
+    imageUrl: "/assets/partners/mondejar.jpg",
   },
   {
     id: 3,
-    name: "Atty. Ryan Carlo L. Cordero",
+    name: "Ryan Carlo L. Cordero",
     role: "Partner",
-    bio: "A tech industry veteran, Michelle leads our intellectual property and data privacy practice with innovative approaches to complex challenges.",
-    imageUrl: "/assets/partners/michelle.png",
+    bio: 
+            "Ryan Carlo L. Cordero is the Managing Partner of Cordero Law Office and a De La Salle University–Manila Juris Doctor graduate with a background in foreign affairs and specialized training in procurement, risk management, and security.",
+    imageUrl: "/assets/partners/cordero.jpg",
   },
 ];
 
@@ -130,7 +133,7 @@ const AboutUsPage: React.FC = () => {
               <div className="relative mt-10 md:mt-0">
                 <div className="relative w-full aspect-[4/3] shadow-xl">
                   <Image
-                    src="/assets/background/table-people.png"
+                    src="/assets/background/main3.png"
                     alt="FMC Law team discussion"
                     fill
                     className="object-cover"

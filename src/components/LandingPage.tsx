@@ -143,26 +143,12 @@ const FmcLawLandingPage: React.FC = () => {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
-      imageUrl: "/assets/partners/alexandra.png",
+      imageUrl: "/assets/partners/lcid.jpg",
       details: [
         {
-          label: "Credentials",
+          label: "",
           value:
-            "Board Certified in Civil Trial Law, Certified Mediator, AV Preeminent® Rated",
-        },
-        {
-          label: "Employment History",
-          value:
-            "Former Senior Partner at Wilson & Reed (2010-2018); Judicial Law Clerk, U.S. Court of Appeals (2005-2007)",
-        },
-        {
-          label: "Areas of Practice",
-          value: "Corporate Litigation, M&A, International Business Law",
-        },
-        {
-          label: "Education",
-          value:
-            "J.D., Harvard Law School (magna cum laude); B.A. Economics, Yale",
+            "Atty. Lcid Crescent Fernandez is a multi-awarded lawyer and entrepreneur with a Juris Doctor from the University of San Agustin and a business degree from UP Visayas, currently leading multiple ventures across media, technology, healthcare, and food, while bringing a strong background in public service, advocacy, and strategic communication.",
         },
       ],
     },
@@ -170,27 +156,12 @@ const FmcLawLandingPage: React.FC = () => {
       id: 2,
       name: "Carl Vincent Mondejar, CPA",
       role: "Partner",
-      imageUrl: "/assets/partners/jonathan.png",
+      imageUrl: "/assets/partners/mondejar.jpg",
       details: [
         {
-          label: "Credentials",
+          label: " ",
           value:
-            "Fellow, American College of Trial Lawyers; Super Lawyers® Top 100",
-        },
-        {
-          label: "Employment History",
-          value:
-            "Founding Partner, Blackwell & Associates (2008-2020); Assistant U.S. Attorney (2002-2008)",
-        },
-        {
-          label: "Areas of Practice",
-          value:
-            "White-Collar Defense, Corporate Compliance, Complex Civil Litigation",
-        },
-        {
-          label: "Education",
-          value:
-            "J.D., Stanford Law School; B.A. Political Science, Georgetown",
+            "Atty. Carl Mondejar is an Ateneo Law School graduate and former associate at Gerodias Suchianco Estrella Law, with experience as a Sangguniang Bayan Member of New Lucena, now poised to serve as the municipality's incoming mayor.",
         },
       ],
     },
@@ -198,27 +169,12 @@ const FmcLawLandingPage: React.FC = () => {
       id: 3,
       name: "Ryan Carlo Cordero",
       role: "Partner",
-      imageUrl: "/assets/partners/michelle.png",
+      imageUrl: "/assets/partners/cordero.jpg",
       details: [
         {
-          label: "Credentials",
+          label: "",
           value:
-            "Certified Intellectual Property Specialist; Rising Stars® (2018-2025)",
-        },
-        {
-          label: "Employment History",
-          value:
-            "Senior Associate, Tech Law Partners (2015-2022); In-house Counsel, InnovateTech (2012-2015)",
-        },
-        {
-          label: "Areas of Practice",
-          value:
-            "Intellectual Property, Technology Law, Data Privacy & Cyber-security",
-        },
-        {
-          label: "Education",
-          value:
-            "J.D., UC Berkeley School of Law; M.S. Computer Science, MIT; B.S. Electrical Engineering, Caltech",
+            "Atty. Ryan Carlo L. Cordero is the Managing Partner of Cordero Law Office and a De La Salle University–Manila Juris Doctor graduate with a background in foreign affairs and specialized training in procurement, risk management, and security.",
         },
       ],
     },
@@ -399,7 +355,7 @@ const FmcLawLandingPage: React.FC = () => {
               <div className="md:col-span-2 relative mt-10 md:mt-0">
                 <div className="relative w-full aspect-[1/1] border-4 border-black shadow-xl">
                   <Image
-                    src="/assets/background/diff-kind-of-law-firm.png"
+                    src="/assets/background/main1.jpg"
                     alt="Modern Legal Professional at FMC Law"
                     fill
                     style={{ objectFit: "cover" }}
@@ -516,7 +472,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/background/table-people.png"
+                  src="/assets/background/main2.jpg"
                   alt="FMC Law team in a meeting"
                   fill
                   style={{ objectFit: "cover" }}
@@ -544,7 +500,7 @@ const FmcLawLandingPage: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               <div className="order-1 md:order-2 relative w-full aspect-[4/3] rounded-lg shadow-xl overflow-hidden">
                 <Image
-                  src="/assets/background/table-empty.png"
+                  src="/assets/background/main3.jpg"
                   alt="FMC Law conference room"
                   fill
                   style={{ objectFit: "cover" }}
