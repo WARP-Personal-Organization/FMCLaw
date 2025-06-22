@@ -133,7 +133,7 @@ const AboutUsPage: React.FC = () => {
               <div className="relative mt-10 md:mt-0">
                 <div className="relative w-full aspect-[4/3] shadow-xl">
                   <Image
-                    src="/assets/background/main3.png"
+                    src="/assets/background/main3.jpg"
                     alt="FMC Law team discussion"
                     fill
                     className="object-cover"
