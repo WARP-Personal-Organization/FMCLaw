@@ -23,7 +23,7 @@ const partnersData: Partner[] = [
     id: 1,
     name: "Lcid Crescent Fernandez",
     role: "MANAGING PARTNER",
-    imageUrl: "/assets/partners/lcid.jpg",
+    imageUrl: "/assets/partners/fernandez.jpg",
     specialties: [],
     partnerInfo: [
       "Atty. Lcid Crescent Fernandez is a dynamic entrepreneur and legal professional with a Juris Doctor degree from the University of San Agustin, a business degree from the University of the Philippines Visayas, and a track record of excellence in law, business, and communication. He currently serves as CEO of Prometheus, Promises Film and Creative Studio, WARP Innovations and Technologies, Inc., and 101 Food, while also holding leadership roles as Vice President – External of Daily Guardian, President and Chairman of Quiklab Diagnostics, Inc., and a founding stockholder of Asia Pacific Medical Center Iloilo.",
@@ -48,7 +48,7 @@ const partnersData: Partner[] = [
   },
   {
     id: 3,
-    name: "Atty. Ryan Carlo L. Cordero",
+    name: "Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/cordero.jpg",
     specialties: ["Civil Law", "Criminal Law", "Labor Law", "Administrative Law"],

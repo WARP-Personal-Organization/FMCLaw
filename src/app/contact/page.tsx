@@ -32,27 +32,12 @@ const faqData = [
   {
     question: "How do I schedule a consultation?",
     answer:
-      "You can schedule a consultation by calling our office directly at (123) 456-7890, emailing us at consult@fmclaw.com, or by filling out the contact form on this page. We aim to respond to all inquiries within 24 business hours.",
+      "You can schedule a consultation by calling our office directly at (033) 329-28-38, emailing us at admin@fmclaw.com.ph, or by filling out the contact form on this page.",
   },
   {
     question: "What should I bring to my initial consultation?",
     answer:
       "Please bring any documents relevant to your case, such as contracts, correspondence, court orders, or police reports. A list of questions you have for our attorneys would also be beneficial for a productive discussion.",
-  },
-  {
-    question: "Do you offer virtual consultations?",
-    answer:
-      "Yes, we offer virtual consultations via secure video conferencing for clients who prefer not to meet in person or are located remotely. Please indicate your preference when scheduling your appointment.",
-  },
-  {
-    question: "How quickly can I expect a response?",
-    answer:
-      "Our team strives to respond to all inquiries as promptly as possible, typically within one business day. For urgent matters, please call our office directly for immediate assistance.",
-  },
-  {
-    question: "Do you work with international clients?",
-    answer:
-      "Yes, FMC Law has extensive experience representing international clients on a variety of legal matters. We have a global network and can provide counsel on cross-border issues effectively.",
   },
 ];
 

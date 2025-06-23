@@ -154,7 +154,7 @@ const FmcLawLandingPage: React.FC = () => {
       id: 1,
       name: "Lcid Crescent Fernandez",
       role: "Managing Partner",
-      imageUrl: "/assets/partners/lcid.jpg",
+      imageUrl: "/assets/partners/fernandez.jpg",
       details: [
         {
           label: "",

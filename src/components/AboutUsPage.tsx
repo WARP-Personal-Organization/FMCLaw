@@ -41,7 +41,7 @@ const leadershipData = [
     role: "Managing Partner",
     bio: 
             "Lcid Crescent Fernandez is a multi-awarded lawyer and entrepreneur with a Juris Doctor from the University of San Agustin and a business degree from UP Visayas, currently leading multiple ventures across media, technology, healthcare, and food, while bringing a strong background in public service, advocacy, and strategic communication.",
-    imageUrl: "/assets/partners/lcid.jpg",
+    imageUrl: "/assets/partners/fernandez.jpg",
   },
   {
     id: 2,
