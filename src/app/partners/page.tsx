@@ -51,7 +51,7 @@ const partnersData: Partner[] = [
     imageUrl: "/assets/partners/cordero.jpg",
     specialties: ["Civ.", "Crim.", "Labor", "Admin."],
     partnerInfo: [
-      "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
+      "Atty. Ryan Carlo L. Cordero, a former Managing Partner, holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
       "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
       "His professional development includes certifications and specialized training in government procurement (RA 9184), risk reduction and emergency response, and security management. He holds a Civil Service Professional Eligibility and has completed courses with the Department of Foreign Affairs, National Risk Reduction and Management Council (NDRRMC), National Intelligence Coordinating Agency (NICA), and the Metro Manila Development Authority (MMDA).",
       "Prior to his legal practice, Atty. Cordero worked as a Planning Officer at the Department of Foreign Affairs – Office of Intelligence and Security, and held an early internship at the Office of Senator Alan Peter S. Cayetano in the Senate of the Philippines. He also gained legal experience as a legal intern at Rouse Philippines / Baranda and Associates.",
