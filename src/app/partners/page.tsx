@@ -43,6 +43,7 @@ const partnersData: Partner[] = [
       "He began his legal career as an Associate at Gerodias Suchianco Estrella Law and previously served as a Sangguniang Bayan Member of New Lucena, Iloilo.",
       "His professional development reflects a deep commitment to governance, civic engagement, and legal service, shaped by both private sector experience and legislative work at the local level.",
       "He is set to assume office as the incoming Mayor of New Lucena, bringing with him a strong legal foundation, a vision for progressive leadership, and a passion for community development.",
+      "Atty. Carl Mondejar is an Ateneo Law School graduate and former associate at Gerodias Suchianco Estrella Law. He entered public service in his home town of New Lucena , currently serving as the municipality's mayor.",
     ],
   },
   {
