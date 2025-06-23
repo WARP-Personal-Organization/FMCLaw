@@ -46,7 +46,7 @@ function Footer() {
     {
       icon: "/assets/icons/clock-solid.svg",
       alt: "Clock Icon",
-      lines: ["Mon-Fri: 9:00 AM - 6:00 PM"],
+      lines: ["Mon-Fri: 8:00 AM - 5:00 PM"],
       href: "#", // Placeholder
     },
   ];
