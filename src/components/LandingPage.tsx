@@ -730,7 +730,7 @@ const FmcLawLandingPage: React.FC = () => {
                       lines: [
                         "<b>Address</b>",
                         "Iloilo Office: 2F, Daily Guardian Center,",
-                        "Guzman Jasena, Mandurriao, Iloilo City",
+                        "Guzman Jesena, Mandurriao, Iloilo City",
                         "",
                         "Manila Office: #62 Saint Peter Street,",
                         "Brgy. Oranbo, Pasig City",
