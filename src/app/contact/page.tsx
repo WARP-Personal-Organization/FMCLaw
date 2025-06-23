@@ -83,7 +83,7 @@ const contactInfo = [
   {
     iconPath: "/assets/icons/clock-outline.svg",
     label: "Office Hours",
-    valueLines: ["Monday - Friday: 9:00 AM - 6:00 PM"],
+    valueLines: ["Monday - Friday: 8:00 AM - 5:00 PM"],
   },
 ];
 
