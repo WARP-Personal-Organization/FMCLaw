@@ -51,7 +51,7 @@ const partnersData: Partner[] = [
     name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/cordero.jpg",
-    specialties: ["Civ.", "Crim.", "Labor", "Admin."],
+    specialties: ["Civil Law", "Criminal Law", "Labor Law", "Administrative Law"],
     partnerInfo: [
       "Atty. Ryan Carlo L. Cordero, a former Managing Partner, holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
       "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
