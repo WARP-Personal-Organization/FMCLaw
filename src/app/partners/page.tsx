@@ -24,13 +24,11 @@ const partnersData: Partner[] = [
     name: "Lcid Crescent Fernandez",
     role: "MANAGING PARTNER",
     imageUrl: "/assets/partners/lcid.jpg",
-    specialties: [
-
-    ],
+    specialties: [],
     partnerInfo: [
-"Atty. Lcid Crescent Fernandez is a dynamic entrepreneur and legal professional with a Juris Doctor degree from the University of San Agustin, a business degree from the University of the Philippines Visayas, and a track record of excellence in law, business, and communication. He currently serves as CEO of Prometheus, Promises Film and Creative Studio, WARP Innovations and Technologies, Inc., and 101 Food, while also holding leadership roles as Vice President – External of Daily Guardian, President and Chairman of Quiklab Diagnostics, Inc., and a founding stockholder of Asia Pacific Medical Center Iloilo.",
-"His experience spans both the private and public sectors, having served as Chief of Staff to the Provincial Federation President of the Liga ng mga Barangay and as Technical Assistant at the Department of Education Central Office. Earlier in his career, he worked as an Editorial Assistant for Daily Guardian and team leader for a gubernatorial campaign.",
-"Atty. Fernandez has been recognized for his leadership and innovation, receiving the Innovative Entrepreneur Award from the Philippine Chamber of Commerce and Industry – Iloilo Chapter, Marketing Leader of the Year at the 2023 Marketing Excellence Awards, and the Dungganon sa Barotacnon Award for Entrepreneurship. He is also a recipient of the Young Ilonggo Entrepreneur of the Year (Special Citation) and has won multiple awards in national and international moot court and debate competitions."
+      "Atty. Lcid Crescent Fernandez is a dynamic entrepreneur and legal professional with a Juris Doctor degree from the University of San Agustin, a business degree from the University of the Philippines Visayas, and a track record of excellence in law, business, and communication. He currently serves as CEO of Prometheus, Promises Film and Creative Studio, WARP Innovations and Technologies, Inc., and 101 Food, while also holding leadership roles as Vice President – External of Daily Guardian, President and Chairman of Quiklab Diagnostics, Inc., and a founding stockholder of Asia Pacific Medical Center Iloilo.",
+      "His experience spans both the private and public sectors, having served as Chief of Staff to the Provincial Federation President of the Liga ng mga Barangay and as Technical Assistant at the Department of Education Central Office. Earlier in his career, he worked as an Editorial Assistant for Daily Guardian and team leader for a gubernatorial campaign.",
+      "Atty. Fernandez has been recognized for his leadership and innovation, receiving the Innovative Entrepreneur Award from the Philippine Chamber of Commerce and Industry – Iloilo Chapter, Marketing Leader of the Year at the 2023 Marketing Excellence Awards, and the Dungganon sa Barotacnon Award for Entrepreneurship. He is also a recipient of the Young Ilonggo Entrepreneur of the Year (Special Citation) and has won multiple awards in national and international moot court and debate competitions.",
     ],
   },
   {
@@ -38,9 +36,7 @@ const partnersData: Partner[] = [
     name: "Carl Vincent Mondejar, CPA",
     role: "PARTNER",
     imageUrl: "/assets/partners/mondejar.jpg",
-    specialties: [
-
-    ],
+    specialties: [],
     partnerInfo: [
       "Atty. Carl Mondejar holds a Juris Doctor degree from Ateneo de Manila University School of Law and has built a career at the intersection of public service and legal practice.",
       "He began his legal career as an Associate at Gerodias Suchianco Estrella Law and previously served as a Sangguniang Bayan Member of New Lucena, Iloilo.",
@@ -53,9 +49,7 @@ const partnersData: Partner[] = [
     name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/cordero.jpg",
-    specialties: [
-
-    ],
+    specialties: ["Civ.", "Crim.", "Labor", "Admin."],
     partnerInfo: [
       "Atty. Ryan Carlo L. Cordero holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
       "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
