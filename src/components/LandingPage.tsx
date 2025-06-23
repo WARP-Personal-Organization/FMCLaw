@@ -4,7 +4,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, useAnimation, useInView, Variants, Easing } from "framer-motion";
+import {
+  motion,
+  useAnimation,
+  useInView,
+  Variants,
+  Easing,
+} from "framer-motion";
 import Footer from "./Footer";
 import Header from "./Header";
 import PartnersCard from "./PartnersCard";
@@ -34,7 +40,12 @@ interface Partner {
   details: PartnerDetailItem[];
 }
 
-const StaggeredChildAnimation: React.FC<{ children: React.ReactNode, className?: string, staggerAmount?: number, once?: boolean }> = ({ children, className, staggerAmount = 0.1, once = true }) => {
+const StaggeredChildAnimation: React.FC<{
+  children: React.ReactNode;
+  className?: string;
+  staggerAmount?: number;
+  once?: boolean;
+}> = ({ children, className, staggerAmount = 0.1, once = true }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: once, amount: 0.3 });
   const controls = useAnimation();
@@ -217,9 +228,12 @@ const FmcLawLandingPage: React.FC = () => {
           message: `Submission failed: ${errorText || "Please try again."}`,
         });
       }
-      } catch (submitError) { 
+    } catch (submitError) {
       console.error("Landing form submission error:", submitError);
-      setLandingFormStatus({ type: 'error', message: "An unexpected error occurred. Please try again." });
+      setLandingFormStatus({
+        type: "error",
+        message: "An unexpected error occurred. Please try again.",
+      });
     } finally {
       setIsLandingFormSubmitting(false);
     }
@@ -268,19 +282,19 @@ const FmcLawLandingPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black to-black" />
           <div className="relative z-10 mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px]">
             <div className="flex flex-col md:flex-row items-center justify-center w-full">
-              <motion.div 
+              <motion.div
                 className="md:w-3/5 text-center md:text-left py-8 md:py-0"
                 initial="hidden"
                 animate="visible"
               >
-                <motion.h1 
+                <motion.h1
                   className="text-[3rem] sm:text-[3.5rem] leading-tight font-oswald font-bold mb-7 text-[#CE9930]"
                   variants={heroTextVariants}
                   custom={0}
                 >
                   Legal Guidance <br></br>That Moves You Forward
                 </motion.h1>
-                <motion.p 
+                <motion.p
                   className="text-lg text-gray-200 font-roboto mx-auto md:mx-0 mb-10 max-w-xl"
                   variants={heroTextVariants}
                   custom={1}
@@ -289,7 +303,7 @@ const FmcLawLandingPage: React.FC = () => {
                   legal representation focused on achieving the best possible
                   outcome for you.
                 </motion.p>
-                <motion.div 
+                <motion.div
                   className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start"
                   variants={heroTextVariants}
                   custom={2}
@@ -308,7 +322,7 @@ const FmcLawLandingPage: React.FC = () => {
                   </Link>
                 </motion.div>
               </motion.div>
-              <motion.div 
+              <motion.div
                 className="hidden md:flex md:w-2/5 justify-center items-center overflow-hidden p-4"
                 variants={heroImageVariants}
                 initial="hidden"
@@ -404,15 +418,15 @@ const FmcLawLandingPage: React.FC = () => {
             <h2 className="text-3xl lg:text-4xl font-bold font-inter mb-16">
               Why Choose FMC Law?
             </h2>
-            <StaggeredChildAnimation 
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto"
-                staggerAmount={0.15}
+            <StaggeredChildAnimation
+              className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 font-roboto"
+              staggerAmount={0.15}
             >
               {whyChooseReasons.map((reason) => (
-                <motion.div 
-                    key={reason.name} 
-                    className="flex flex-col items-center"
-                    variants={itemVariants}
+                <motion.div
+                  key={reason.name}
+                  className="flex flex-col items-center"
+                  variants={itemVariants}
                 >
                   <div className="w-16 h-16 border-2 border-[#D4AF37] rounded-full flex items-center justify-center mb-4 text-white bg-[#D4AF37]">
                     <Image
@@ -737,7 +751,7 @@ const FmcLawLandingPage: React.FC = () => {
                       alt: "Clock icon",
                       lines: [
                         "<b>Office Hours</b>",
-                        "Mon-Fri: 9:00 AM - 6:00 PM",
+                        "Mon-Fri: 8:00 AM - 5:00 PM",
                       ],
                     },
                   ].map((item) => (
