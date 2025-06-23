@@ -43,6 +43,7 @@ const partnersData: Partner[] = [
       "He began his legal career as an Associate at Gerodias Suchianco Estrella Law and previously served as a Sangguniang Bayan Member of New Lucena, Iloilo.",
       "His professional development reflects a deep commitment to governance, civic engagement, and legal service, shaped by both private sector experience and legislative work at the local level.",
       "He is set to assume office as the incoming Mayor of New Lucena, bringing with him a strong legal foundation, a vision for progressive leadership, and a passion for community development.",
+      "Atty. Carl Mondejar is an Ateneo Law School graduate and former associate at Gerodias Suchianco Estrella Law. He entered public service in his home town of New Lucena , currently serving as the municipality's mayor.",
     ],
   },
   {
@@ -50,7 +51,7 @@ const partnersData: Partner[] = [
     name: "Atty. Ryan Carlo L. Cordero",
     role: "PARTNER",
     imageUrl: "/assets/partners/cordero.jpg",
-    specialties: ["Civ.", "Crim.", "Labor", "Admin."],
+    specialties: ["Civil Law", "Criminal Law", "Labor Law", "Administrative Law"],
     partnerInfo: [
       "Atty. Ryan Carlo L. Cordero, a former Managing Partner, holds a Juris Doctor degree from De La Salle University – Manila and a bachelor’s degree in Consular and Diplomatic Affairs from De La Salle – College of Saint Benilde. He was admitted to the Philippine Bar in December 2023.",
       "Before founding Cordero Law Office, he served as an Associate Attorney at Santos Paruñgao Aquino and Santos Law Offices (SPASLaw). ",
