@@ -217,6 +217,50 @@ const firmName = "FMC Law";
                   will be posted on this page with an updated “Effective Date.”
                 </p>
               </section>
+              <section>
+                <h2 className="text-2xl md:text-3xl font-semibold font-oswald text-gray-900 mb-4">
+                    12. Use of Google Analytics (GA4)
+                </h2>
+                <p className="mb-3">
+                    We use Google Analytics 4 (GA4) to help us understand how visitors use our
+                    website. GA4 collects information such as:
+                </p>
+                <ul className="list-disc list-outside space-y-1 pl-6 mb-3">
+                    <li>Device and browser type</li>
+                    <li>Pages visited and time spent on them</li>
+                    <li>Geographic location (approximate)</li>
+                    <li>Referral sources (e.g., search engines or links)</li>
+                </ul>
+                <p className="mb-3">
+                    Google Analytics collects this information in a way that does not directly
+                    identify you. The data is used solely for analytical and performance
+                    monitoring purposes.
+                </p>
+                <p className="mb-3">
+                    You may opt out of Google Analytics tracking by installing the{" "}
+                    <a
+                    href="https://tools.google.com/dlpage/gaoptout"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 underline"
+                    >
+                    Google Analytics Opt-out Browser Add-on
+                    </a>
+                    .
+                </p>
+                <p>
+                    For more information on how Google processes data, visit{" "}
+                    <a
+                    href="https://policies.google.com/technologies/partner-sites"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 underline"
+                    >
+                    https://policies.google.com/technologies/partner-sites
+                    </a>
+                    .
+                </p>
+                </section>
             </div>
           </div>
         </div>
