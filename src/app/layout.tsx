@@ -1,6 +1,10 @@
 // app/layout.tsx
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "../components/GoogleAnalytics"; // Adjust path if needed
+
+// Hardcoded Google Analytics Measurement ID
+const GA_MEASUREMENT_ID = "G-FMEBC1PWCC";
 
 // Use NEXT_PUBLIC_SITE_URL from environment variables if available,
 // otherwise default to your production URL.
@@ -49,6 +53,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      {/* Google Analytics Script - Using hardcoded ID */}
+      {GA_MEASUREMENT_ID && (
+        <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
+      )}
       <body className="antialiased">{children}</body>
     </html>
   );
