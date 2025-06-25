@@ -147,9 +147,6 @@ function Footer() {
               <Link href="/privacy-policy" className="hover:text-white">
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-service" className="hover:text-white">
-                Terms of Service
-              </Link>
             </div>
           </div>
         </div>
