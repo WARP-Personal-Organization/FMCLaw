@@ -6,22 +6,24 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Privacy Policy - FMC Law",
-  description: "Read the Privacy Policy for FMC Law (fmclaw.com.ph).",
-};
 
 const PrivacyPolicyPage: React.FC = () => {
   const effectiveDate = "06/25/2025";
   const officeAddress = "Guzman-Jesena St, Mandurriao Iloilo City";
   const contactEmail = "admin@fmclaw.com.ph";
   const contactPhone = "(033) 329-28-38";
+const firmName = "FMC Law";
 
   return (
     <>
       <Header />
+    <Head>
+        <title>Privacy Policy | {firmName}</title>
+        <meta
+          name="description"
+          content={`Read the Privacy Policy for ${firmName}.`}
+        />
+      </Head>
       <main className="font-inter text-gray-700">
         <div className="bg-white py-16 md:py-20 lg:py-24">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
