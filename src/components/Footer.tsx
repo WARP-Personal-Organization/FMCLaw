@@ -7,7 +7,7 @@ function Footer() {
   const socialLinks = [
     // { href: "#", src: "/assets/linkedin-solid.png", alt: "LinkedIn" },
     // { href: "#", src: "/assets/twitter-solid.png", alt: "Twitter" },
-    { href: "#", src: "/assets/icons/facebook-solid.svg", alt: "Facebook" },
+    { href: "https://www.facebook.com/FMCLaw", src: "/assets/icons/facebook-solid.svg", alt: "Facebook" },
     // { href: "#", src: "/assets/insta-outline.png", alt: "Instagram" },
   ];
 
