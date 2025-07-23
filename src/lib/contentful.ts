@@ -1,11 +1,10 @@
 // src/lib/contentful.ts
-import { createClient, type EntrySkeletonType, type Entry } from 'contentful';
+import { createClient, type EntrySkeletonType, type Entry, type Asset } from 'contentful';
 import type { Document } from '@contentful/rich-text-types';
 
 export interface AuthorFields {
   name: string;
-  bio: string;
-  // Add other author fields here if you have them, e.g., picture: Asset;
+  bio?: string;
 }
 
 export type AuthorSkeleton = EntrySkeletonType<AuthorFields, 'author'>;
@@ -17,6 +16,7 @@ export interface BlogPostFields {
   publishedDate: string;
   author: Entry<AuthorSkeleton>;
   body: Document;
+  featuredImage?: Asset; 
 }
 
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, 'blogPost'>;
@@ -31,11 +31,10 @@ export const client = createClient({
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   const queryOptions = {
     content_type: 'blogPost',
-    include: 2, // 2 because of author reference
+    include: 2, // This now includes both author and featuredImage
     order: ['-fields.publishedDate'],
   };
 
-  // We keep 'as any' to prevent potential issues with the 'order' property type.
   const entries = await client.getEntries<BlogPostSkeleton>(queryOptions as any);
   return entries.items;
 }
@@ -44,7 +43,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   const queryOptions = {
     content_type: 'blogPost',
     limit: 1,
-    include: 2, // Also need to include the author here.
+    include: 2, // This now includes both author and featuredImage
     'fields.slug': slug,
   };
   

@@ -3,6 +3,7 @@ import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -59,14 +60,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  const { title, body, publishedDate, author } = post.fields;
+  const { title, body, publishedDate, author, featuredImage } = post.fields;
   const authorName = author && author.fields ? author.fields.name : 'Anonymous';
+  
+  // THE FIX: Explicitly check for fields to create a robust type guard.
+  const imageUrl = featuredImage && featuredImage.fields ? featuredImage.fields.file?.url : undefined;
+  const imageAlt = featuredImage && featuredImage.fields ? featuredImage.fields.title : `Featured image for ${title}`;
 
   return (
     <>
       <Header />
       <main className="font-sans text-gray-800">
-        <section className="bg-gray-100 py-16 md:py-20">
+        <section className="bg-white py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link 
               href="/blog" 
@@ -76,7 +81,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             </Link>
 
             <article>
-              <header className="mb-12">
+              <header className="mb-8">
                 <h1 className="text-4xl sm:text-5xl font-bold font-oswald text-gray-900 mb-4">
                   {title}
                 </h1>
@@ -92,6 +97,18 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </span>
                 </div>
               </header>
+
+              {imageUrl && (
+                <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
+                  <Image
+                    src={`https:${imageUrl}`}
+                    alt={imageAlt || `Featured image for ${title}`}
+                    fill
+                    className="object-cover"
+                    priority
+                  />
+                </div>
+              )}
 
               <div className="prose prose-lg max-w-none font-inter">
                 {body && documentToReactComponents(body, richTextOptions)}
