@@ -1,5 +1,5 @@
 // src/app/blog/[slug]/page.tsx
-import { getBlogPostBySlug, getAllBlogPosts } from '@/lib/contentful';
+import { getBlogPostBySlug, getAllBlogPosts, getAllTags } from '@/lib/contentful';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 import Link from 'next/link';
@@ -54,11 +54,18 @@ export async function generateStaticParams() {
 }
 
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = await getBlogPostBySlug(params.slug);
+  // Fetch the single post and all tags in parallel
+  const [post, allTags] = await Promise.all([
+    getBlogPostBySlug(params.slug),
+    getAllTags()
+  ]);
 
   if (!post) {
     notFound();
   }
+
+  // Create the same lookup map
+  const tagMap = new Map(allTags.map(tag => [tag.sys.id, tag.name]));
 
   const { title, body, publishedDate, author, featuredImage } = post.fields;
   const authorName = author && author.fields ? author.fields.name : 'Anonymous';
@@ -66,6 +73,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   // THE FIX: Explicitly check for fields to create a robust type guard.
   const imageUrl = featuredImage && featuredImage.fields ? featuredImage.fields.file?.url : undefined;
   const imageAlt = featuredImage && featuredImage.fields ? featuredImage.fields.title : `Featured image for ${title}`;
+
+  // Resolve the tags for this specific post
+  const postTags = (post.metadata?.tags || [])
+    .map(tagLink => tagMap.get(tagLink.sys.id))
+    .filter(Boolean) as string[];
 
   return (
     <>
@@ -82,6 +94,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
             <article>
               <header className="mb-8">
+                {postTags.length > 0 && (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {postTags.map((tag) => (
+                      <span key={tag} className="bg-gray-200 text-gray-800 text-xs font-medium px-2.5 py-0.5 rounded-full font-inter">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <h1 className="text-4xl sm:text-5xl font-bold font-oswald text-gray-900 mb-4">
                   {title}
                 </h1>

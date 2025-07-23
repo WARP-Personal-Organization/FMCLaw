@@ -1,10 +1,11 @@
 // src/lib/contentful.ts
-import { createClient, type EntrySkeletonType, type Entry, type Asset } from 'contentful';
+import { createClient, type EntrySkeletonType, type Entry, type Asset, type Tag } from 'contentful';
 import type { Document } from '@contentful/rich-text-types';
 
 export interface AuthorFields {
   name: string;
   bio?: string;
+  avatar?: Asset;
 }
 
 export type AuthorSkeleton = EntrySkeletonType<AuthorFields, 'author'>;
@@ -22,6 +23,11 @@ export interface BlogPostFields {
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, 'blogPost'>;
 
 export type BlogPost = Entry<BlogPostSkeleton, undefined>;
+
+export async function getAllTags(): Promise<Tag[]> {
+  const tags = await client.getTags();
+  return tags.items;
+}
 
 export const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID!,
