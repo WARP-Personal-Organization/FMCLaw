@@ -17,7 +17,13 @@ export interface BlogPostFields {
   publishedDate: string;
   author: Entry<AuthorSkeleton>;
   body: Document;
-  featuredImage?: Asset; 
+  featuredImage?: Asset;
+  seoTitle: string;
+  metaDescription: string;
+  postType?: string;
+  canonicalUrl?: string;
+  commentsEnabled?: boolean;
+  relatedPosts?: Entry<BlogPostSkeleton>[]; 
 }
 
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, 'blogPost'>;
@@ -37,7 +43,7 @@ export const client = createClient({
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
   const queryOptions = {
     content_type: 'blogPost',
-    include: 2, // This now includes both author and featuredImage
+    include: 3, // Level 3 from Blogs, Authors and Images, and Related Posts
     order: ['-fields.publishedDate'],
   };
 
@@ -49,7 +55,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
   const queryOptions = {
     content_type: 'blogPost',
     limit: 1,
-    include: 2, // This now includes both author and featuredImage
+    include: 3,
     'fields.slug': slug,
   };
   
