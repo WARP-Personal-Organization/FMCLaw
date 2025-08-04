@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Asset } from 'contentful';
 
 export default async function BlogPage() {
   const posts: BlogPost[] = await getAllBlogPosts();
@@ -35,8 +36,10 @@ export default async function BlogPage() {
                   const { title, slug, summary, featuredImage } = post.fields;
                   
                   // THE FIX: Explicitly check for fields to create a robust type guard.
-                  const imageUrl = featuredImage && featuredImage.fields ? featuredImage.fields.file?.url : undefined;
-                  const imageAlt = featuredImage && featuredImage.fields ? featuredImage.fields.title : `Featured image for ${title}`;
+                  const typedImage = featuredImage as Asset<undefined, string> | undefined;
+                  const imageUrl = typedImage?.fields?.file?.url;
+                  const imageAlt = typedImage?.fields?.title ?? `Featured image for ${title}`;
+
 
                   return (
                     <article 
