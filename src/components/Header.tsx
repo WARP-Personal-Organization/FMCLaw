@@ -17,6 +17,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
     { href: "/partners", label: "Our Partners" },
+    { href: "/blog", label: "Blog" },
   ];
 
   const HamburgerIcon = ({ className = "w-6 h-6" }) => (
