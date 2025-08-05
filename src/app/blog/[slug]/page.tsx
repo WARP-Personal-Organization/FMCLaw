@@ -100,7 +100,8 @@ export default async function BlogPostPage({
     string
   >;
   const authorName =
-    typeof rawName === "string" ? rawName : rawName["en-US"] ?? "Anonymous";
+
+    typeof rawName === "string" ? rawName : rawName["en-US"] ?? "FMC Law";
 
   const typedImage = featuredImage as Asset<undefined, string> | undefined;
   const imageUrl = typedImage?.fields?.file?.url;
