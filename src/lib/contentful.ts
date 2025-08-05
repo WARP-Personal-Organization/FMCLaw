@@ -56,7 +56,7 @@ export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> 
     content_type: 'blogPost',
     limit: 1,
     include: 2,
-    'fields.slug': slug,
+    'fields.slug': slug, 
   } as unknown as Parameters<typeof client.getEntries<BlogPostSkeleton>>[0];
 
   const entries = await client.getEntries<BlogPostSkeleton>(queryOptions);
