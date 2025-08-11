@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 // Hardcoded post data
 const post = {
   // The slug is still useful for metadata but is no longer a URL parameter
-  slug: "do-us-part", 
+  slug: "do-us-part",
   title: "Till Death Do Us Part, Or a Secret Does",
   summary:
     "The Supreme Court's latest decision sheds light on the legal implications of withholding one's sexual orientation before marriage.",
@@ -33,7 +33,7 @@ export async function generateMetadata(): Promise<Metadata> {
       title: `${title} | FMC Law`,
       description: summary,
       // The URL is now hardcoded to this specific page
-      url: `${siteUrl}/${slug}`, 
+      url: `${siteUrl}/${slug}`,
       siteName: "FMC Law",
       images: [
         {
@@ -54,8 +54,6 @@ export async function generateMetadata(): Promise<Metadata> {
     },
   };
 }
-
-// `generateStaticParams` is removed because this is not a dynamic route.
 
 // The page component no longer receives or needs `params`.
 export default function DoUsPartPage() {
@@ -107,10 +105,10 @@ export default function DoUsPartPage() {
               )}
 
               <div className="prose prose-lg max-w-none font-inter">
-                {/* Hardcoded Article Content Starts Here */}
+                {/* Hardcoded Article Content Starts Here - WITH ESCAPED ENTITIES */}
                 <p className="lead">
-                  The Supreme Court's latest decision sheds light on the legal
-                  implications of withholding one's sexual orientation before
+                  The Supreme Court&apos;s latest decision sheds light on the legal
+                  implications of withholding one&apos;s sexual orientation before
                   marriage.
                 </p>
                 <p>
@@ -120,14 +118,14 @@ export default function DoUsPartPage() {
                   consent is the cornerstone of a valid marriage. When one
                   party’s consent is obtained through deceit, the legal
                   integrity of the union can be called into question. The
-                  concealment of a partner's true identity, particularly their
+                  concealment of a partner&apos;s true identity, particularly their
                   sexuality, can be a profound betrayal that not only breaks a
-                  person's heart but also a serious legal matter.
+                  person&apos;s heart but also a serious legal matter.
                 </p>
                 <p>
                   The Supreme Court recently brought this issue to the forefront
-                  in a significant decision. The Court's ruling clarifies a
-                  long-standing principle, highlighting that hiding one's
+                  in a significant decision. The Court&apos;s ruling clarifies a
+                  long-standing principle, highlighting that hiding one&apos;s
                   homosexuality from a spouse constitutes a form of fraud that
                   can be used as a valid reason to annul a marriage. This
                   decision provides a clear path for those who discover their
@@ -143,7 +141,7 @@ export default function DoUsPartPage() {
                   divorce is not a legal option here. Instead, couples can seek
                   a declaration of nullity for marriages that were void from the
                   beginning (e.g., due to bigamy or psychological incapacity) or
-                  an annulment for marriages that are considered "voidable."
+                  an annulment for marriages that are considered &quot;voidable.&quot;
                 </p>
                 <p>
                   An annulment is a legal process that voids a marriage that was
@@ -194,40 +192,40 @@ export default function DoUsPartPage() {
                   intimacy. He would initiate arguments and often sleep in a
                   separate room. Just two months after their wedding, Lory
                   returned to Saudi Arabia and ceased all communication. After a
-                  brief, strange exchange on their first anniversary, Lory's
+                  brief, strange exchange on their first anniversary, Lory&apos;s
                   silence resumed.
                 </p>
                 <p>
                   The truth finally emerged in June 2015 when Jaaziel discovered
-                  magazines of half-naked and naked male models in Lory's
+                  magazines of half-naked and naked male models in Lory&apos;s
                   belongings. When confronted, Lory admitted his homosexuality.
                   This discovery, Jaaziel explained, was a devastating
                   revelation that not only ended their marriage but also made
-                  her understand Lory's peculiar behavior before and after the
+                  her understand Lory&apos;s peculiar behavior before and after the
                   wedding. She promptly left the conjugal home and filed for
                   annulment in 2017.
                 </p>
                 <p>
                   Jaaziel’s father, Francisco Salva, corroborated her testimony.
-                  He described Lory as "<em>medyo malambot</em>" or somewhat
-                  effeminate, and "not romantic" or "man enough," noting that
+                  He described Lory as <em>&quot;medyo malambot&quot;</em> or somewhat
+                  effeminate, and <em>&quot;not romantic&quot;</em> or <em>&quot;man enough,&quot;</em> noting that
                   Lory never wooed Jaaziel properly or showed public affection
                   typical of a newlywed. Francisco also attested that Jaaziel
-                  confided in him about Lory's homosexuality and her devastation
+                  confided in him about Lory&apos;s homosexuality and her devastation
                   upon the discovery.
                 </p>
                 <p>
                   Both the Regional Trial Court (RTC) and the Court of Appeals
-                  (CA) initially denied Jaaziel's petition. The RTC ruled that
-                  Jaaziel failed to establish Lory's homosexuality, dismissing
-                  her and her father's testimonies as "self-serving." The CA
+                  (CA) initially denied Jaaziel&apos;s petition. The RTC ruled that
+                  Jaaziel failed to establish Lory&apos;s homosexuality, dismissing
+                  her and her father&apos;s testimonies as &quot;self-serving.&quot; The CA
                   affirmed this decision, holding that the evidence was not
                   convincing enough to prove that Lory had fraudulently
-                  concealed his sexuality to obtain Jaaziel's consent.
+                  concealed his sexuality to obtain Jaaziel&apos;s consent.
                 </p>
                 <p>
                   The central issue brought before the Supreme Court was whether
-                  the lower courts were correct in disregarding the woman's
+                  the lower courts were correct in disregarding the woman&apos;s
                   testimony and evidence and, in turn, if fraudulent concealment
                   of homosexuality could be proven to annul a marriage.
                 </p>
@@ -235,12 +233,12 @@ export default function DoUsPartPage() {
                   The Supreme Court, in a clear and decisive ruling, reversed
                   the decisions of the lower courts and annulled the marriage.
                   The Court gave full credence to Jaaziel’s allegations, finding
-                  that the circumstances and Lory's actions—or lack
+                  that the circumstances and Lory&apos;s actions—or lack
                   thereof—provided more than enough evidence to prove his
                   fraudulent concealment.
                 </p>
                 <p>
-                  The Court held that the husband's admission of homosexuality,
+                  The Court held that the husband&apos;s admission of homosexuality,
                   coupled with his pattern of avoiding intimacy, his distant
                   behavior, and his unexplained silence during periods of
                   questioning about his sexuality, could not be ignored. It
@@ -251,7 +249,7 @@ export default function DoUsPartPage() {
                 <p>
                   By doing so, the Court directly applied Article 45(3) in
                   relation to Article 46(4) of the Family Code. Article 45
-                  states that a marriage can be annulled if one party's consent
+                  states that a marriage can be annulled if one party&apos;s consent
                   was obtained through fraud. Article 46 explicitly defines the
                   concealment of homosexuality as a form of fraud that is
                   serious enough to annul a marriage.
@@ -259,7 +257,7 @@ export default function DoUsPartPage() {
                 <p>
                   This ruling stands as a powerful reminder that consent to
                   marriage must be based on a genuine understanding of a
-                  spouse's identity. The Court found that Jaaziel’s consent was
+                  spouse&apos;s identity. The Court found that Jaaziel’s consent was
                   fundamentally vitiated by Lory’s deliberate concealment, and
                   had she known the truth, she would not have entered into the
                   marriage.
@@ -270,7 +268,7 @@ export default function DoUsPartPage() {
                   This Supreme Court decision is a powerful statement about the
                   importance of truth and honesty in marriage. It tells us that
                   a marriage cannot be legally sustained if it is based on a
-                  foundational lie about one's identity. The ruling protects a
+                  foundational lie about one&apos;s identity. The ruling protects a
                   spouse who, without their knowledge, is betrayed by a partner
                   who intentionally hides a fundamental part of themselves.
                 </p>
