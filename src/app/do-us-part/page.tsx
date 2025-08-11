@@ -133,6 +133,7 @@ export default function DoUsPartPage() {
                   spouse has concealed their sexuality and affirms the
                   importance of truth in a marital relationship.
                 </p>
+                <br/>
 
                 <h2 className="font-bold ">Understanding Annulment in the Philippines</h2>
                 <br/>
