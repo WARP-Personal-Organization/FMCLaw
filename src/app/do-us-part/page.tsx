@@ -89,19 +89,16 @@ export default function DoUsPartPage() {
                   </span>
                 </div>
               </header>
-
-              {imageUrl && (
+              
                 <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
                   <Image
-                    src={`https:${imageUrl}`}
+                    src="/assets/background/brokenvow.jpg"
                     alt={imageAlt || `Featured image for ${title}`}
                     fill
                     className="object-cover"
                     priority
                   />
                 </div>
-              )}
-
               {/* Restructured Article Content with H2s and P tags */}
             <div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
                 <p className="lead">
