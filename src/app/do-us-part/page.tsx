@@ -22,7 +22,7 @@ const post = {
 export async function generateMetadata(): Promise<Metadata> {
   const { title, summary, slug } = post;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fmclaw.com.ph";
-  const imageUrl = `${siteUrl}/socialshare.png`; // Fallback image
+//   const imageUrl = `${siteUrl}/socialshare.png`; // Fallback image
   const imageAlt = `Featured image for ${title}`;
 
   return {
