@@ -132,7 +132,7 @@ export default function DoUsPartPage() {
                 </p>
                 <br/>
 
-                <h2 className="font-bold ">Understanding Annulment in the Philippines</h2>
+                <h2 className="font-bold text-2xl">Understanding Annulment in the Philippines</h2>
                 <br/>
 
                 <p>
@@ -169,7 +169,7 @@ export default function DoUsPartPage() {
                 </p>
                 <br/>
 
-                <h2 className="font-bold">A Story of Concealment and Discovery</h2>
+                <h2 className="font-bold text-2xl">A Story of Concealment and Discovery</h2>
                 <br/>
 
                 <p>
@@ -292,7 +292,7 @@ export default function DoUsPartPage() {
                 </p>
                 <br/>
 
-                <h2 className="font-bold">What This Means for Marital Integrity</h2>
+                <h2 className="font-bold text-2xl">What This Means for Marital Integrity</h2>
                 <br/>
 
                 <p>
