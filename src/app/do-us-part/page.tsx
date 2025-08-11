@@ -9,7 +9,6 @@ import type { Metadata } from "next";
 
 // Hardcoded post data
 const post = {
-  // The slug is still useful for metadata but is no longer a URL parameter
   slug: "do-us-part",
   title: "Till Death Do Us Part, Or a Secret Does",
   summary:
@@ -19,7 +18,7 @@ const post = {
   featuredImage: null,
 };
 
-// Metadata for this specific page. Note that it no longer receives `params`.
+// Metadata for this specific page.
 export async function generateMetadata(): Promise<Metadata> {
   const { title, summary, slug } = post;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fmclaw.com.ph";
@@ -32,7 +31,6 @@ export async function generateMetadata(): Promise<Metadata> {
     openGraph: {
       title: `${title} | FMC Law`,
       description: summary,
-      // The URL is now hardcoded to this specific page
       url: `${siteUrl}/${slug}`,
       siteName: "FMC Law",
       images: [
@@ -55,7 +53,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-// The page component no longer receives or needs `params`.
 export default function DoUsPartPage() {
   const { title, publishedDate, authorName, featuredImage } = post;
   const imageUrl = featuredImage;
@@ -68,7 +65,7 @@ export default function DoUsPartPage() {
         <section className="bg-white py-16 md:py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <Link
-              href="/blog" // You might want this to link back to the main blog index
+              href="/blog"
               className="inline-flex items-center text-[#D4AF37] hover:text-black transition-colors mb-8 font-inter"
             >
               ← Back to Blog
@@ -76,6 +73,7 @@ export default function DoUsPartPage() {
 
             <article>
               <header className="mb-8">
+                {/* The h1 is rendered here from the 'post' object */}
                 <h1 className="text-4xl sm:text-5xl font-bold font-oswald text-gray-900 mb-4">
                   {title}
                 </h1>
@@ -104,13 +102,14 @@ export default function DoUsPartPage() {
                 </div>
               )}
 
-              <div className="prose prose-lg max-w-none font-inter">
-                {/* Hardcoded Article Content Starts Here - WITH ESCAPED ENTITIES */}
+              {/* Restructured Article Content with H2s and P tags */}
+<div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
                 <p className="lead">
                   The Supreme Court&apos;s latest decision sheds light on the legal
                   implications of withholding one&apos;s sexual orientation before
                   marriage.
                 </p>
+
                 <p>
                   Marriage is built on a foundation of trust, honesty, and
                   mutual respect. But what happens when that foundation is built
@@ -122,6 +121,7 @@ export default function DoUsPartPage() {
                   sexuality, can be a profound betrayal that not only breaks a
                   person&apos;s heart but also a serious legal matter.
                 </p>
+
                 <p>
                   The Supreme Court recently brought this issue to the forefront
                   in a significant decision. The Court&apos;s ruling clarifies a
@@ -134,6 +134,7 @@ export default function DoUsPartPage() {
                 </p>
 
                 <h2>Understanding Annulment in the Philippines</h2>
+
                 <p>
                   The Family Code of the Philippines points out the importance
                   of understanding the distinction between the different ways a
@@ -143,6 +144,7 @@ export default function DoUsPartPage() {
                   beginning (e.g., due to bigamy or psychological incapacity) or
                   an annulment for marriages that are considered &quot;voidable.&quot;
                 </p>
+
                 <p>
                   An annulment is a legal process that voids a marriage that was
                   initially valid but had a defect at its inception. One of the
@@ -150,6 +152,7 @@ export default function DoUsPartPage() {
                   party’s consent to the marriage was obtained through force,
                   intimidation, or, as in this case, fraud.
                 </p>
+
                 <p>
                   Article 45 of the Family Code specifically lists the exclusive
                   grounds for annulment. More importantly, Article 46
@@ -164,6 +167,7 @@ export default function DoUsPartPage() {
                 </p>
 
                 <h2>A Story of Concealment and Discovery</h2>
+
                 <p>
                   The recent Supreme Court decision, penned by Associate Justice
                   Antonio T. Kho, Jr., brought these principles to life. The
@@ -174,6 +178,7 @@ export default function DoUsPartPage() {
                   a response, effectively waiving his right to present a
                   defense.
                 </p>
+
                 <p>
                   Jaaziel testified that she and Lory began a long-distance
                   relationship in 2011 after meeting on social media while Lory
@@ -185,6 +190,7 @@ export default function DoUsPartPage() {
                   as a result of timidity and a lack of confidence, and Jaaziel
                   learned he was 31 years old and she was his first girlfriend.
                 </p>
+
                 <p>
                   The couple married in 2013, but the unusual behavior
                   continued. Jaaziel alleged that their honeymoon was anything
@@ -195,6 +201,7 @@ export default function DoUsPartPage() {
                   brief, strange exchange on their first anniversary, Lory&apos;s
                   silence resumed.
                 </p>
+
                 <p>
                   The truth finally emerged in June 2015 when Jaaziel discovered
                   magazines of half-naked and naked male models in Lory&apos;s
@@ -205,6 +212,7 @@ export default function DoUsPartPage() {
                   wedding. She promptly left the conjugal home and filed for
                   annulment in 2017.
                 </p>
+
                 <p>
                   Jaaziel’s father, Francisco Salva, corroborated her testimony.
                   He described Lory as <em>&quot;medyo malambot&quot;</em> or somewhat
@@ -214,6 +222,7 @@ export default function DoUsPartPage() {
                   confided in him about Lory&apos;s homosexuality and her devastation
                   upon the discovery.
                 </p>
+
                 <p>
                   Both the Regional Trial Court (RTC) and the Court of Appeals
                   (CA) initially denied Jaaziel&apos;s petition. The RTC ruled that
@@ -223,12 +232,14 @@ export default function DoUsPartPage() {
                   convincing enough to prove that Lory had fraudulently
                   concealed his sexuality to obtain Jaaziel&apos;s consent.
                 </p>
+
                 <p>
                   The central issue brought before the Supreme Court was whether
                   the lower courts were correct in disregarding the woman&apos;s
                   testimony and evidence and, in turn, if fraudulent concealment
                   of homosexuality could be proven to annul a marriage.
                 </p>
+
                 <p>
                   The Supreme Court, in a clear and decisive ruling, reversed
                   the decisions of the lower courts and annulled the marriage.
@@ -237,6 +248,7 @@ export default function DoUsPartPage() {
                   thereof—provided more than enough evidence to prove his
                   fraudulent concealment.
                 </p>
+
                 <p>
                   The Court held that the husband&apos;s admission of homosexuality,
                   coupled with his pattern of avoiding intimacy, his distant
@@ -246,6 +258,7 @@ export default function DoUsPartPage() {
                   orientation to persuade Jaaziel to marry him and to maintain
                   the relationship.
                 </p>
+
                 <p>
                   By doing so, the Court directly applied Article 45(3) in
                   relation to Article 46(4) of the Family Code. Article 45
@@ -254,6 +267,7 @@ export default function DoUsPartPage() {
                   concealment of homosexuality as a form of fraud that is
                   serious enough to annul a marriage.
                 </p>
+
                 <p>
                   This ruling stands as a powerful reminder that consent to
                   marriage must be based on a genuine understanding of a
@@ -264,6 +278,7 @@ export default function DoUsPartPage() {
                 </p>
 
                 <h2>What This Means for Marital Integrity</h2>
+
                 <p>
                   This Supreme Court decision is a powerful statement about the
                   importance of truth and honesty in marriage. It tells us that
@@ -272,6 +287,7 @@ export default function DoUsPartPage() {
                   spouse who, without their knowledge, is betrayed by a partner
                   who intentionally hides a fundamental part of themselves.
                 </p>
+
                 <p>
                   For those who find themselves in a similar heartbreaking
                   situation, this ruling offers a clear legal recourse. If you
@@ -279,6 +295,7 @@ export default function DoUsPartPage() {
                   their homosexuality or another serious matter at the time of
                   your marriage, you may have grounds for annulment.
                 </p>
+
                 <p>
                   Navigating the legal process of annulment requires careful
                   attention to the facts and evidence. It is crucial to prove
@@ -286,12 +303,14 @@ export default function DoUsPartPage() {
                   have married had you known the truth. This is where legal
                   counsel becomes invaluable.
                 </p>
+
                 <p>
                   We believe that every person deserves to enter into a marriage
                   with full knowledge and genuine consent. It is a ruling that
                   helps uphold the integrity of marital unions in the
                   Philippines.
                 </p>
+
                 <p>
                   If you have questions about annulment or other family law
                   matters, seeking legal guidance is a next step. Finding a
@@ -304,7 +323,6 @@ export default function DoUsPartPage() {
                   law services that can guide you through this difficult
                   process.
                 </p>
-                {/* Hardcoded Article Content Ends Here */}
               </div>
             </article>
           </div>
