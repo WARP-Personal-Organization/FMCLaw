@@ -15,14 +15,14 @@ const post = {
     "The Supreme Court's latest decision sheds light on the legal implications of withholding one's sexual orientation before marriage.",
   authorName: "FMC Law",
   publishedDate: "2025-08-11", // Example date
-  featuredImage: null,
 };
 
 // Metadata for this specific page.
 export async function generateMetadata(): Promise<Metadata> {
   const { title, summary, slug } = post;
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://fmclaw.com.ph";
-//   const imageUrl = `${siteUrl}/socialshare.png`; // Fallback image
+  // FIX: Reverted to the original social share image for metadata
+  const imageUrl = `${siteUrl}/socialshare.png`; 
   const imageAlt = `Featured image for ${title}`;
 
   return {
@@ -54,8 +54,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function DoUsPartPage() {
-  const { title, publishedDate, authorName, featuredImage } = post;
-  const imageUrl = featuredImage;
+  const { title, publishedDate, authorName } = post;
   const imageAlt = `Featured image for ${title}`;
 
   return (
@@ -73,7 +72,6 @@ export default function DoUsPartPage() {
 
             <article>
               <header className="mb-8">
-                {/* The h1 is rendered here from the 'post' object */}
                 <h1 className="text-4xl sm:text-5xl font-bold font-oswald text-gray-900 mb-4">
                   {title}
                 </h1>
@@ -89,24 +87,25 @@ export default function DoUsPartPage() {
                   </span>
                 </div>
               </header>
+
+              <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
+                <Image
+                  // The image displayed on the page remains brokenvow.jpg
+                  src="/assets/background/brokenvow.jpg"
+                  alt={imageAlt || `Featured image for ${title}`}
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
               
-                <div className="relative h-96 w-full rounded-lg overflow-hidden mb-12">
-                  <Image
-                    src="/assets/background/brokenvow.jpg"
-                    alt={imageAlt || `Featured image for ${title}`}
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-              {/* Restructured Article Content with H2s and P tags */}
-            <div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
+              <div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
                 <p className="lead">
                   The Supreme Court&apos;s latest decision sheds light on the legal
                   implications of withholding one&apos;s sexual orientation before
                   marriage.
                 </p>
-                <br/>
+                <br />
                 <p>
                   Marriage is built on a foundation of trust, honesty, and
                   mutual respect. But what happens when that foundation is built
@@ -118,7 +117,7 @@ export default function DoUsPartPage() {
                   sexuality, can be a profound betrayal that not only breaks a
                   person&apos;s heart but also a serious legal matter.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   The Supreme Court recently brought this issue to the forefront
@@ -130,10 +129,12 @@ export default function DoUsPartPage() {
                   spouse has concealed their sexuality and affirms the
                   importance of truth in a marital relationship.
                 </p>
-                <br/>
+                <br />
 
-                <h2 className="font-bold text-2xl">Understanding Annulment in the Philippines</h2>
-                <br/>
+                <h2 className="font-bold text-2xl">
+                  Understanding Annulment in the Philippines
+                </h2>
+                <br />
 
                 <p>
                   The Family Code of the Philippines points out the importance
@@ -144,7 +145,7 @@ export default function DoUsPartPage() {
                   beginning (e.g., due to bigamy or psychological incapacity) or
                   an annulment for marriages that are considered &quot;voidable.&quot;
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   An annulment is a legal process that voids a marriage that was
@@ -153,7 +154,7 @@ export default function DoUsPartPage() {
                   party’s consent to the marriage was obtained through force,
                   intimidation, or, as in this case, fraud.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   Article 45 of the Family Code specifically lists the exclusive
@@ -167,10 +168,12 @@ export default function DoUsPartPage() {
                   that if it were known, the other party would likely never have
                   agreed to the marriage.
                 </p>
-                <br/>
+                <br />
 
-                <h2 className="font-bold text-2xl">A Story of Concealment and Discovery</h2>
-                <br/>
+                <h2 className="font-bold text-2xl">
+                  A Story of Concealment and Discovery
+                </h2>
+                <br />
 
                 <p>
                   The recent Supreme Court decision, penned by Associate Justice
@@ -182,7 +185,7 @@ export default function DoUsPartPage() {
                   a response, effectively waiving his right to present a
                   defense.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   Jaaziel testified that she and Lory began a long-distance
@@ -195,7 +198,7 @@ export default function DoUsPartPage() {
                   as a result of timidity and a lack of confidence, and Jaaziel
                   learned he was 31 years old and she was his first girlfriend.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   The couple married in 2013, but the unusual behavior
@@ -207,7 +210,7 @@ export default function DoUsPartPage() {
                   brief, strange exchange on their first anniversary, Lory&apos;s
                   silence resumed.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   The truth finally emerged in June 2015 when Jaaziel discovered
@@ -219,29 +222,30 @@ export default function DoUsPartPage() {
                   wedding. She promptly left the conjugal home and filed for
                   annulment in 2017.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   Jaaziel’s father, Francisco Salva, corroborated her testimony.
                   He described Lory as <em>&quot;medyo malambot&quot;</em> or somewhat
-                  effeminate, and <em>&quot;not romantic&quot;</em> or <em>&quot;man enough,&quot;</em> noting that
-                  Lory never wooed Jaaziel properly or showed public affection
-                  typical of a newlywed. Francisco also attested that Jaaziel
-                  confided in him about Lory&apos;s homosexuality and her devastation
-                  upon the discovery.
+                  effeminate, and <em>&quot;not romantic&quot;</em> or{' '}
+                  <em>&quot;man enough,&quot;</em> noting that Lory never wooed
+                  Jaaziel properly or showed public affection typical of a
+                  newlywed. Francisco also attested that Jaaziel confided in him
+                  about Lory&apos;s homosexuality and her devastation upon the
+                  discovery.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   Both the Regional Trial Court (RTC) and the Court of Appeals
                   (CA) initially denied Jaaziel&apos;s petition. The RTC ruled that
                   Jaaziel failed to establish Lory&apos;s homosexuality, dismissing
-                  her and her father&apos;s testimonies as &quot;self-serving.&quot; The CA
-                  affirmed this decision, holding that the evidence was not
+                  her and her father&apos;s testimonies as &quot;self-serving.&quot; The
+                  CA affirmed this decision, holding that the evidence was not
                   convincing enough to prove that Lory had fraudulently
                   concealed his sexuality to obtain Jaaziel&apos;s consent.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   The central issue brought before the Supreme Court was whether
@@ -249,7 +253,7 @@ export default function DoUsPartPage() {
                   testimony and evidence and, in turn, if fraudulent concealment
                   of homosexuality could be proven to annul a marriage.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   The Supreme Court, in a clear and decisive ruling, reversed
@@ -259,18 +263,18 @@ export default function DoUsPartPage() {
                   thereof—provided more than enough evidence to prove his
                   fraudulent concealment.
                 </p>
-                <br/>
+                <br />
 
                 <p>
-                  The Court held that the husband&apos;s admission of homosexuality,
-                  coupled with his pattern of avoiding intimacy, his distant
-                  behavior, and his unexplained silence during periods of
-                  questioning about his sexuality, could not be ignored. It
-                  determined that Lory intentionally hid his true sexual
-                  orientation to persuade Jaaziel to marry him and to maintain
-                  the relationship.
+                  The Court held that the husband&apos;s admission of
+                  homosexuality, coupled with his pattern of avoiding intimacy,
+                  his distant behavior, and his unexplained silence during
+                  periods of questioning about his sexuality, could not be
+                  ignored. It determined that Lory intentionally hid his true
+                  sexual orientation to persuade Jaaziel to marry him and to
+                  maintain the relationship.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   By doing so, the Court directly applied Article 45(3) in
@@ -280,7 +284,7 @@ export default function DoUsPartPage() {
                   concealment of homosexuality as a form of fraud that is
                   serious enough to annul a marriage.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   This ruling stands as a powerful reminder that consent to
@@ -290,10 +294,12 @@ export default function DoUsPartPage() {
                   had she known the truth, she would not have entered into the
                   marriage.
                 </p>
-                <br/>
+                <br />
 
-                <h2 className="font-bold text-2xl">What This Means for Marital Integrity</h2>
-                <br/>
+                <h2 className="font-bold text-2xl">
+                  What This Means for Marital Integrity
+                </h2>
+                <br />
 
                 <p>
                   This Supreme Court decision is a powerful statement about the
@@ -303,7 +309,7 @@ export default function DoUsPartPage() {
                   spouse who, without their knowledge, is betrayed by a partner
                   who intentionally hides a fundamental part of themselves.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   For those who find themselves in a similar heartbreaking
@@ -312,7 +318,7 @@ export default function DoUsPartPage() {
                   their homosexuality or another serious matter at the time of
                   your marriage, you may have grounds for annulment.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   Navigating the legal process of annulment requires careful
@@ -321,7 +327,7 @@ export default function DoUsPartPage() {
                   have married had you known the truth. This is where legal
                   counsel becomes invaluable.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   We believe that every person deserves to enter into a marriage
@@ -329,14 +335,14 @@ export default function DoUsPartPage() {
                   helps uphold the integrity of marital unions in the
                   Philippines.
                 </p>
-                <br/>
+                <br />
 
                 <p>
                   If you have questions about annulment or other family law
                   matters, seeking legal guidance is a next step. Finding a
                   qualified legal professional is essential to understanding
                   your rights and options. A good family law lawyer or
-                  litigation attorney in Iloilo can provide the legal advice and
+-                  litigation attorney in Iloilo can provide the legal advice and
                   assistance you need to move forward. For those in Western
                   Visayas, finding experienced lawyers in Iloilo City is a good
                   place to start. For legal consultations, reach out to trusted
