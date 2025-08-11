@@ -14,7 +14,7 @@ const post = {
   summary:
     "The Supreme Court's latest decision sheds light on the legal implications of withholding one's sexual orientation before marriage.",
   authorName: "FMC Law",
-  publishedDate: "2023-10-26", // Example date
+  publishedDate: "2025-08-11", // Example date
   featuredImage: null,
 };
 
