@@ -69,17 +69,24 @@ export async function generateMetadata({
 // --- Rich Text Options for proper spacing ---
 const richTextOptions: RichTextOptions = {
   renderNode: {
-    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+    [BLOCKS.PARAGRAPH]: (node, children) => (
+      <p className="mb-6 leading-relaxed">{children}</p>
+    ),
     [BLOCKS.HEADING_2]: (node, children) => (
       <h2 className="mt-8 mb-4 font-bold text-2xl">{children}</h2>
     ),
     [BLOCKS.HEADING_3]: (node, children) => (
       <h3 className="mt-6 mb-3 font-semibold text-xl">{children}</h3>
     ),
-    [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc pl-6">{children}</ul>,
-    [BLOCKS.OL_LIST]: (node, children) => <ol className="list-decimal pl-6">{children}</ol>,
+    [BLOCKS.UL_LIST]: (node, children) => (
+      <ul className="list-disc pl-6 mb-6">{children}</ul>
+    ),
+    [BLOCKS.OL_LIST]: (node, children) => (
+      <ol className="list-decimal pl-6 mb-6">{children}</ol>
+    ),
   },
 };
+
 
 export async function generateStaticParams() {
   const posts = await getAllBlogPosts();
