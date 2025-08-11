@@ -109,7 +109,7 @@ export default function DoUsPartPage() {
                   implications of withholding one&apos;s sexual orientation before
                   marriage.
                 </p>
-
+                <br/>
                 <p>
                   Marriage is built on a foundation of trust, honesty, and
                   mutual respect. But what happens when that foundation is built
@@ -121,6 +121,7 @@ export default function DoUsPartPage() {
                   sexuality, can be a profound betrayal that not only breaks a
                   person&apos;s heart but also a serious legal matter.
                 </p>
+                <br/>
 
                 <p>
                   The Supreme Court recently brought this issue to the forefront
@@ -134,6 +135,7 @@ export default function DoUsPartPage() {
                 </p>
 
                 <h2 className="font-bold ">Understanding Annulment in the Philippines</h2>
+                <br/>
 
                 <p>
                   The Family Code of the Philippines points out the importance
@@ -144,6 +146,7 @@ export default function DoUsPartPage() {
                   beginning (e.g., due to bigamy or psychological incapacity) or
                   an annulment for marriages that are considered &quot;voidable.&quot;
                 </p>
+                <br/>
 
                 <p>
                   An annulment is a legal process that voids a marriage that was
@@ -152,6 +155,7 @@ export default function DoUsPartPage() {
                   party’s consent to the marriage was obtained through force,
                   intimidation, or, as in this case, fraud.
                 </p>
+                <br/>
 
                 <p>
                   Article 45 of the Family Code specifically lists the exclusive
@@ -165,8 +169,10 @@ export default function DoUsPartPage() {
                   that if it were known, the other party would likely never have
                   agreed to the marriage.
                 </p>
+                <br/>
 
                 <h2 className="font-bold">A Story of Concealment and Discovery</h2>
+                <br/>
 
                 <p>
                   The recent Supreme Court decision, penned by Associate Justice
@@ -178,6 +184,7 @@ export default function DoUsPartPage() {
                   a response, effectively waiving his right to present a
                   defense.
                 </p>
+                <br/>
 
                 <p>
                   Jaaziel testified that she and Lory began a long-distance
@@ -190,6 +197,7 @@ export default function DoUsPartPage() {
                   as a result of timidity and a lack of confidence, and Jaaziel
                   learned he was 31 years old and she was his first girlfriend.
                 </p>
+                <br/>
 
                 <p>
                   The couple married in 2013, but the unusual behavior
@@ -201,6 +209,7 @@ export default function DoUsPartPage() {
                   brief, strange exchange on their first anniversary, Lory&apos;s
                   silence resumed.
                 </p>
+                <br/>
 
                 <p>
                   The truth finally emerged in June 2015 when Jaaziel discovered
@@ -212,6 +221,7 @@ export default function DoUsPartPage() {
                   wedding. She promptly left the conjugal home and filed for
                   annulment in 2017.
                 </p>
+                <br/>
 
                 <p>
                   Jaaziel’s father, Francisco Salva, corroborated her testimony.
@@ -222,6 +232,7 @@ export default function DoUsPartPage() {
                   confided in him about Lory&apos;s homosexuality and her devastation
                   upon the discovery.
                 </p>
+                <br/>
 
                 <p>
                   Both the Regional Trial Court (RTC) and the Court of Appeals
@@ -232,6 +243,7 @@ export default function DoUsPartPage() {
                   convincing enough to prove that Lory had fraudulently
                   concealed his sexuality to obtain Jaaziel&apos;s consent.
                 </p>
+                <br/>
 
                 <p>
                   The central issue brought before the Supreme Court was whether
@@ -239,6 +251,7 @@ export default function DoUsPartPage() {
                   testimony and evidence and, in turn, if fraudulent concealment
                   of homosexuality could be proven to annul a marriage.
                 </p>
+                <br/>
 
                 <p>
                   The Supreme Court, in a clear and decisive ruling, reversed
@@ -248,6 +261,7 @@ export default function DoUsPartPage() {
                   thereof—provided more than enough evidence to prove his
                   fraudulent concealment.
                 </p>
+                <br/>
 
                 <p>
                   The Court held that the husband&apos;s admission of homosexuality,
@@ -258,6 +272,7 @@ export default function DoUsPartPage() {
                   orientation to persuade Jaaziel to marry him and to maintain
                   the relationship.
                 </p>
+                <br/>
 
                 <p>
                   By doing so, the Court directly applied Article 45(3) in
@@ -267,6 +282,7 @@ export default function DoUsPartPage() {
                   concealment of homosexuality as a form of fraud that is
                   serious enough to annul a marriage.
                 </p>
+                <br/>
 
                 <p>
                   This ruling stands as a powerful reminder that consent to
@@ -276,8 +292,10 @@ export default function DoUsPartPage() {
                   had she known the truth, she would not have entered into the
                   marriage.
                 </p>
+                <br/>
 
                 <h2 className="font-bold">What This Means for Marital Integrity</h2>
+                <br/>
 
                 <p>
                   This Supreme Court decision is a powerful statement about the
@@ -287,6 +305,7 @@ export default function DoUsPartPage() {
                   spouse who, without their knowledge, is betrayed by a partner
                   who intentionally hides a fundamental part of themselves.
                 </p>
+                <br/>
 
                 <p>
                   For those who find themselves in a similar heartbreaking
@@ -295,6 +314,7 @@ export default function DoUsPartPage() {
                   their homosexuality or another serious matter at the time of
                   your marriage, you may have grounds for annulment.
                 </p>
+                <br/>
 
                 <p>
                   Navigating the legal process of annulment requires careful
@@ -303,6 +323,7 @@ export default function DoUsPartPage() {
                   have married had you known the truth. This is where legal
                   counsel becomes invaluable.
                 </p>
+                <br/>
 
                 <p>
                   We believe that every person deserves to enter into a marriage
@@ -310,6 +331,7 @@ export default function DoUsPartPage() {
                   helps uphold the integrity of marital unions in the
                   Philippines.
                 </p>
+                <br/>
 
                 <p>
                   If you have questions about annulment or other family law
