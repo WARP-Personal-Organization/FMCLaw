@@ -24,7 +24,7 @@ export interface BlogPostFields {
   publishedDate: string;
   author: Entry<AuthorSkeleton>;
   body: Document;
-  featuredImage?: Asset;
+  featuredImage?: Asset; 
 }
 
 export type BlogPostSkeleton = EntrySkeletonType<BlogPostFields, 'blogPost'>;
