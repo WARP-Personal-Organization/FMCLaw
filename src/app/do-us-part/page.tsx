@@ -103,7 +103,7 @@ export default function DoUsPartPage() {
               )}
 
               {/* Restructured Article Content with H2s and P tags */}
-<div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
+            <div className="prose prose-lg max-w-none font-inter prose-p:mb-8">
                 <p className="lead">
                   The Supreme Court&apos;s latest decision sheds light on the legal
                   implications of withholding one&apos;s sexual orientation before
@@ -133,7 +133,7 @@ export default function DoUsPartPage() {
                   importance of truth in a marital relationship.
                 </p>
 
-                <h2>Understanding Annulment in the Philippines</h2>
+                <h2 className="font-bold ">Understanding Annulment in the Philippines</h2>
 
                 <p>
                   The Family Code of the Philippines points out the importance
@@ -166,7 +166,7 @@ export default function DoUsPartPage() {
                   agreed to the marriage.
                 </p>
 
-                <h2>A Story of Concealment and Discovery</h2>
+                <h2 className="font-bold">A Story of Concealment and Discovery</h2>
 
                 <p>
                   The recent Supreme Court decision, penned by Associate Justice
@@ -277,7 +277,7 @@ export default function DoUsPartPage() {
                   marriage.
                 </p>
 
-                <h2>What This Means for Marital Integrity</h2>
+                <h2 className="font-bold">What This Means for Marital Integrity</h2>
 
                 <p>
                   This Supreme Court decision is a powerful statement about the
