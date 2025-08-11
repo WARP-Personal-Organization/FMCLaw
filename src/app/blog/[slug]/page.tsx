@@ -15,22 +15,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Asset, Entry } from "contentful";
 import type { Metadata } from "next";
+import { BLOCKS } from "@contentful/rich-text-types";
 
-// NEW: Define props for generateMetadata
-type Props = {
-  params: { slug: string };
-};
-
-// NEW: Implement generateMetadata to dynamically create metadata for each post
+// --- generateMetadata ---
 export async function generateMetadata({
-  params: { slug },
-}: Props): Promise<Metadata> {
-  const post = await getBlogPostBySlug(slug); // Use slug directly
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) {
-    return {
-      title: "Post Not Found",
-    };
+    return { title: "Post Not Found" };
   }
 
   const { title, summary, featuredImage } = post.fields;
@@ -58,7 +55,7 @@ export async function generateMetadata({
         },
       ],
       locale: "en_US",
-      type: "article", // More specific type for blog posts
+      type: "article",
     },
     twitter: {
       card: "summary_large_image",
@@ -69,10 +66,19 @@ export async function generateMetadata({
   };
 }
 
-// ... (rest of your component remains the same)
-
+// --- Rich Text Options for proper spacing ---
 const richTextOptions: RichTextOptions = {
-  // ... your rich text options
+  renderNode: {
+    [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+    [BLOCKS.HEADING_2]: (node, children) => (
+      <h2 className="mt-8 mb-4 font-bold text-2xl">{children}</h2>
+    ),
+    [BLOCKS.HEADING_3]: (node, children) => (
+      <h3 className="mt-6 mb-3 font-semibold text-xl">{children}</h3>
+    ),
+    [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc pl-6">{children}</ul>,
+    [BLOCKS.OL_LIST]: (node, children) => <ol className="list-decimal pl-6">{children}</ol>,
+  },
 };
 
 export async function generateStaticParams() {
@@ -83,12 +89,14 @@ export async function generateStaticParams() {
   }));
 }
 
+// --- Blog Post Page ---
 export default async function BlogPostPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const post = await getBlogPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) notFound();
 
@@ -100,7 +108,6 @@ export default async function BlogPostPage({
     string
   >;
   const authorName =
-
     typeof rawName === "string" ? rawName : rawName["en-US"] ?? "FMC Law";
 
   const typedImage = featuredImage as Asset<undefined, string> | undefined;
