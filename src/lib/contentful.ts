@@ -19,7 +19,7 @@ export type ImageAssetFields = {
 };
 export interface BlogPostFields {
   title: string;
-  slug: string;
+  slug: string; 
   summary: string;
   publishedDate: string;
   author: Entry<AuthorSkeleton>;
