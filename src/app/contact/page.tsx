@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const RightArrowIcon: React.FC<{ className?: string }> = ({
   className = "w-5 h-5 ml-2",
-}) => (
+}) => ( 
   <svg
     className={className}
     fill="none" 
