@@ -11,7 +11,7 @@ const RightArrowIcon: React.FC<{ className?: string }> = ({
   className = "w-5 h-5 ml-2",
 }) => (  
   <svg
-    className={className}
+    className={className} 
     fill="none" 
     stroke="currentColor"  
     viewBox="0 0 24 24"
