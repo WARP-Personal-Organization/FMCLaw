@@ -158,15 +158,15 @@ export default async function BlogPostPage({
           h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] xl:h-[800px]
           rounded-lg overflow-hidden mb-12
         ">
-  <Image
-    src={`https:${imageUrl}`}
-    alt={imageAlt || `Featured image for ${title}`}
-    fill
-    className="object-cover object-center"
-    sizes="100vw"
-    priority
-  />
-</div>
+          <Image
+            src={`https:${imageUrl}`}
+            alt={imageAlt || `Featured image for ${title}`}
+            fill
+            className="object-cover object-center"
+            sizes="100vw"
+            priority
+          />
+        </div>
               )}
 
               <div className="prose prose-lg max-w-none font-inter">
