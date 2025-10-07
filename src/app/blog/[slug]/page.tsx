@@ -153,11 +153,11 @@ export default async function BlogPostPage({
               </header>
 
               {imageUrl && (
-<div className="
-  relative w-full 
-  h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] xl:h-[800px]
-  rounded-lg overflow-hidden mb-12
-">
+        <div className="
+          relative w-full 
+          h-[300px] sm:h-[400px] md:h-[500px] lg:h-[700px] xl:h-[800px]
+          rounded-lg overflow-hidden mb-12
+        ">
   <Image
     src={`https:${imageUrl}`}
     alt={imageAlt || `Featured image for ${title}`}
@@ -167,9 +167,6 @@ export default async function BlogPostPage({
     priority
   />
 </div>
-
-
-
               )}
 
               <div className="prose prose-lg max-w-none font-inter">
