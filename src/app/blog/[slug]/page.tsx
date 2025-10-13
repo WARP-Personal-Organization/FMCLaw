@@ -170,7 +170,7 @@ export default async function BlogPostPage({
               )}
 
               <div className="prose prose-lg max-w-none font-inter">
-                {body && documentToReactComponents(body, richTextOptions)}
+                {body && documentToReactComponents(body, richTextOptions)} 
               </div>
             </article>
           </div>
