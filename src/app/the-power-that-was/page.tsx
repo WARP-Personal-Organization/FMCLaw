@@ -15,7 +15,7 @@ const post = {
     "A Special Power of Attorney is a temporary grant of authority, not a perpetual one. The Supreme Court recently made a definitive ruling on this matter, reiterating that an SPA automatically becomes void upon the death of the person who granted it.",
   authorName: "FMC Law",
   publishedDate: "2025-09-15", // Example date
-};
+};     
 
 // Metadata for this specific page.
 export async function generateMetadata(): Promise<Metadata> {
