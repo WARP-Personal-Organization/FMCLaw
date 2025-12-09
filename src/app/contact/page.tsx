@@ -114,7 +114,7 @@ const ContactUsPage: React.FC = () => {
         body: new URLSearchParams(
           formData as unknown as Record<string, string>
         ).toString(),
-      });
+      }); 
 
       if (response.ok) {
         setSubmissionStatus({
