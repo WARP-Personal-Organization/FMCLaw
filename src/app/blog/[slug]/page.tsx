@@ -84,6 +84,26 @@ const richTextOptions: RichTextOptions = {
     [BLOCKS.OL_LIST]: (node, children) => (
       <ol className="list-decimal pl-6 mb-6">{children}</ol>
     ),
+    [BLOCKS.TABLE]: (_node, children) => (
+      <div className="overflow-x-auto mb-6">
+        <table className="w-full border-collapse border border-gray-300 text-sm">
+          <tbody>{children}</tbody>
+        </table>
+      </div>
+    ),
+    [BLOCKS.TABLE_ROW]: (_node, children) => (
+      <tr className="even:bg-gray-50">{children}</tr>
+    ),
+    [BLOCKS.TABLE_HEADER_CELL]: (_node, children) => (
+      <th className="border border-gray-300 bg-gray-100 px-4 py-2 text-left font-semibold text-gray-800">
+        {children}
+      </th>
+    ),
+    [BLOCKS.TABLE_CELL]: (_node, children) => (
+      <td className="border border-gray-300 px-4 py-2 text-gray-700 align-top">
+        {children}
+      </td>
+    ),
   },
 };
 
