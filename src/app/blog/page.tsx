@@ -10,7 +10,7 @@ import { Asset } from 'contentful';
 export default async function BlogPage() {
   const posts: BlogPost[] = await getAllBlogPosts();
 
-  return (
+  return ( 
     <>
       <Header />
       <main className="font-sans text-gray-800">
